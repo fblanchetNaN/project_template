@@ -1,0 +1,83 @@
+name: Create new issues when new python / node versions are released
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+
+on:
+  schedule:
+    - cron: 29 3 * * *
+  workflow_dispatch:
+
+jobs:
+  check-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - id: check-python-minor
+        run: echo "ls-tags='$(git ls-remote https://github.com/python/cpython refs/tags/v3.12.0)'" >> $GITHUB_OUTPUT
+      - id: python-minor-issue
+        if: contains(steps.check-python-minor.outputs.ls-tags, 'v3.12.0')
+        uses: actions-cool/issues-helper@v3.4.0
+        with:
+          actions: "find-issues"
+          issue-state: "open"
+          title-includes: "chore(dev): bump python version (minor)"
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - if: steps.python-minor-issue.outputs.issues[0] != null
+        uses: actions-cool/issues-helper@v3.4.0
+        with:
+          actions: "create-issue"
+          body: Python 3.12 has been released
+          title: "chore(dev): bump python version (minor)"
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - id: check-node-minor
+        run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v19.9.0)'" >> $GITHUB_OUTPUT
+      - id: node-minor-issue
+        if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
+        uses: actions-cool/issues-helper@v3.4.0
+        with:
+          actions: "find-issues"
+          issue-state: "open"
+          title-includes: "chore(docs): bump node.js version (minor)"
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - if: steps.node-minor-issue.outputs.issues[0] != null
+        uses: actions-cool/issues-helper@v3.4.0
+        with:
+          actions: "create-issue"
+          body: Node.js 19.9 has been released
+          title: "chore(docs): bump node.js version (minor)"
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - id: check-python-major
+        run: echo "ls-tags='$(git ls-remote https://github.com/python/cpython refs/tags/v4.0.0)'" >> $GITHUB_OUTPUT
+      - id: python-major-issue
+        if: contains(steps.check-python-major.outputs.ls-tags, 'v4.0.0')
+        uses: actions-cool/issues-helper@v3.4.0
+        with:
+          actions: "find-issues"
+          issue-state: "open"
+          title-includes: "chore(dev): bump python version (major)"
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - if: steps.python-major-issue.outputs.issues[0] != null
+        uses: actions-cool/issues-helper@v3.4.0
+        with:
+          actions: "create-issue"
+          body: Python 4.0 has been released
+          title: "chore(dev): bump python version (major)"
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - id: check-node-major
+        run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v20.0.0)'" >> $GITHUB_OUTPUT
+      - id: node-major-issue
+        if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
+        uses: actions-cool/issues-helper@v3.4.0
+        with:
+          actions: "find-issues"
+          issue-state: "open"
+          title-includes: "chore(docs): bump Node.js version (major)"
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - if: steps.node-major-issue.outputs.issues[0] != null
+        uses: actions-cool/issues-helper@v3.4.0
+        with:
+          actions: "create-issue"
+          body: Node.js 20.0 has been released
+          title: "chore(docs): bump Node.js version (major)"
+          token: ${{ secrets.GITHUB_TOKEN }}
