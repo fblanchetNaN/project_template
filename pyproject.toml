@@ -1,0 +1,114 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[project]
+authors = [
+    {name = "John Doe", email = "john.doe@gmail.com"},
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+description = ""
+name = "project_name"
+readme = "README.md"
+requires-python = ">=3.7"
+version = "0.0.0"
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "coverage==7.2.5",
+  "hammett==0.9.4",
+  "hypothesis==6.75.2",
+  "mutmut==2.4.3",
+]
+docs = [
+  "npdoc-to-md==2.0.1",
+]
+stable = []
+
+[project.urls]
+Changelog = "https://github.com/fblanchetNaN/test/releases"
+Documentation = "https://fblanchetnan.github.io/test"
+Source = "https://github.com/fblanchetNaN/test"
+Tracker = "https://github.com/fblanchetNaN/test/issues"
+
+[tool.hatch.envs.venv]
+dependencies = [
+  "hatch",
+  "pip",
+]
+detached = true
+
+[tool.hatch.envs.ci]
+dependencies = [
+  "build",
+  "pre-commit",
+]
+template = "venv"
+
+[tool.hatch.envs.default]
+features = ["dev", "stable"]
+
+[tool.hatch.envs.docs]
+features = ["docs", "stable"]
+
+[tool.hatch.envs.minimal]
+features = ["dev"]
+dependencies = []
+template = "minimal"
+
+[tool.black]
+line-length = 98
+
+[tool.mutmut]
+paths_to_mutate = "project_name"
+runner = "python -m hammett -x"
+tests_dir = "tests"
+
+[tool.pyright]
+include = ["project_name", "tests"]
+typeCheckingMode = "strict"
+verboseOutput = true
+reportMissingModuleSource = "error"
+reportCallInDefaultInitializer = "error"
+reportImplicitStringConcatenation = "error"
+reportMissingSuperCall = "error"
+reportPropertyTypeMismatch = "error"
+reportShadowedImports = "error"
+reportUninitializedInstanceVariable = "error"
+reportUnnecessaryTypeIgnoreComment = "error"
+reportUnusedCallResult = "error"
+strictParameterNoneValue = false
+
+[tool.ruff]
+fixable = [
+  "B", "C4", "D", "E", "ERA", "F", "G", "I", "PIE", "PLE", "PLR", "PLC", "Q", "RET", "RUF", "SIM", "W",
+]
+format = "github"
+ignore = [
+  "B024", "B027",
+  "D100", "D104", "D105", "D107", "D203", "D211", "D213",
+  "E501", "FBT002", "W505",
+]
+select = [
+  "B", "C4", "D", "E", "ERA", "F", "G", "I", "PIE", "PLE", "PLR", "PLC", "Q", "RET", "RUF", "SIM", "W",
+  "A", "ARG", "BLE", "EM", "FBT", "ISC", "N", "PLW", "PTH", "S", "TRY", "YTT",
+]
+show-fixes = true
+show-source = true
+
+[tool.ruff.per-file-ignores]
+"project_name/**/__*__.py" = ["D"]
+"project_name/**/_*/**/*.py" = ["D"]
+"project_name/**/__init__.py" = ["F401"]
+"tests/**/*.py" = ["D"]
+"tests/**/test_*.py" = ["S101"]

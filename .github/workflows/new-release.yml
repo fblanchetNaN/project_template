@@ -1,0 +1,69 @@
+name: Release management
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-release:
+    name: Prepare a new release
+    outputs:
+      release_created: ${{ steps.release-please.outputs.release_created }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: GoogleCloudPlatform/release-please-action@v3.7.8
+        id: release-please
+        with:
+          bump-minor-pre-major: true
+          bump-patch-for-minor-pre-major: true
+          pull-request-title-pattern: "chore(release): project_name ${version}"
+          release-type: python
+  deploy-docs:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    if: needs.build-release.outputs.release_created
+    name: Deploy the static site on GitHub Pages
+    needs: build-release
+    permissions:
+      contents: read
+      id-token: write
+      pages: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: actions/configure-pages@v3.0.6
+      - uses: actions/download-artifact@v3.0.2
+        with:
+          name: static-site--${{ github.sha }}
+          path: docs/.vuepress/dist
+      - uses: actions/upload-pages-artifact@v1.0.8
+        with:
+          path: docs/.vuepress/dist
+      - id: deployment
+        uses: actions/deploy-pages@v2.0.1
+  publish:
+    if: needs.build-release.outputs.release_created
+    name: Publish on PyPi
+    needs: build-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: actions/setup-python@v4.6.0
+        with:
+          cache: pip
+          cache-dependency-path: .github/requirements-ci.lock
+          check-latest: true
+          python-version: 3.11
+      - run: python -m pip config --user set install.use-pep517 true
+      - run: python -m pip install -r .github/requirements-ci.lock
+      - run: python -m hatch publish
+        env:
+          HATCH_INDEX_AUTH: ${{ secrets.PYPI_TOKEN }}
+          HATCH_INDEX_REPO: https://test.pypi.org/legacy/
+          HATCH_INDEX_USER: __token__
