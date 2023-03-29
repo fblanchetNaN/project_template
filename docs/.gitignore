@@ -1,0 +1,6 @@
+.cache
+.temp
+.yarn
+dist
+node_modules
+pages/*.md

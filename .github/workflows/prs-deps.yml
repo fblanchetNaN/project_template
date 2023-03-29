@@ -1,0 +1,82 @@
+name: Dependabot on python dependancies for PRs validation
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, unlocked]
+    paths:
+      - ".github/workflows/prs-deps.yml"
+      - "pyproject.toml"
+  schedule:
+    - cron: 53 9 * * *
+  workflow_dispatch:
+
+jobs:
+  update:
+    if: ${{ ! endsWith(github.actor, '[bot]') }}
+    name: Prepare python ${{ matrix.python-version }} ${{ matrix.deps-flavor }} dependancies lockfile for PRs validation on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        deps-flavor: [default, minimal]
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: actions/setup-python@v4.6.0
+        with:
+          cache: pip
+          cache-dependency-path: .github/requirements-prs/${{ matrix.deps-flavor }}--${{ matrix.os }}--${{ matrix.python-version }}.lock
+          check-latest: true
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip config --user set install.use-pep517 true
+      - run: python -m pip install -r .github/requirements-venv.lock
+      - run: python -m hatch --verbose env create ${{ matrix.deps-flavor }}
+      - name: Freeze dependencies from a fresh environment
+        if: matrix.os == 'macos-latest'
+        run: |
+          source "$( python -m hatch env find ${{ matrix.deps-flavor }} )/bin/activate"
+          python -m pip freeze --all --exclude-editable > .github/requirements-prs/${{ matrix.deps-flavor }}--${{ matrix.os }}--${{ matrix.python-version }}.lock
+      - name: Freeze dependencies from a fresh environment
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          source "$( python -m hatch env find ${{ matrix.deps-flavor }} )/bin/activate"
+          python -m pip freeze --all --exclude-editable > .github/requirements-prs/${{ matrix.deps-flavor }}--${{ matrix.os }}--${{ matrix.python-version }}.lock
+      - name: Freeze dependencies from a fresh environment
+        if: matrix.os == 'windows-latest'
+        run: |
+          . "$( python -m hatch env find ${{ matrix.deps-flavor }} )/Scripts/Activate.ps1"
+          python -m pip freeze --all --exclude-editable > .github/requirements-prs/${{ matrix.deps-flavor }}--${{ matrix.os }}--${{ matrix.python-version }}.lock
+      - if: success() || failure()
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: requirements-prs--${{ github.sha }}
+          path: .github/requirements-prs/${{ matrix.deps-flavor }}--${{ matrix.os }}--${{ matrix.python-version }}.lock
+  pull-request:
+    if: success() || failure()
+    name: Create PR to bump python dependancies for PRs validation
+    needs: update
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: actions/download-artifact@v3.0.2
+        with:
+          name: requirements-prs--${{ github.sha }}
+          path: .github/requirements-prs
+      - uses: peter-evans/create-pull-request@v5.0.0
+        with:
+          author: "GitHub <noreply@github.com>"
+          base: ${{ github.head_ref || github.ref_name }}
+          branch: dependabot/prs-deps/${{ github.head_ref || github.ref_name }}
+          committer: "GitHub <noreply@github.com>"
+          commit-message: "chore(deps): bump python dependancies for PRs validation"
+          labels: |
+            dependencies
+            merge:queue
+            python
+          title: "chore(deps): bump python dependancies for PRs validation"

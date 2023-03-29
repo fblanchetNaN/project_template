@@ -1,0 +1,7 @@
+__pycache__
+.coverage
+.env
+.hypothesis
+.mutmut-cache
+.ruff_cache
+dist

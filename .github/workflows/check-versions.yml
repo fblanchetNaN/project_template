@@ -1,0 +1,231 @@
+name: Create new PR when new python / node versions are released
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+
+on:
+  schedule:
+    - cron: 29 3 * * *
+  workflow_dispatch:
+
+jobs:
+  check-nodejs-major:
+    name: Check if a new node.js major version has been released
+    outputs:
+      ls-tags: ${{ steps.check.outputs.ls-tags }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: check
+        run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v21.0.0)'" >> $GITHUB_OUTPUT
+  nodejs-major:
+    if: contains(needs.check-nodejs-major.outputs.ls-tags, 'v21.0.0')
+    name: Create a new PR bumping node.js to v21.0.0
+    needs: check-nodejs-major
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: actions/setup-python@v4.6.0
+        with:
+          cache: pip
+          cache-dependency-path: .github/requirements-ci.lock
+          check-latest: true
+          python-version: 3.11
+      - name: Update node.js to v21.0.0
+        run: |
+          import fileinput
+          import os
+          import re
+
+          def update_major(semver):
+              major, _ = semver.split('.')[:2]
+              return f"{int(major)+1}.0"
+
+          def update_minor(semver):
+              major, minor = semver.split('.')[:2]
+              return f"{major}.{int(minor)+1}"
+
+          for root, _, files in os.walk('.github/workflows'):
+              for name in files:
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"v21.0.0", lambda semver: f"v{update_major(semver.group(0)[1:])}.0", line), end='')
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"v20.1.0", lambda semver: f"v{update_minor(update_major(semver.group(0)[1:]))}.0", line), end='')
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"node-version: 20.0", lambda semver: f"node-version: {update_major(semver.group(0)[14:])}", line), end='')
+        shell: python
+      - uses: peter-evans/create-pull-request@v5.0.0
+        with:
+          author: "GitHub <noreply@github.com>"
+          base: ${{ github.ref_name }}
+          branch: dependabot/nodejs-major/${{ github.ref_name }}
+          committer: "GitHub <noreply@github.com>"
+          commit-message: "chore(docs): bump node.js to v21.0.0"
+          labels: |
+            documentation
+            javascript
+            merge:queue
+          title: "chore(docs): bump node.js to v21.0.0"
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+  check-nodejs-minor:
+    if: ${{ ! contains(needs.check-nodejs-major.outputs.ls-tags, 'v21.0.0') }}
+    name: Check if a new node.js minor version has been released
+    needs: check-nodejs-major
+    outputs:
+      ls-tags: ${{ steps.check.outputs.ls-tags }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: check
+        run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v20.1.0)'" >> $GITHUB_OUTPUT
+  nodejs-minor:
+    if: contains(needs.check-nodejs-minor.outputs.ls-tags, 'v20.1.0')
+    name: Create a new PR bumping node.js to v20.1.0
+    needs: check-nodejs-minor
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: actions/setup-python@v4.6.0
+        with:
+          cache: pip
+          cache-dependency-path: .github/requirements-ci.lock
+          check-latest: true
+          python-version: 3.11
+      - name: Update node.js to v20.1.0
+        run: |
+          import fileinput
+          import os
+          import re
+
+          def update_minor(semver):
+              major, minor = semver.split('.')[:2]
+              return f"{major}.{int(minor)+1}"
+
+          for root, _, files in os.walk('.github/workflows'):
+              for name in files:
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"v20.1.0", lambda semver: f"v{update_minor(semver.group(0)[1:])}.0", line), end='')
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"node-version: 20.0", lambda semver: f"node-version: {update_minor(semver.group(0)[14:])}", line), end='')
+        shell: python
+      - uses: peter-evans/create-pull-request@v5.0.0
+        with:
+          author: "GitHub <noreply@github.com>"
+          base: ${{ github.ref_name }}
+          branch: dependabot/nodejs-minor/${{ github.ref_name }}
+          committer: "GitHub <noreply@github.com>"
+          commit-message: "chore(docs): bump node.js to v20.1.0"
+          labels: |
+            documentation
+            javascript
+            merge:queue
+          title: "chore(docs): bump node.js to v20.1.0"
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+  check-python-v3:
+    name: Check if a new python 3 version has been released
+    outputs:
+      ls-tags: ${{ steps.check.outputs.ls-tags }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: check
+        run: echo "ls-tags='$(git ls-remote https://github.com/python/cpython refs/tags/v3.12.0)'" >> $GITHUB_OUTPUT
+  python-v3:
+    if: contains(needs.check-python-v3.outputs.ls-tags, 'v3.12.0')
+    name: Create a new PR bumping python support to v3.12.0
+    needs: check-python-v3
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: actions/setup-python@v4.6.0
+        with:
+          cache: pip
+          cache-dependency-path: .github/requirements-ci.lock
+          check-latest: true
+          python-version: 3.11
+      - name: Update python support to v3.12.0
+        run: |
+          import fileinput
+          import os
+          import re
+
+          def update_minor(semver):
+              major, minor = semver.split('.')[:2]
+              return f"{major}.{int(minor)+1}"
+
+          for root, _, files in os.walk('.github/workflows'):
+              for name in files:
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"v3.12.0", lambda semver: f"v{update_minor(semver.group(0)[1:])}.0", line), end='')
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"python-version: 3.11", lambda semver: f"python-version: {update_minor(semver.group(0)[16:])}", line), end='')
+        shell: python
+      - uses: peter-evans/create-pull-request@v5.0.0
+        with:
+          author: "GitHub <noreply@github.com>"
+          base: ${{ github.ref_name }}
+          branch: dependabot/python-v3/${{ github.ref_name }}
+          committer: "GitHub <noreply@github.com>"
+          commit-message: "feat: bump python support to v3.12.0"
+          labels: python
+          title: "feat: bump python support to v3.12.0"
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+  check-python-v4:
+    name: Check if a new python 4 version has been released
+    outputs:
+      ls-tags: ${{ steps.check.outputs.ls-tags }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: check
+        run: echo "ls-tags='$(git ls-remote https://github.com/python/cpython refs/tags/v4.0.0)'" >> $GITHUB_OUTPUT
+  python-v4:
+    if: contains(needs.check-python-v4.outputs.ls-tags, 'v4.0.0')
+    name: Create a new PR bumping python support to v4.0.0
+    needs: check-python-v4
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: actions/setup-python@v4.6.0
+        with:
+          cache: pip
+          cache-dependency-path: .github/requirements-ci.lock
+          check-latest: true
+          python-version: 3.11
+      - name: Update python support to v4.0.0
+        run: |
+          import fileinput
+          import os
+          import re
+
+          def update_major(semver):
+              major, _ = semver.split('.')[:2]
+              return f"{int(major)+1}.0"
+
+          def update_minor(semver):
+              major, minor = semver.split('.')[:2]
+              return f"{major}.{int(minor)+1}"
+
+          for root, _, files in os.walk('.github/workflows'):
+              for name in files:
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"v4.0.0", lambda semver: f"v{update_minor(semver.group(0)[1:])}.0", line), end='')
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"python-version: 3.11", lambda semver: f"python-version: {update_major(semver.group(0)[16:])}", line), end='')
+        shell: python
+      - uses: peter-evans/create-pull-request@v5.0.0
+        with:
+          author: "GitHub <noreply@github.com>"
+          base: ${{ github.ref_name }}
+          branch: dependabot/python-v4/${{ github.ref_name }}
+          committer: "GitHub <noreply@github.com>"
+          commit-message: "feat: bump python support to v4.0.0"
+          labels: python
+          title: "feat: bump python support to v4.0.0"
+          token: ${{ secrets.WORKFLOW_TOKEN }}
