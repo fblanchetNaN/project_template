@@ -1,0 +1,53 @@
+name: Dependabot on python tools used by CI
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, unlocked]
+    paths:
+      - ".github/workflows/ci-tools.yml"
+      - "pyproject.toml"
+  schedule:
+    - cron: 41 7 * * *
+  workflow_dispatch:
+
+jobs:
+  update:
+    if: ${{ ! endsWith(github.actor, '[bot]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.1
+      - uses: actions/setup-python@v4.5.0
+        with:
+          cache: pip
+          cache-dependency-path: .github/requirements-ci.lock
+          check-latest: true
+          python-version: 3.11
+      - run: python -m pip config --user set install.use-pep517 true
+      - run: python -m pip install -r .github/requirements-venv.lock
+      - run: python -m hatch --verbose env create venv
+      - name: Freeze dependencies for venv tools from a fresh environment
+        run: |
+          source "$( python -m hatch env find venv )/bin/activate"
+          python -m pip freeze --all --exclude-editable > .github/requirements-venv.lock
+      - run: python -m hatch --verbose env create ci
+      - name: Freeze dependencies for ci tools from a fresh environment
+        run: |
+          source "$( python -m hatch env find ci )/bin/activate"
+          python -m pip freeze --all --exclude-editable > .github/requirements-ci.lock
+      - uses: peter-evans/create-pull-request@v5.0.0
+        with:
+          author: "GitHub <noreply@github.com>"
+          base: ${{ github.head_ref || github.ref_name }}
+          branch: dependabot/ci-tools/${{ github.head_ref || github.ref_name }}
+          committer: "GitHub <noreply@github.com>"
+          commit-message: "chore(ci): bump python ci tools"
+          labels: |
+            dependencies
+            merge:queue
+            python
+          title: "chore(ci): bump python ci tools"

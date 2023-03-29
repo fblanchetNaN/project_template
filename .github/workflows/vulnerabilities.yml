@@ -1,0 +1,26 @@
+name: Security vulnerabilities
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, unlocked]
+  schedule:
+    - cron: 13 1 * * *
+  workflow_dispatch:
+
+jobs:
+  codeql:
+    if: github.actor != 'dependabot[bot]'
+    name: Security vulnerabilities
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.1
+      - uses: github/codeql-action/init@v2.2.11
+        with:
+          languages: javascript, python
+          queries: +security-and-quality
+      - uses: github/codeql-action/analyze@v2.2.11
