@@ -1,0 +1,19 @@
+queue_rules:
+  - name: default
+    allow_inplace_checks: false
+    merge_method: rebase
+    update_method: rebase
+    merge_conditions:
+      - check-success=Build the static site
+      - check-success=Build the rolling release
+      - check-success=Pre-commit (include linter)
+      - check-success=All tests for minimal dependancies passed (or skipped)
+      - check-success=All tests for stable dependancies passed (or skipped)
+      - check-success=Security vulnerabilities
+
+pull_request_rules:
+  - name: Queue dependabot PRs
+    conditions:
+      - label=merge:queue
+    actions:
+      queue:

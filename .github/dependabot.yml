@@ -1,0 +1,33 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    commit-message:
+      prefix: "chore(ci)"
+    directory: "/"
+    labels:
+      - "merge:queue"
+    open-pull-requests-limit: 0
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    commit-message:
+      prefix: "chore(docs)"
+    directory: "/docs/"
+    labels:
+      - "merge:queue"
+    open-pull-requests-limit: 0
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "all"
+    versioning-strategy: "increase"
+  - package-ecosystem: "pip"
+    commit-message:
+      prefix: "chore(deps)"
+    directory: "/"
+    labels:
+      - "merge:queue"
+    open-pull-requests-limit: 0
+    schedule:
+      interval: "daily"
+    versioning-strategy: "increase"

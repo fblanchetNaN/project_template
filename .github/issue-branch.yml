@@ -1,0 +1,3 @@
+autoCloseIssue: true
+openPR: true
+prSkipCI: true
