@@ -6,7 +6,7 @@ updates:
     directory: "/"
     labels:
       - "merge:queue"
-    open-pull-requests-limit: 0
+    open-pull-requests-limit: 100
     schedule:
       interval: "daily"
   - package-ecosystem: "npm"
@@ -15,7 +15,7 @@ updates:
     directory: "/docs/"
     labels:
       - "merge:queue"
-    open-pull-requests-limit: 0
+    open-pull-requests-limit: 100
     schedule:
       interval: "daily"
     allow:
@@ -27,7 +27,7 @@ updates:
     directory: "/"
     labels:
       - "merge:queue"
-    open-pull-requests-limit: 0
+    open-pull-requests-limit: 100
     schedule:
       interval: "daily"
     versioning-strategy: "increase"
