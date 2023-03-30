@@ -1,0 +1,39 @@
+name: Fix yarn lockfile after dependabot
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, unlocked]
+
+jobs:
+  update:
+    if: github.actor == 'dependabot[bot]' && !contains( github.event.pull_request.labels.*.name, 'merge:queue')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.0
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-node@v3.6.0
+        with:
+          check-latest: true
+          node-version: 19.8
+      - run: corepack enable
+      - run: corepack prepare yarn@stable --activate
+      - uses: actions/cache@v3.3.1
+        with:
+          key: ${{ hashFiles('docs/yarn.lock') }}
+          path: docs/.yarn/cache
+      - run: yarn install --no-immutable
+        working-directory: docs
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9.1.1
+        with:
+          author_name: GitHub
+          author_email: noreply@github.com
+          commit: --amend
+          message: "${{ github.event.pull_request.title }}"
+      - run: gh pr edit ${{ github.event.number }} --add-label "merge:queue"
