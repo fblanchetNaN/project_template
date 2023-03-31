@@ -9,6 +9,11 @@ on:
     branches: [main]
     types: [opened, reopened, synchronize, unlocked]
 
+permissions:
+  issues: write
+  pull-requests: write
+  repository-projects: write
+
 jobs:
   update:
     if: github.actor == 'dependabot[bot]' && !contains( github.event.pull_request.labels.*.name, 'merge:queue')
@@ -29,8 +34,7 @@ jobs:
           path: docs/.yarn/cache
       - run: yarn install --no-immutable
         working-directory: docs
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9.1.1
+      - uses: EndBug/add-and-commit@v9.1.1
         with:
           author_name: GitHub
           author_email: noreply@github.com
