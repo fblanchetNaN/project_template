@@ -8,11 +8,6 @@ on:
   push:
     branches: ["!main"]
 
-permissions:
-  issues: write
-  pull-requests: write
-  repository-projects: write
-
 jobs:
   update:
     if: github.actor == 'dependabot[bot]'
