@@ -13,6 +13,8 @@ updates:
     commit-message:
       prefix: "chore(docs)"
     directory: "/docs/"
+    labels:
+      - "merge:queue"
     open-pull-requests-limit: 100
     schedule:
       interval: "daily"
