@@ -5,15 +5,19 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref }}
 
 on:
-  push:
-    branches: ["!main"]
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, unlocked]
 
 jobs:
   update:
-    if: github.actor == 'dependabot[bot]'
+    if: github.actor == 'dependabot[bot]' && !contains( github.event.pull_request.labels.*.name, 'merge:queue')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.5.0
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.WORKFLOW_TOKEN }}
       - uses: actions/setup-node@v3.6.0
         with:
           check-latest: true
@@ -31,4 +35,5 @@ jobs:
           author_name: GitHub
           author_email: noreply@github.com
           commit: --amend
-          message: "${{ github.event.head_commit.message }}"
+          message: "${{ github.event.pull_request.title }}"
+      - run: gh pr edit ${{ github.event.number }} --add-label "merge:queue"
