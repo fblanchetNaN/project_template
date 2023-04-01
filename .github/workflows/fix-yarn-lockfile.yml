@@ -6,7 +6,7 @@ on:
     types: [completed]
 
 jobs:
-  update:
+  commit-lockfile:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
@@ -14,10 +14,12 @@ jobs:
         with:
           ref: ${{ github.event.workflow_run.head_branch }}
       - run: rm docs/yarn.lock
-      - uses: actions/download-artifact@v3.0.2
+      - uses: dawidd6/action-download-artifact@v2.26.0
         with:
           name: yarn-lockfile--${{ github.event.workflow_run.head_sha }}
           path: docs/yarn.lock
+          run_id: ${{ github.event.workflow_run.id }}
+          workflow: prepare-yarn-lockfile.yml
       - uses: EndBug/add-and-commit@v9.1.1
         with:
           author_name: GitHub
