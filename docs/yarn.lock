@@ -3452,11 +3452,11 @@ __metadata:
   linkType: hard
 
 "d3-delaunay@npm:6":
-  version: 6.0.3
-  resolution: "d3-delaunay@npm:6.0.3"
+  version: 6.0.4
+  resolution: "d3-delaunay@npm:6.0.4"
   dependencies:
     delaunator: 5
-  checksum: df845baa7d99aa3687e9066b34560822261b6b22cbcf52015e68d764cb2c058b95dec0e6a7a3bb58b0e9d60fb181147e676be1b7cc5b9dd1cb7d70ed5160e14a
+  checksum: ce6d267d5ef21a8aeadfe4606329fc80a22ab6e7748d47bc220bcc396ee8be84b77a5473033954c5ac4aa522d265ddc45d4165d30fe4787dd60a15ea66b9bbb4
   languageName: node
   linkType: hard
 
