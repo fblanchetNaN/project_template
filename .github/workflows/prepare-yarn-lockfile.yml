@@ -10,7 +10,7 @@ on:
     types: [opened, reopened, synchronize, unlocked]
 
 jobs:
-  update:
+  yarn-install:
     if: github.actor == 'dependabot[bot]' && !contains( github.event.pull_request.labels.*.name, 'merge:queue')
     runs-on: ubuntu-latest
     steps:
