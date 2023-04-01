@@ -47,7 +47,6 @@ jobs:
           branch: dependabot/pre-commit/${{ github.head_ref || github.ref_name }}
           committer: "GitHub <noreply@github.com>"
           commit-message: "chore(dev): bump pre-commit hooks"
-          delete-branch: true
           labels: |
             dependencies
             merge:queue

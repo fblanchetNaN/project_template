@@ -47,7 +47,6 @@ jobs:
           branch: dependabot/ci-tools/${{ github.head_ref || github.ref_name }}
           committer: "GitHub <noreply@github.com>"
           commit-message: "chore(ci): bump python ci tools"
-          delete-branch: true
           labels: |
             dependencies
             merge:queue

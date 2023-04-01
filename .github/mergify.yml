@@ -12,8 +12,14 @@ queue_rules:
       - check-success=Security vulnerabilities
 
 pull_request_rules:
-  - name: Queue dependabot PRs
+  - name: Queue PRs
     conditions:
       - label=merge:queue
     actions:
       queue:
+        allow_merging_configuration_change: true
+  - name: Delete head branch
+    conditions:
+      - merged
+    actions:
+      delete_head_branch:
