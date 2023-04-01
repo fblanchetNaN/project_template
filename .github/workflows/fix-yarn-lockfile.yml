@@ -26,5 +26,7 @@ jobs:
           author_email: noreply@github.com
           commit: --amend
           message: "${{ github.event.workflow_run.head_commit.message }}"
-          push: origin ${{ github.event.workflow_run.head_branch }} --force
+          push: --force
       - run: gh pr edit ${{ github.event.workflow_run.pull_requests[0].number }} --add-label "merge:queue"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
