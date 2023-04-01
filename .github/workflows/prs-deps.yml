@@ -79,7 +79,6 @@ jobs:
           branch: dependabot/prs-deps/${{ github.head_ref || github.ref_name }}
           committer: "GitHub <noreply@github.com>"
           commit-message: "chore(deps): bump python dependancies for PRs validation"
-          delete-branch: true
           labels: |
             dependencies
             merge:queue
