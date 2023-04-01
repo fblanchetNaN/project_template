@@ -1,0 +1,17 @@
+name: Trigger workflow event for dependabot PRs
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, unlocked]
+
+jobs:
+  yarn-install:
+    if: github.actor == 'dependabot[bot]' && !contains( github.event.pull_request.labels.*.name, 'merge:queue')
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
