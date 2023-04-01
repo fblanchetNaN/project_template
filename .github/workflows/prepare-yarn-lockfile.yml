@@ -31,7 +31,3 @@ jobs:
         with:
           name: yarn-lockfile--${{ github.event.pull_request.head.sha }}
           path: docs/yarn.lock
-      - uses: peter-evans/repository-dispatch@v2.1.1
-        with:
-          client-payload: '{"pull_request": ${{ toJson(github.event.pull_request) }}}'
-          event-type: update-lockfile
