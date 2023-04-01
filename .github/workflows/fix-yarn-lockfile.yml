@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3.5.0
         with:
+          fetch-depth: 0
           ref: ${{ github.event.workflow_run.head_branch }}
       - run: rm docs/yarn.lock
       - uses: dawidd6/action-download-artifact@v2.26.0
