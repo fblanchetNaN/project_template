@@ -21,14 +21,15 @@ on:
 
 jobs:
   update:
+    if: github.actor != 'dependabot[bot]'
+    name: Prepare python ${{ matrix.python-version }} ${{ matrix.deps-flavor }} dependancies lockfile for PRs validation on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         deps-flavor: [default, minimal]
         os: [ubuntu-latest, macos-latest, windows-latest]
         python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
-      fail-fast: false
-    runs-on: ${{ matrix.os }}
-    name: Prepare python ${{ matrix.python-version }} ${{ matrix.deps-flavor }} dependancies lockfile for PRs validation on ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3.5.0
       - uses: actions/setup-python@v4.5.0
@@ -58,11 +59,11 @@ jobs:
       - if: success() || failure()
         uses: actions/upload-artifact@v3.1.2
         with:
-          name: requirements-prs
+          name: requirements-prs--${{ github.sha }}
           path: .github/requirements-prs/${{ matrix.deps-flavor }}--${{ matrix.os }}--${{ matrix.python-version }}.lock
   pull-request:
-    name: Create PR to bump python dependancies for PRs validation
     if: success() || failure()
+    name: Create PR to bump python dependancies for PRs validation
     needs: update
     runs-on: ubuntu-latest
     steps:
@@ -70,7 +71,7 @@ jobs:
       - run: rm -r .github/requirements-prs
       - uses: actions/download-artifact@v3.0.2
         with:
-          name: requirements-prs
+          name: requirements-prs--${{ github.sha }}
           path: .github/requirements-prs
       - uses: peter-evans/create-pull-request@v4.2.4
         with:
