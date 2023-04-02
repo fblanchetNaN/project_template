@@ -26,9 +26,9 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: python -m pip config --user set install.use-pep517 true
       - run: python -m pip install -r .github/requirements-prs/${{ matrix.deps-flavor }}--${{ matrix.os }}--${{ matrix.python-version }}.lock
-      - if: matrix.os == 'default'
+      - if: matrix.deps-flavor == 'default'
         run: python -m pip install -e ".[dev, stable]"
-      - if: matrix.os == 'minimal'
+      - if: matrix.deps-flavor == 'minimal'
         run: python -m pip install -e ".[dev]"
       - run: python -m pip freeze --all --exclude-editable > .github/requirements-prs/${{ matrix.deps-flavor }}--${{ matrix.os }}--${{ matrix.python-version }}.lock
       - if: success() || failure()

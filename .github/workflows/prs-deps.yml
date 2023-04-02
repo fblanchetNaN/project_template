@@ -68,7 +68,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.5.0
-      - run: rm -r .github/requirements-prs
       - uses: actions/download-artifact@v3.0.2
         with:
           name: requirements-prs--${{ github.sha }}
