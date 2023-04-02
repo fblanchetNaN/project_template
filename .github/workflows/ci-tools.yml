@@ -21,6 +21,7 @@ on:
 
 jobs:
   update:
+    if: github.actor != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.5.0
@@ -35,11 +36,13 @@ jobs:
       - run: python -m hatch --verbose env create venv
       - name: Freeze dependencies for venv tools from a fresh environment
         run: |
-          "$( python -m hatch env find venv )/bin/pip" freeze --all --exclude-editable > .github/requirements-venv.lock
+          source "$( python -m hatch env find venv )/bin/activate"
+          python -m pip freeze --all --exclude-editable > .github/requirements-venv.lock
       - run: python -m hatch --verbose env create ci
       - name: Freeze dependencies for ci tools from a fresh environment
         run: |
-          "$( python -m hatch env find ci )/bin/pip" freeze --all --exclude-editable > .github/requirements-ci.lock
+          source "$( python -m hatch env find ci )/bin/activate"
+          python -m pip freeze --all --exclude-editable > .github/requirements-ci.lock
       - uses: peter-evans/create-pull-request@v4.2.4
         with:
           author: "GitHub <noreply@github.com>"

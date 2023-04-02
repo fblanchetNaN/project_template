@@ -42,17 +42,17 @@ jobs:
         with:
           files: "project_name/**/!(_)*.py, tests/**/test_*.py"
   test-minimal:
+    env:
+      PYTHONUTF8: 1
     if: github.actor != 'dependabot[bot]' && needs.check-source.outputs.files_exists == 'true'
     name: Run all tests for minimal dependancies
     needs: check-source
+    runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
         python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
-      fail-fast: false
-    runs-on: ${{ matrix.os }}
-    env:
-      PYTHONUTF8: 1
     steps:
       - uses: actions/checkout@v3.5.0
       - uses: actions/setup-python@v4.5.0
@@ -86,17 +86,17 @@ jobs:
       - if: needs.test-minimal.result == 'failure'
         run: exit 1
   test-stable:
+    env:
+      PYTHONUTF8: 1
     if: github.actor != 'dependabot[bot]' && needs.check-source.outputs.files_exists == 'true'
     name: Run all tests for stable dependancies
     needs: check-source
+    runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
         python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
-      fail-fast: false
-    runs-on: ${{ matrix.os }}
-    env:
-      PYTHONUTF8: 1
     steps:
       - uses: actions/checkout@v3.5.0
       - uses: actions/setup-python@v4.5.0
