@@ -21,30 +21,30 @@ jobs:
       - if: contains(steps.check-python-minor.outputs.ls-tags, 'v3.12.0')
         uses: dacbd/create-issue-action@v1.2.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: "chore(ci): bump python version (minor)"
           body: Python 3.12 has been released
+          title: "chore(ci): bump python version (minor)"
+          token: ${{ secrets.GITHUB_TOKEN }}
       - id: check-node-minor
         run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v19.9.0)'" >> $GITHUB_OUTPUT
       - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
         uses: dacbd/create-issue-action@v1.2.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: "chore(ci): bump node.js version (minor)"
           body: Node.js 19.9 has been released
+          title: "chore(ci): bump node.js version (minor)"
+          token: ${{ secrets.GITHUB_TOKEN }}
       - id: check-python-major
         run: echo "ls-tags='$(git ls-remote https://github.com/python/cpython refs/tags/v4.0.0)'" >> $GITHUB_OUTPUT
       - if: contains(steps.check-python-major.outputs.ls-tags, 'v4.0.0')
         uses: dacbd/create-issue-action@v1.2.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: "chore(ci): bump python version (major)"
           body: Python 4.0 has been released
+          title: "chore(ci): bump python version (major)"
+          token: ${{ secrets.GITHUB_TOKEN }}
       - id: check-node-major
         run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v20.0.0)'" >> $GITHUB_OUTPUT
       - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
         uses: dacbd/create-issue-action@v1.2.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: "chore(ci): bump Node.js version (major)"
           body: Node.js 20.0 has been released
+          title: "chore(ci): bump Node.js version (major)"
+          token: ${{ secrets.GITHUB_TOKEN }}
