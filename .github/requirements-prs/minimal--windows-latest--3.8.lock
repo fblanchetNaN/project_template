@@ -6,7 +6,7 @@ coverage==7.2.2
 exceptiongroup==1.1.1
 glob2==0.7
 hammett==0.9.4
-hypothesis==6.70.1
+hypothesis==6.70.2
 junit-xml==1.8
 mutmut==2.4.3
 parso==0.8.3
