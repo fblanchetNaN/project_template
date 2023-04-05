@@ -3137,9 +3137,9 @@ __metadata:
   linkType: hard
 
 "cli-spinners@npm:^2.6.1":
-  version: 2.7.0
-  resolution: "cli-spinners@npm:2.7.0"
-  checksum: a9afaf73f58d1f951fb23742f503631b3cf513f43f4c7acb1b640100eb76bfa16efbcd1994d149ffc6603a6d75dd3d4a516a76f125f90dce437de9b16fd0ee6f
+  version: 2.8.0
+  resolution: "cli-spinners@npm:2.8.0"
+  checksum: 42bc69127706144b83b25da27e0719bdd8294efe43018e1736928a8f78a26e8d2b4dcd39af4a6401526ca647e99e302ad2b29bf19e67d1db403b977aca6abeb7
   languageName: node
   linkType: hard
 
