@@ -1920,9 +1920,9 @@ __metadata:
   linkType: hard
 
 "@stackblitz/sdk@npm:^1.8.2":
-  version: 1.8.2
-  resolution: "@stackblitz/sdk@npm:1.8.2"
-  checksum: c9979ecee50b353fc54ec2407bfd96bbc5e45004e6a1e54ce3d94c9671cb64857eceaef2397c75ba6f070fde141fb119ee479d71848a555a6bd5bf7a500bf46d
+  version: 1.9.0
+  resolution: "@stackblitz/sdk@npm:1.9.0"
+  checksum: 9003383143cc17ef8a6982cece827d85e7bcfb63f07242af85d19834ce387c293f44c83360f8a7ca46dc153e89151c7487c54bc842967047910712aab9bd4a04
   languageName: node
   linkType: hard
 
@@ -4363,7 +4363,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -6321,7 +6321,7 @@ __metadata:
 
 "resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.19.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.1#~builtin<compat/resolve>":
   version: 1.22.1
-  resolution: "resolve@patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=07638b"
   dependencies:
     is-core-module: ^2.9.0
     path-parse: ^1.0.7
