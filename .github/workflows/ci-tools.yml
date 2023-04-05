@@ -44,7 +44,7 @@ jobs:
         run: |
           source "$( python -m hatch env find ci )/bin/activate"
           python -m pip freeze --all --exclude-editable > .github/requirements-ci.lock
-      - uses: peter-evans/create-pull-request@v4.2.4
+      - uses: peter-evans/create-pull-request@v5.0.0
         with:
           author: "GitHub <noreply@github.com>"
           base: ${{ github.head_ref || github.ref_name }}
