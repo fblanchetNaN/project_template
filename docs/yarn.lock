@@ -1617,13 +1617,13 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-align@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "@mdit/plugin-align@npm:0.4.1"
+  version: 0.4.2
+  resolution: "@mdit/plugin-align@npm:0.4.2"
   dependencies:
-    "@mdit/plugin-container": 0.4.1
+    "@mdit/plugin-container": 0.4.2
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: 36b5be6aeef587df9eab91c68cb9a314f8d9383aff96bae9cb5da5531f534cf4dba1a3d303fe3fbe91837ae9479dbf8ad941c29d7d6377fdb5960cead5bf4c25
+  checksum: d159add9e9147fc50b8f83f884c8d07a37a32a1ae9295d871c86ae7dac3e6c7bcaedc8cdadbd1c4fdb5ae8137dd64603ad5a2729111adc8a5527b5f5b44d7bc5
   languageName: node
   linkType: hard
 
@@ -1637,7 +1637,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdit/plugin-container@npm:0.4.1, @mdit/plugin-container@npm:^0.4.1":
+"@mdit/plugin-container@npm:0.4.2":
+  version: 0.4.2
+  resolution: "@mdit/plugin-container@npm:0.4.2"
+  dependencies:
+    "@types/markdown-it": ^12.2.3
+    markdown-it: ^13.0.1
+  checksum: 997096d37a3b8ac0da15f4b42cf91d404458f77c24125cbb8c4e326db1434a0833e965db4e6e317df1afdd3d781ce52241d20ecca0048f78f9213b9195a6b613
+  languageName: node
+  linkType: hard
+
+"@mdit/plugin-container@npm:^0.4.1":
   version: 0.4.1
   resolution: "@mdit/plugin-container@npm:0.4.1"
   dependencies:
@@ -4363,7 +4373,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -6321,7 +6331,7 @@ __metadata:
 
 "resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.19.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.1#~builtin<compat/resolve>":
   version: 1.22.2
-  resolution: "resolve@patch:resolve@npm%3A1.22.2#~builtin<compat/resolve>::version=1.22.2&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.22.2#~builtin<compat/resolve>::version=1.22.2&hash=07638b"
   dependencies:
     is-core-module: ^2.11.0
     path-parse: ^1.0.7
