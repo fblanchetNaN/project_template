@@ -2715,14 +2715,14 @@ __metadata:
   linkType: hard
 
 "artalk@npm:^2.5.2":
-  version: 2.5.2
-  resolution: "artalk@npm:2.5.2"
+  version: 2.5.3
+  resolution: "artalk@npm:2.5.3"
   dependencies:
     abortcontroller-polyfill: ^1.7.5
     hanabi: ^0.4.0
     insane: ^2.6.2
     marked: ^4.2.12
-  checksum: d3f48341a0d20e0993d0e93bab7beb2b8e94e4ac44bc643535bd239f15e613aa4d97dcae798e2933495238d68e1ba262101f1a3deee026b514cb2540f8f37c85
+  checksum: bb55abc14c909c9c706e3d766a9a1f8ade15f5476da5b0b5dae93af67fb2d99f5ced42665e6d527648f9bb8aef661e83687c2fbff5caceaea0bf1d4d341c7e67
   languageName: node
   linkType: hard
 
@@ -4363,7 +4363,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -6321,7 +6321,7 @@ __metadata:
 
 "resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.19.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.1#~builtin<compat/resolve>":
   version: 1.22.2
-  resolution: "resolve@patch:resolve@npm%3A1.22.2#~builtin<compat/resolve>::version=1.22.2&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.22.2#~builtin<compat/resolve>::version=1.22.2&hash=07638b"
   dependencies:
     is-core-module: ^2.11.0
     path-parse: ^1.0.7
