@@ -1678,12 +1678,12 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-img-mark@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "@mdit/plugin-img-mark@npm:0.4.1"
+  version: 0.4.2
+  resolution: "@mdit/plugin-img-mark@npm:0.4.2"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: 332103416e955a21d6f3ac76a4e20834d00d71a8ef47f3c40a7013c0efbfda8b6c00446db92270b6ee52f92d0065aa653162fca4d1af2e18b2c27bb04873f262
+  checksum: 0705877ae58c530b1094e9dc0634fcaf044427451e1493b064ab0a6ab97c492576a0c0bafbf91ce9d26f6d5526fc19fbfb752c9143ea92f1cd637d70418d3877
   languageName: node
   linkType: hard
 
