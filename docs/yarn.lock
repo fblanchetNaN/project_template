@@ -1765,12 +1765,12 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-sup@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "@mdit/plugin-sup@npm:0.4.1"
+  version: 0.4.2
+  resolution: "@mdit/plugin-sup@npm:0.4.2"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: 20f89093bc9611d25702ad5e4945f7b639ca8066f8e38dfbc8f93436c933508f3acc45be054bbb46543d383d37e86fc0f3cdb51e9fdc8588651a5f9c300a4d2e
+  checksum: 0b2e18bc074cbee1155d6e7a6b6895a47a9dc0afcd13393b62f10e8d38699801d7e86f7c937fdbacb490cca4af06df676ef34589c43805fb59a92f5306e193c7
   languageName: node
   linkType: hard
 
@@ -4363,7 +4363,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -6321,7 +6321,7 @@ __metadata:
 
 "resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.19.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.1#~builtin<compat/resolve>":
   version: 1.22.2
-  resolution: "resolve@patch:resolve@npm%3A1.22.2#~builtin<compat/resolve>::version=1.22.2&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.22.2#~builtin<compat/resolve>::version=1.22.2&hash=07638b"
   dependencies:
     is-core-module: ^2.11.0
     path-parse: ^1.0.7
