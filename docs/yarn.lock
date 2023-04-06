@@ -1698,13 +1698,13 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-include@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "@mdit/plugin-include@npm:0.4.1"
+  version: 0.4.2
+  resolution: "@mdit/plugin-include@npm:0.4.2"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
     upath: ^2.0.1
-  checksum: de6338f0d85df5f4cc22879bdd15ed73cee92a873a9a470e2ad9a17f1bd2ca882dc9406ede441e55fce8116771c56e10819e085ec1e5cba41e1ce31cbcc0232f
+  checksum: 8e8e2452eab870619a8615886239f6c8e17b0f7e954236c5e4eba6bd14d6945c64938562070ec5d44cf7e89ebb50f153f50ae469b58f4353745d864c3f102b19
   languageName: node
   linkType: hard
 
