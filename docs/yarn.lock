@@ -1775,12 +1775,12 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-tab@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "@mdit/plugin-tab@npm:0.4.1"
+  version: 0.4.2
+  resolution: "@mdit/plugin-tab@npm:0.4.2"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: 6ec17465ac848991921acf53ff7e0128387f043261bb372d70d44009af7c1556d2cb61c25199c395b3e1220f4a4c5ef858efdbb2ee04d4cd8fd35366f6dd3e21
+  checksum: 03a34cd970b89855c5c37e945e3a4245b95e691bb104449adcedc7e8bb7ce6625e94ffb16a3456f8dcd69d42787db0c5399dec2351e7e9f99457d99564e0cb78
   languageName: node
   linkType: hard
 
