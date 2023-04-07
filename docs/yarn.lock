@@ -1658,12 +1658,12 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-footnote@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "@mdit/plugin-footnote@npm:0.4.1"
+  version: 0.4.3
+  resolution: "@mdit/plugin-footnote@npm:0.4.3"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: bbb06b459c758ff80f365c4393441bb500fbb60a72dd59c7937a92e078e44f043cdb13ba12452ec56febae57675f129e6176e140966c1980201ba732f420eacc
+  checksum: e840d7818a3e55f4e368032a94a77196b2990d10a91eadacd532dc3665ee8df3cbb1058d402b95697f826d68b37f479a9f68ce4059821b2962f631ec53cbb820
   languageName: node
   linkType: hard
 
