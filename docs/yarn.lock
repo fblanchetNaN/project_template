@@ -1668,12 +1668,12 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-img-lazyload@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "@mdit/plugin-img-lazyload@npm:0.4.1"
+  version: 0.4.3
+  resolution: "@mdit/plugin-img-lazyload@npm:0.4.3"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: 2229353d50e1b6287961665beda8dc5ab9340b41c3e99718ba2e3db3f8cdcbd24e9544662afe0381bc13bcefefd5a0db77fa627ee3a29349f24541e364bfda7a
+  checksum: d70e9eb7f8d7e9d11da071e677c1d98243370bfd48207ee9d31433f25d06aae8ac841e99a294c1f37706b0f5977555b456810cb002c8189e5c89df56046ae4f5
   languageName: node
   linkType: hard
 
