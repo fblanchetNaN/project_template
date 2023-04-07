@@ -1709,15 +1709,15 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-katex@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "@mdit/plugin-katex@npm:0.4.1"
+  version: 0.4.3
+  resolution: "@mdit/plugin-katex@npm:0.4.3"
   dependencies:
-    "@mdit/plugin-tex": 0.4.1
+    "@mdit/plugin-tex": 0.4.3
     "@types/katex": ^0.16.0
     "@types/markdown-it": ^12.2.3
     katex: ^0.16.4
     markdown-it: ^13.0.1
-  checksum: 90db4b7176e3d04083a41496f6d4260c3fa551fc6f33f151c3141a6a1f5233f4c38a5a43163ac84cdc7e3f55778641ac4aac797276471d072d9cc71a699dab61
+  checksum: 5237ad77c273c1fd869c443e5c34127fe636c50565e53f253f3ea679dca56b55a2d079c2c4f6296cdb401908e020626b1307d0f7497fa1129d62ac94029610de
   languageName: node
   linkType: hard
 
@@ -1794,16 +1794,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdit/plugin-tex@npm:0.4.1, @mdit/plugin-tex@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "@mdit/plugin-tex@npm:0.4.1"
-  dependencies:
-    "@types/markdown-it": ^12.2.3
-    markdown-it: ^13.0.1
-  checksum: 97c3b249a33939dd8932112b894d15f25fa0b1a2dda6c8e102698e505cff3abac025da65c010f08f2990ff3e0f1023d661dcdfac98c6c12347c5ca574a8c70da
-  languageName: node
-  linkType: hard
-
 "@mdit/plugin-tex@npm:0.4.2":
   version: 0.4.2
   resolution: "@mdit/plugin-tex@npm:0.4.2"
@@ -1811,6 +1801,26 @@ __metadata:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
   checksum: b972ddef3e1819e5515717f08ab2ed59f2bc38d8e08cf2a05fd02dc0fdbc860a31fc54adb328030e6aa5c7de9e9bfa11bfa06348b8ce1d3f5114892b75b8e7c5
+  languageName: node
+  linkType: hard
+
+"@mdit/plugin-tex@npm:0.4.3":
+  version: 0.4.3
+  resolution: "@mdit/plugin-tex@npm:0.4.3"
+  dependencies:
+    "@types/markdown-it": ^12.2.3
+    markdown-it: ^13.0.1
+  checksum: 4a69bca0369fd7b9df35921b5a4a5ec3d4c7652f138928a7210762ab7b3cde52564a93f2a1c9142661298f56acc18665f1aeb2385f2cfeb32ac55f9390634d49
+  languageName: node
+  linkType: hard
+
+"@mdit/plugin-tex@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "@mdit/plugin-tex@npm:0.4.1"
+  dependencies:
+    "@types/markdown-it": ^12.2.3
+    markdown-it: ^13.0.1
+  checksum: 97c3b249a33939dd8932112b894d15f25fa0b1a2dda6c8e102698e505cff3abac025da65c010f08f2990ff3e0f1023d661dcdfac98c6c12347c5ca574a8c70da
   languageName: node
   linkType: hard
 
