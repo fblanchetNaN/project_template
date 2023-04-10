@@ -6991,9 +6991,9 @@ __metadata:
   linkType: hard
 
 "twikoo@npm:^1.6.11":
-  version: 1.6.11
-  resolution: "twikoo@npm:1.6.11"
-  checksum: b96f1edcd6e23c952501a82fb4d3929f4a0ec25b326fe4335838e23f9425b040665653b04b77932a1dbcb4d3f8ff7ccee55d27cb6d817fc208ee24158029f7f3
+  version: 1.6.15
+  resolution: "twikoo@npm:1.6.15"
+  checksum: 9f670a154630bc60201217153c3e9f7a026b4a5dcd61bde309a2bd2a5ce81896bc306fef4094ea6cecfe66a2e7901fa8ad17c4bdcf4614f456108c8447a5c613
   languageName: node
   linkType: hard
 
