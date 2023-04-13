@@ -17,7 +17,7 @@ jobs:
     name: Build the static site
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.5.1
+      - uses: actions/checkout@v3.5.2
       - uses: actions/setup-node@v3.6.0
         with:
           check-latest: true
@@ -41,7 +41,7 @@ jobs:
     name: Build the rolling release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.5.1
+      - uses: actions/checkout@v3.5.2
       - uses: actions/setup-python@v4.5.0
         with:
           cache: pip
