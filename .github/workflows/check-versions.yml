@@ -34,6 +34,7 @@ jobs:
           commit-message: "chore(docs): bump node.js version (major)"
           labels: javascript
           title: "chore(docs): bump node.js version (major)"
+          token: ${{ secrets.WORKFLOW_TOKEN }}
       - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
         run: exit 0 
       - id: check-node-minor
@@ -57,6 +58,7 @@ jobs:
           commit-message: "chore(docs): bump node.js version (minor)"
           labels: javascript
           title: "chore(docs): bump node.js version (minor)"
+          token: ${{ secrets.WORKFLOW_TOKEN }}
   python-v3:
     runs-on: ubuntu-latest
     steps:
@@ -81,6 +83,7 @@ jobs:
           commit-message: "feat: python v3.12.0 support"
           labels: python
           title: "feat: python v3.12.0 support"
+          token: ${{ secrets.WORKFLOW_TOKEN }}
   python-v4:
     runs-on: ubuntu-latest
     steps:
@@ -105,4 +108,5 @@ jobs:
           commit-message: "feat: python v4.0.0 support"
           labels: python
           title: "feat: python v4.0.0 support"
+          token: ${{ secrets.WORKFLOW_TOKEN }}
           
