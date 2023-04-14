@@ -20,8 +20,8 @@ jobs:
       - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
         name: Update node version from v19.8.0 to v20.0.0
         run: |
-          grep -rl 'v20.0.0' | xargs sed -i 's/v20.0.0/v21.0.0'
-          grep -rl 'v19.9.0' | xargs sed -i 's/v19.9.0/v20.0.0'
+          grep -rl 'v20.0.0' | xargs sed -i 's/v20.0.0/v21.0.0/g'
+          grep -rl 'v19.9.0' | xargs sed -i 's/v19.9.0/v20.0.0/g'
           grep -rl 'node-version: 20.0' | xargs sed -i 's/node-version: 20.0/node-version: 20.1/g'
           grep -rl 'node-version: 19.8' | xargs sed -i 's/node-version: 19.8/node-version: 20.0/g'
       - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
@@ -43,8 +43,8 @@ jobs:
       - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
         name: Update node version from v19.8.0 to v19.9.0
         run: |
-          grep -rl 'v19.10.0' | xargs sed -i 's/v19.10.0/v19.11.0'
-          grep -rl 'v19.9.0' | xargs sed -i 's/v19.9.0/v19.10.0'
+          grep -rl 'v19.10.0' | xargs sed -i 's/v19.10.0/v19.11.0/g'
+          grep -rl 'v19.9.0' | xargs sed -i 's/v19.9.0/v19.10.0/g'
           grep -rl 'node-version: 19.9' | xargs sed -i 's/node-version: 19.9/node-version: 19.10/g'
           grep -rl 'node-version: 19.8' | xargs sed -i 's/node-version: 19.8/node-version: 19.9/g'
       - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
@@ -67,8 +67,8 @@ jobs:
       - if: contains(steps.check-python.outputs.ls-tags, 'v3.12.0')
         name: Update python version from v3.11.0 to v3.12.0
         run: |
-          grep -rl 'v3.12.0' | xargs sed -i 's/v3.12.0/v3.13.0'
-          grep -rl 'v3.11.0' | xargs sed -i 's/v3.11.0/v3.12.0'
+          grep -rl 'v3.12.0' | xargs sed -i 's/v3.12.0/v3.13.0/g'
+          grep -rl 'v3.11.0' | xargs sed -i 's/v3.11.0/v3.12.0/g'
           grep -rl 'python-version: 3.12' | xargs sed -i 's/python-version: 3.12/python-version: 3.13/g'
           grep -rl 'python-version: 3.11' | xargs sed -i 's/python-version: 3.11/python-version: 3.12/g'
       - if: contains(steps.check-python-minor.outputs.ls-tags, 'v3.12.0')
@@ -91,8 +91,8 @@ jobs:
       - if: contains(steps.check-python.outputs.ls-tags, 'v4.0.0')
         name: Update python version from v3.11.0 to v4.0.0
         run: |
-          grep -rl 'v4.1.0' | xargs sed -i 's/v4.1.0/v4.2.0'
-          grep -rl 'v4.0.0' | xargs sed -i 's/v4.0.0/v4.1.0'
+          grep -rl 'v4.1.0' | xargs sed -i 's/v4.1.0/v4.2.0/g'
+          grep -rl 'v4.0.0' | xargs sed -i 's/v4.0.0/v4.1.0/g'
           grep -rl 'python-version: 4.0' | xargs sed -i 's/python-version: 4.0/python-version: 4.1/g'
           grep -rl 'python-version: 3.11' | xargs sed -i 's/python-version: 3.11/python-version: 4.0/g'
       - if: contains(steps.check-python.outputs.ls-tags, 'v4.0.0')
