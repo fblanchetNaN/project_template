@@ -33,7 +33,7 @@ jobs:
       - id: check-node-minor
         run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v19.9.0)'" >> $GITHUB_OUTPUT
       - id: node-minor-issue
-        if: contains(steps.check-node-minor.outputs.ls-tags, "v19.9.0')
+        if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
         uses: actions-cool/issues-helper@v3.4.0
         with:
           actions: "find-issues"
