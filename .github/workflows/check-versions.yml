@@ -23,7 +23,7 @@ jobs:
           issue-state: "open"
           title-includes: "chore(dev): bump python version (minor)"
           token: ${{ secrets.GITHUB_TOKEN }}
-      - if: toJSON(steps.python-minor-issue.outputs.issues) == '[]'
+      - if: toJSON(steps.python-minor-issue.outputs.issues) == "[]"
         uses: actions-cool/issues-helper@v3.4.0
         with:
           actions: "create-issue"
