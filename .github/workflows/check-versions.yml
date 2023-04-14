@@ -23,7 +23,7 @@ jobs:
           issue-state: "open"
           title-includes: "chore(dev): bump python version (minor)"
           token: ${{ secrets.GITHUB_TOKEN }}
-      - if: toJSON(steps.python-minor-issue.outputs.issues) == "[]"
+      - if: ${{ toJSON(steps.python-minor-issue.outputs.issues) == "[]" }}
         uses: actions-cool/issues-helper@v3.4.0
         with:
           actions: "create-issue"
@@ -33,21 +33,20 @@ jobs:
       - id: check-node-minor
         run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v19.9.0)'" >> $GITHUB_OUTPUT
       - id: node-minor-issue
-        if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
+        if: contains(steps.check-node-minor.outputs.ls-tags, "v19.9.0')
         uses: actions-cool/issues-helper@v3.4.0
         with:
           actions: "find-issues"
           issue-state: "open"
           title-includes: "chore(docs): bump node.js version (minor)"
           token: ${{ secrets.GITHUB_TOKEN }}
-      - if: toJSON(steps.node-minor-issue.outputs.issues) == '[]'
+      - if: ${{ toJSON(steps.node-minor-issue.outputs.issues) == "[]" }}
         uses: actions-cool/issues-helper@v3.4.0
         with:
           actions: "create-issue"
           body: Node.js 19.9 has been released
           title: "chore(docs): bump node.js version (minor)"
           token: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo ${{ toJSON(steps.node-minor-issue.outputs.issues) }}
       - id: check-python-major
         run: echo "ls-tags='$(git ls-remote https://github.com/python/cpython refs/tags/v4.0.0)'" >> $GITHUB_OUTPUT
       - id: python-major-issue
@@ -58,7 +57,7 @@ jobs:
           issue-state: "open"
           title-includes: "chore(dev): bump python version (major)"
           token: ${{ secrets.GITHUB_TOKEN }}
-      - if: toJSON(steps.python-major-issue.outputs.issues) == '[]'
+      - if: ${{ toJSON(steps.python-major-issue.outputs.issues) == "[]" }}
         uses: actions-cool/issues-helper@v3.4.0
         with:
           actions: "create-issue"
@@ -75,7 +74,7 @@ jobs:
           issue-state: "open"
           title-includes: "chore(docs): bump Node.js version (major)"
           token: ${{ secrets.GITHUB_TOKEN }}
-      - if: toJSON(steps.node-major-issue.outputs.issues) == '[]'
+      - if: ${{ toJSON(steps.node-major-issue.outputs.issues) == "[]" }}
         uses: actions-cool/issues-helper@v3.4.0
         with:
           actions: "create-issue"
