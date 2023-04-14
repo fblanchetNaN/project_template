@@ -1,4 +1,4 @@
-name: Create new issues when new python / node versions are released
+name: Create new PR when new python / node versions are released
 
 concurrency:
   cancel-in-progress: true
@@ -10,74 +10,193 @@ on:
   workflow_dispatch:
 
 jobs:
-  check-versions:
+  nodejs:
     runs-on: ubuntu-latest
     steps:
-      - id: check-python-minor
-        run: echo "ls-tags='$(git ls-remote https://github.com/python/cpython refs/tags/v3.12.0)'" >> $GITHUB_OUTPUT
-      - id: python-minor-issue
-        if: contains(steps.check-python-minor.outputs.ls-tags, 'v3.12.0')
-        uses: actions-cool/issues-helper@v3.4.0
-        with:
-          actions: "find-issues"
-          issue-state: "open"
-          title-includes: "chore(dev): bump python version (minor)"
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - if: steps.python-minor-issue.outputs.issues[0] != null
-        uses: actions-cool/issues-helper@v3.4.0
-        with:
-          actions: "create-issue"
-          body: Python 3.12 has been released
-          title: "chore(dev): bump python version (minor)"
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - id: check-node-minor
-        run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v19.9.0)'" >> $GITHUB_OUTPUT
-      - id: node-minor-issue
-        if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
-        uses: actions-cool/issues-helper@v3.4.0
-        with:
-          actions: "find-issues"
-          issue-state: "open"
-          title-includes: "chore(docs): bump node.js version (minor)"
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - if: steps.node-minor-issue.outputs.issues[0] != null
-        uses: actions-cool/issues-helper@v3.4.0
-        with:
-          actions: "create-issue"
-          body: Node.js 19.9 has been released
-          title: "chore(docs): bump node.js version (minor)"
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - id: check-python-major
-        run: echo "ls-tags='$(git ls-remote https://github.com/python/cpython refs/tags/v4.0.0)'" >> $GITHUB_OUTPUT
-      - id: python-major-issue
-        if: contains(steps.check-python-major.outputs.ls-tags, 'v4.0.0')
-        uses: actions-cool/issues-helper@v3.4.0
-        with:
-          actions: "find-issues"
-          issue-state: "open"
-          title-includes: "chore(dev): bump python version (major)"
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - if: steps.python-major-issue.outputs.issues[0] != null
-        uses: actions-cool/issues-helper@v3.4.0
-        with:
-          actions: "create-issue"
-          body: Python 4.0 has been released
-          title: "chore(dev): bump python version (major)"
-          token: ${{ secrets.GITHUB_TOKEN }}
       - id: check-node-major
         run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v20.0.0)'" >> $GITHUB_OUTPUT
-      - id: node-major-issue
-        if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
-        uses: actions-cool/issues-helper@v3.4.0
+      - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
+        uses: actions/checkout@v3.5.2
+      - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
+        uses: actions/setup-python@v4.5.0
         with:
-          actions: "find-issues"
-          issue-state: "open"
-          title-includes: "chore(docs): bump Node.js version (major)"
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - if: steps.node-major-issue.outputs.issues[0] != null
-        uses: actions-cool/issues-helper@v3.4.0
+          cache: pip
+          cache-dependency-path: .github/requirements-ci.lock
+          check-latest: true
+          python-version: 3.11
+      - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
+        name: Update node.js to v20.0.0
+        run: |
+          import fileinput
+          import os
+          import re
+
+          def update_major(semver):
+              major, _ = semver.split('.')[:2]
+              return f"{int(major)+1}.0"
+
+          def update_minor(semver):
+              major, minor = semver.split('.')[:2]
+              return f"{major}.{int(minor)+1}"
+
+          for root, _, files in os.walk('.github/workflows'):
+              for name in files:
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"v20.0.0", lambda semver: f"v{update_major(semver.group(0)[1:])}.0", line), end='')
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"v19.9.0", lambda semver: f"v{update_minor(update_major(semver.group(0)[1:]))}.0", line), end='')
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"node-version: 19.8", lambda semver: f"node-version: {update_major(semver.group(0)[14:])}", line), end='')
+        shell: python
+      - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
+        uses: peter-evans/create-pull-request@v5.0.0
         with:
-          actions: "create-issue"
-          body: Node.js 20.0 has been released
-          title: "chore(docs): bump Node.js version (major)"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          author: "GitHub <noreply@github.com>"
+          base: ${{ github.ref_name }}
+          branch: dependabot/nodejs-major/${{ github.ref_name }}
+          committer: "GitHub <noreply@github.com>"
+          commit-message: "chore(docs): bump node.js to v20.0.0"
+          labels: javascript
+          title: "chore(docs): bump node.js to v20.0.0"
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+      - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
+        run: exit 0
+      - id: check-node-minor
+        run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v19.9.0)'" >> $GITHUB_OUTPUT
+      - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
+        uses: actions/checkout@v3.5.2
+      - if: contains(steps.check-node-major.outputs.ls-tags, 'v19.9.0')
+        uses: actions/setup-python@v4.5.0
+        with:
+          cache: pip
+          cache-dependency-path: .github/requirements-ci.lock
+          check-latest: true
+          python-version: 3.11
+      - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
+        name: Update node.js to v19.9.0
+        run: |
+          import fileinput
+          import os
+          import re
+
+          def update_minor(semver):
+              major, minor = semver.split('.')[:2]
+              return f"{major}.{int(minor)+1}"
+
+          for root, _, files in os.walk('.github/workflows'):
+              for name in files:
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"v19.9.0", lambda semver: f"v{update_minor(semver.group(0)[1:])}.0", line), end='')
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"node-version: 19.8", lambda semver: f"node-version: {update_minor(semver.group(0)[14:])}", line), end='')
+        shell: python
+      - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
+        uses: peter-evans/create-pull-request@v5.0.0
+        with:
+          author: "GitHub <noreply@github.com>"
+          base: ${{ github.ref_name }}
+          branch: dependabot/nodejs-minor/${{ github.ref_name }}
+          committer: "GitHub <noreply@github.com>"
+          commit-message: "chore(docs): bump node.js to v19.9.0"
+          labels: javascript
+          title: "chore(docs): bump node.js to v19.9.0"
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+  python-v3:
+    runs-on: ubuntu-latest
+    steps:
+      - id: check-python
+        run: echo "ls-tags='$(git ls-remote https://github.com/python/cpython refs/tags/v3.12.0)'" >> $GITHUB_OUTPUT
+      - if: contains(steps.check-python.outputs.ls-tags, 'v3.12.0')
+        uses: actions/checkout@v3.5.2
+      - if: contains(steps.check-python.outputs.ls-tags, 'v3.12.0')
+        uses: actions/setup-python@v4.5.0
+        with:
+          cache: pip
+          cache-dependency-path: .github/requirements-ci.lock
+          check-latest: true
+          python-version: 3.11
+      - if: contains(steps.check-python.outputs.ls-tags, 'v3.12.0')
+        name: Update python support to v3.12.0
+        run: |
+          import fileinput
+          import os
+          import re
+
+          def update_minor(semver):
+              major, minor = semver.split('.')[:2]
+              return f"{major}.{int(minor)+1}"
+
+          for root, _, files in os.walk('.github/workflows'):
+              for name in files:
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"v3.12.0", lambda semver: f"v{update_minor(semver.group(0)[1:])}.0", line), end='')
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"python-version: 3.11", lambda semver: f"python-version: {update_minor(semver.group(0)[16:])}", line), end='')
+        shell: python
+      - if: contains(steps.check-python-minor.outputs.ls-tags, 'v3.12.0')
+        uses: peter-evans/create-pull-request@v5.0.0
+        with:
+          author: "GitHub <noreply@github.com>"
+          base: ${{ github.ref_name }}
+          branch: dependabot/python-v3/${{ github.ref_name }}
+          committer: "GitHub <noreply@github.com>"
+          commit-message: "feat: bump python support to v3.12.0"
+          labels: python
+          title: "feat: bump python support to v3.12.0"
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+  python-v4:
+    runs-on: ubuntu-latest
+    steps:
+      - id: check-python
+        run: echo "ls-tags='$(git ls-remote https://github.com/python/cpython refs/tags/v4.0.0)'" >> $GITHUB_OUTPUT
+      - if: contains(steps.check-python.outputs.ls-tags, 'v4.0.0')
+        uses: actions/checkout@v3.5.2
+      - if: contains(steps.check-python.outputs.ls-tags, 'v4.0.0')
+        uses: actions/setup-python@v4.5.0
+        with:
+          cache: pip
+          cache-dependency-path: .github/requirements-ci.lock
+          check-latest: true
+          python-version: 3.11
+      - if: contains(steps.check-python.outputs.ls-tags, 'v4.0.0')
+        name: Update python support to v4.0.0
+        run: |
+          import fileinput
+          import os
+          import re
+
+          def update_major(semver):
+              major, _ = semver.split('.')[:2]
+              return f"{int(major)+1}.0"
+
+          def update_minor(semver):
+              major, minor = semver.split('.')[:2]
+              return f"{major}.{int(minor)+1}"
+
+          for root, _, files in os.walk('.github/workflows'):
+              for name in files:
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"v4.0.0", lambda semver: f"v{update_minor(semver.group(0)[1:])}.0", line), end='')
+                  with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
+                      for line in file:
+                          print(re.sub(r"python-version: 3.11", lambda semver: f"python-version: {update_major(semver.group(0)[16:])}", line), end='')
+        shell: python
+      - if: contains(steps.check-python.outputs.ls-tags, 'v4.0.0')
+        uses: peter-evans/create-pull-request@v5.0.0
+        with:
+          author: "GitHub <noreply@github.com>"
+          base: ${{ github.ref_name }}
+          branch: dependabot/python-v4/${{ github.ref_name }}
+          committer: "GitHub <noreply@github.com>"
+          commit-message: "feat: bump python support to v4.0.0"
+          labels: python
+          title: "feat: bump python support to v4.0.0"
+          token: ${{ secrets.WORKFLOW_TOKEN }}
