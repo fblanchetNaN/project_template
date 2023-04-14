@@ -23,7 +23,7 @@ jobs:
           issue-state: "open"
           title-includes: "chore(dev): bump python version (minor)"
           token: ${{ secrets.GITHUB_TOKEN }}
-      - if: ${{ toJSON(steps.python-minor-issue.outputs.issues) == "[]" }}
+      - if: steps.python-minor-issue.outputs.issues[0] == null
         uses: actions-cool/issues-helper@v3.4.0
         with:
           actions: "create-issue"
@@ -40,7 +40,7 @@ jobs:
           issue-state: "open"
           title-includes: "chore(docs): bump node.js version (minor)"
           token: ${{ secrets.GITHUB_TOKEN }}
-      - if: ${{ toJSON(steps.node-minor-issue.outputs.issues) == "[]" }}
+      - if: steps.node-minor-issue.outputs.issues[0] == null
         uses: actions-cool/issues-helper@v3.4.0
         with:
           actions: "create-issue"
@@ -57,7 +57,7 @@ jobs:
           issue-state: "open"
           title-includes: "chore(dev): bump python version (major)"
           token: ${{ secrets.GITHUB_TOKEN }}
-      - if: ${{ toJSON(steps.python-major-issue.outputs.issues) == "[]" }}
+      - if: steps.python-major-issue.outputs.issues[0] == null
         uses: actions-cool/issues-helper@v3.4.0
         with:
           actions: "create-issue"
@@ -74,7 +74,7 @@ jobs:
           issue-state: "open"
           title-includes: "chore(docs): bump Node.js version (major)"
           token: ${{ secrets.GITHUB_TOKEN }}
-      - if: ${{ toJSON(steps.node-major-issue.outputs.issues) == "[]" }}
+      - if: steps.node-major-issue.outputs.issues[0] == null
         uses: actions-cool/issues-helper@v3.4.0
         with:
           actions: "create-issue"
