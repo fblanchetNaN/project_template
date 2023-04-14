@@ -47,6 +47,7 @@ jobs:
           body: Node.js 19.9 has been released
           title: "chore(docs): bump node.js version (minor)"
           token: ${{ secrets.GITHUB_TOKEN }}
+      - run: echo ${{ toJSON(steps.node-minor-issue.outputs.issues) }}
       - id: check-python-major
         run: echo "ls-tags='$(git ls-remote https://github.com/python/cpython refs/tags/v4.0.0)'" >> $GITHUB_OUTPUT
       - id: python-major-issue
