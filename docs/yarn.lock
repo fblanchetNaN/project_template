@@ -1817,15 +1817,15 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-katex@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "@mdit/plugin-katex@npm:0.4.3"
+  version: 0.4.4
+  resolution: "@mdit/plugin-katex@npm:0.4.4"
   dependencies:
-    "@mdit/plugin-tex": 0.4.3
+    "@mdit/plugin-tex": 0.4.4
     "@types/katex": ^0.16.0
     "@types/markdown-it": ^12.2.3
-    katex: ^0.16.4
+    katex: ^0.16.6
     markdown-it: ^13.0.1
-  checksum: 5237ad77c273c1fd869c443e5c34127fe636c50565e53f253f3ea679dca56b55a2d079c2c4f6296cdb401908e020626b1307d0f7497fa1129d62ac94029610de
+  checksum: 125c781b852107821d33b64eb9d08398306ee592a7a2000581946720287ae742197bcd64b73a3acd2fc02dc3d68cb11159831ad9358a43d2dd12693f85a83b4c
   languageName: node
   linkType: hard
 
@@ -1909,6 +1909,16 @@ __metadata:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
   checksum: 4a69bca0369fd7b9df35921b5a4a5ec3d4c7652f138928a7210762ab7b3cde52564a93f2a1c9142661298f56acc18665f1aeb2385f2cfeb32ac55f9390634d49
+  languageName: node
+  linkType: hard
+
+"@mdit/plugin-tex@npm:0.4.4":
+  version: 0.4.4
+  resolution: "@mdit/plugin-tex@npm:0.4.4"
+  dependencies:
+    "@types/markdown-it": ^12.2.3
+    markdown-it: ^13.0.1
+  checksum: 37fe2ae57fa4c7006f552e769b031ec8a70917b33c9fb8ee78c4c226eb42f102bb0c6440b164fdec66718be62cb8e06d98ccdd026445c536b3bc44f9715a22f3
   languageName: node
   linkType: hard
 
@@ -3370,7 +3380,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^8.0.0":
+"commander@npm:^8.0.0, commander@npm:^8.3.0":
   version: 8.3.0
   resolution: "commander@npm:8.3.0"
   checksum: 0f82321821fc27b83bd409510bb9deeebcfa799ff0bf5d102128b500b7af22872c0c92cb6a0ebc5a4cf19c6b550fba9cedfa7329d18c6442a625f851377bacf0
@@ -5401,6 +5411,17 @@ __metadata:
   bin:
     katex: cli.js
   checksum: 94eaf1fbd8365792308527695c09baa6d2d84e2d0170e4af44fb12be3ed403fb3430caff2410117f2f1a9dfdb329f61ab9611d97e645d9c89ee60940698a45cc
+  languageName: node
+  linkType: hard
+
+"katex@npm:^0.16.6":
+  version: 0.16.7
+  resolution: "katex@npm:0.16.7"
+  dependencies:
+    commander: ^8.3.0
+  bin:
+    katex: cli.js
+  checksum: 6c3f61e28820ecba074a149d17be6d731d8a950cdd7826851e16f2b0f3627c4119acd8c6e4fb86950063c4e99a6e478720ea6cca3dc82e59bbca81001ee00b70
   languageName: node
   linkType: hard
 
