@@ -59,7 +59,10 @@ jobs:
           branch: dependabot/nodejs-major/${{ github.ref_name }}
           committer: "GitHub <noreply@github.com>"
           commit-message: "chore(docs): bump node.js to v20.0.0"
-          labels: javascript
+          labels: |
+            documentation
+            javascript
+            merge:queue
           title: "chore(docs): bump node.js to v20.0.0"
           token: ${{ secrets.WORKFLOW_TOKEN }}
       - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
@@ -103,7 +106,10 @@ jobs:
           branch: dependabot/nodejs-minor/${{ github.ref_name }}
           committer: "GitHub <noreply@github.com>"
           commit-message: "chore(docs): bump node.js to v19.9.0"
-          labels: javascript
+          labels: |
+            documentation
+            javascript
+            merge:queue
           title: "chore(docs): bump node.js to v19.9.0"
           token: ${{ secrets.WORKFLOW_TOKEN }}
   python-v3:
