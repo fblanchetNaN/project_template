@@ -10,22 +10,28 @@ on:
   workflow_dispatch:
 
 jobs:
-  nodejs:
+  check-nodejs-major:
+    name: Check if a new node.js major version has been released
+    outputs:
+      ls-tags: ${{ steps.check.outputs.ls-tags }}
     runs-on: ubuntu-latest
     steps:
-      - id: check-node-major
+      - id: check
         run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v20.0.0)'" >> $GITHUB_OUTPUT
-      - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
-        uses: actions/checkout@v3.5.2
-      - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
-        uses: actions/setup-python@v4.5.0
+  nodejs-major:
+    if: contains(needs.check-nodejs-major.outputs.ls-tags, 'v20.0.0')
+    name: Create a new PR bumping node.js to v20.0.0
+    needs: check-nodejs-major
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: actions/setup-python@v4.5.0
         with:
           cache: pip
           cache-dependency-path: .github/requirements-ci.lock
           check-latest: true
           python-version: 3.11
-      - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
-        name: Update node.js to v20.0.0
+      - name: Update node.js to v20.0.0
         run: |
           import fileinput
           import os
@@ -51,32 +57,43 @@ jobs:
                       for line in file:
                           print(re.sub(r"node-version: 19.8", lambda semver: f"node-version: {update_major(semver.group(0)[14:])}", line), end='')
         shell: python
-      - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
-        uses: peter-evans/create-pull-request@v5.0.0
+      - uses: peter-evans/create-pull-request@v5.0.0
         with:
           author: "GitHub <noreply@github.com>"
           base: ${{ github.ref_name }}
           branch: dependabot/nodejs-major/${{ github.ref_name }}
           committer: "GitHub <noreply@github.com>"
           commit-message: "chore(docs): bump node.js to v20.0.0"
-          labels: javascript
+          labels: |
+            documentation
+            javascript
+            merge:queue
           title: "chore(docs): bump node.js to v20.0.0"
           token: ${{ secrets.WORKFLOW_TOKEN }}
-      - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
-        run: exit 0
-      - id: check-node-minor
+  check-nodejs-minor:
+    if: ${{ ! contains(needs.check-nodejs-major.outputs.ls-tags, 'v20.0.0') }}
+    name: Check if a new node.js minor version has been released
+    needs: check-nodejs-major
+    outputs:
+      ls-tags: ${{ steps.check.outputs.ls-tags }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: check
         run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v19.9.0)'" >> $GITHUB_OUTPUT
-      - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
-        uses: actions/checkout@v3.5.2
-      - if: contains(steps.check-node-major.outputs.ls-tags, 'v19.9.0')
-        uses: actions/setup-python@v4.5.0
+  nodejs-minor:
+    if: contains(needs.check-nodejs-minor.outputs.ls-tags, 'v19.9.0')
+    name: Create a new PR bumping node.js to v19.9.0
+    needs: check-nodejs-minor
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: actions/setup-python@v4.5.0
         with:
           cache: pip
           cache-dependency-path: .github/requirements-ci.lock
           check-latest: true
           python-version: 3.11
-      - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
-        name: Update node.js to v19.9.0
+      - name: Update node.js to v19.9.0
         run: |
           import fileinput
           import os
@@ -95,33 +112,41 @@ jobs:
                       for line in file:
                           print(re.sub(r"node-version: 19.8", lambda semver: f"node-version: {update_minor(semver.group(0)[14:])}", line), end='')
         shell: python
-      - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
-        uses: peter-evans/create-pull-request@v5.0.0
+      - uses: peter-evans/create-pull-request@v5.0.0
         with:
           author: "GitHub <noreply@github.com>"
           base: ${{ github.ref_name }}
           branch: dependabot/nodejs-minor/${{ github.ref_name }}
           committer: "GitHub <noreply@github.com>"
           commit-message: "chore(docs): bump node.js to v19.9.0"
-          labels: javascript
+          labels: |
+            documentation
+            javascript
+            merge:queue
           title: "chore(docs): bump node.js to v19.9.0"
           token: ${{ secrets.WORKFLOW_TOKEN }}
-  python-v3:
+  check-python-v3:
+    name: Check if a new python 3 version has been released
+    outputs:
+      ls-tags: ${{ steps.check.outputs.ls-tags }}
     runs-on: ubuntu-latest
     steps:
-      - id: check-python
+      - id: check
         run: echo "ls-tags='$(git ls-remote https://github.com/python/cpython refs/tags/v3.12.0)'" >> $GITHUB_OUTPUT
-      - if: contains(steps.check-python.outputs.ls-tags, 'v3.12.0')
-        uses: actions/checkout@v3.5.2
-      - if: contains(steps.check-python.outputs.ls-tags, 'v3.12.0')
-        uses: actions/setup-python@v4.5.0
+  python-v3:
+    if: contains(needs.check-python-v3.outputs.ls-tags, 'v3.12.0')
+    name: Create a new PR bumping python support to v3.12.0
+    needs: check-python-v3
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: actions/setup-python@v4.5.0
         with:
           cache: pip
           cache-dependency-path: .github/requirements-ci.lock
           check-latest: true
           python-version: 3.11
-      - if: contains(steps.check-python.outputs.ls-tags, 'v3.12.0')
-        name: Update python support to v3.12.0
+      - name: Update python support to v3.12.0
         run: |
           import fileinput
           import os
@@ -140,8 +165,7 @@ jobs:
                       for line in file:
                           print(re.sub(r"python-version: 3.11", lambda semver: f"python-version: {update_minor(semver.group(0)[16:])}", line), end='')
         shell: python
-      - if: contains(steps.check-python-minor.outputs.ls-tags, 'v3.12.0')
-        uses: peter-evans/create-pull-request@v5.0.0
+      - uses: peter-evans/create-pull-request@v5.0.0
         with:
           author: "GitHub <noreply@github.com>"
           base: ${{ github.ref_name }}
@@ -151,22 +175,28 @@ jobs:
           labels: python
           title: "feat: bump python support to v3.12.0"
           token: ${{ secrets.WORKFLOW_TOKEN }}
-  python-v4:
+  check-python-v4:
+    name: Check if a new python 4 version has been released
+    outputs:
+      ls-tags: ${{ steps.check.outputs.ls-tags }}
     runs-on: ubuntu-latest
     steps:
-      - id: check-python
+      - id: check
         run: echo "ls-tags='$(git ls-remote https://github.com/python/cpython refs/tags/v4.0.0)'" >> $GITHUB_OUTPUT
-      - if: contains(steps.check-python.outputs.ls-tags, 'v4.0.0')
-        uses: actions/checkout@v3.5.2
-      - if: contains(steps.check-python.outputs.ls-tags, 'v4.0.0')
-        uses: actions/setup-python@v4.5.0
+  python-v4:
+    if: contains(needs.check-python-v4.outputs.ls-tags, 'v4.0.0')
+    name: Create a new PR bumping python support to v4.0.0
+    needs: check-python-v4
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: actions/setup-python@v4.5.0
         with:
           cache: pip
           cache-dependency-path: .github/requirements-ci.lock
           check-latest: true
           python-version: 3.11
-      - if: contains(steps.check-python.outputs.ls-tags, 'v4.0.0')
-        name: Update python support to v4.0.0
+      - name: Update python support to v4.0.0
         run: |
           import fileinput
           import os
@@ -189,8 +219,7 @@ jobs:
                       for line in file:
                           print(re.sub(r"python-version: 3.11", lambda semver: f"python-version: {update_major(semver.group(0)[16:])}", line), end='')
         shell: python
-      - if: contains(steps.check-python.outputs.ls-tags, 'v4.0.0')
-        uses: peter-evans/create-pull-request@v5.0.0
+      - uses: peter-evans/create-pull-request@v5.0.0
         with:
           author: "GitHub <noreply@github.com>"
           base: ${{ github.ref_name }}
