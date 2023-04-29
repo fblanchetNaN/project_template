@@ -6410,9 +6410,9 @@ __metadata:
   linkType: hard
 
 "reveal.js@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "reveal.js@npm:4.4.0"
-  checksum: e3918968e919a53d7a572b175c81ba53133617f60ab149085e57c93a441ff5195434a187b127f0e8c29a0a073fe49c4b9cbec92245ad7d62ae65f0fb80de6ede
+  version: 4.5.0
+  resolution: "reveal.js@npm:4.5.0"
+  checksum: c6bd879c603c426666fc33da78b98e0cc14d073f2b6f62ac8f3d3b737c31dc95d21a7fa3ff920d6cc0f5adb28efc0e1fc46d7408065bad1feff6cefcf2986143
   languageName: node
   linkType: hard
 
