@@ -4433,13 +4433,13 @@ __metadata:
   linkType: hard
 
 "flowchart.ts@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "flowchart.ts@npm:0.1.2"
+  version: 0.1.5
+  resolution: "flowchart.ts@npm:0.1.5"
   dependencies:
     "@types/raphael": 2.3.3
     raphael: 2.3.0
-    tslib: 2.4.1
-  checksum: ab70571f72b2e4129b7111c9715d0925ff39d4f66821a40e816d4c934eb56a85634a56511cc133629caa0bee1b6cd1f2f9e14cba7b4c037ed12eee3796b3f8bf
+    tslib: 2.5.0
+  checksum: c1f09502fb9965aae74693447a4159209c7e0cb46b6d5df04d8b776b884478ee97ba5f55889d26ce627f5fea327e99db5d065644962002513f624fc3a557863d
   languageName: node
   linkType: hard
 
@@ -7132,10 +7132,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.4.1":
-  version: 2.4.1
-  resolution: "tslib@npm:2.4.1"
-  checksum: 19480d6e0313292bd6505d4efe096a6b31c70e21cf08b5febf4da62e95c265c8f571f7b36fcc3d1a17e068032f59c269fab3459d6cd3ed6949eafecf64315fca
+"tslib@npm:2.5.0":
+  version: 2.5.0
+  resolution: "tslib@npm:2.5.0"
+  checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
   languageName: node
   linkType: hard
 
