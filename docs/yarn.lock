@@ -1747,12 +1747,12 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-stylize@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "@mdit/plugin-stylize@npm:0.4.3"
+  version: 0.4.4
+  resolution: "@mdit/plugin-stylize@npm:0.4.4"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: ebabd2acf092a2f6a326e1b28e29470460f08837247907e45b038870588618ca4c44df19a207b8ff552790229d069fd36fc94375651afac142735b171881e0c5
+  checksum: cc0486cbc9fa951ed8ce541ab3dc8bf78a2aabd6c30eb684bbd49fff81350f9ed69daeb1221805b7f3f8abfa8468506cd2fe10157989083325447eac1db4134d
   languageName: node
   linkType: hard
 
