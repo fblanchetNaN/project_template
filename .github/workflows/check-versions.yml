@@ -46,10 +46,10 @@ jobs:
                           print(re.sub(r"v20.0.0", lambda semver: f"v{update_major(semver.group(0)[1:])}.0", line), end='')
                   with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
                       for line in file:
-                          print(re.sub(r"v19.9.0", lambda semver: f"v{update_minor(update_major(semver.group(0)[1:]))}.0", line), end='')
+                          print(re.sub(r"v19.10.0", lambda semver: f"v{update_minor(update_major(semver.group(0)[1:]))}.0", line), end='')
                   with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
                       for line in file:
-                          print(re.sub(r"node-version: 19.8", lambda semver: f"node-version: {update_major(semver.group(0)[14:])}", line), end='')
+                          print(re.sub(r"node-version: 19.9", lambda semver: f"node-version: {update_major(semver.group(0)[14:])}", line), end='')
         shell: python
       - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
         uses: peter-evans/create-pull-request@v5.0.0
@@ -65,18 +65,18 @@ jobs:
       - if: contains(steps.check-node-major.outputs.ls-tags, 'v20.0.0')
         run: exit 0
       - id: check-node-minor
-        run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v19.9.0)'" >> $GITHUB_OUTPUT
-      - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
+        run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v19.10.0)'" >> $GITHUB_OUTPUT
+      - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.10.0')
         uses: actions/checkout@v3.5.2
-      - if: contains(steps.check-node-major.outputs.ls-tags, 'v19.9.0')
+      - if: contains(steps.check-node-major.outputs.ls-tags, 'v19.10.0')
         uses: actions/setup-python@v4.5.0
         with:
           cache: pip
           cache-dependency-path: .github/requirements-ci.lock
           check-latest: true
           python-version: 3.11
-      - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
-        name: Update node.js to v19.9.0
+      - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.10.0')
+        name: Update node.js to v19.10.0
         run: |
           import fileinput
           import os
@@ -90,21 +90,21 @@ jobs:
               for name in files:
                   with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
                       for line in file:
-                          print(re.sub(r"v19.9.0", lambda semver: f"v{update_minor(semver.group(0)[1:])}.0", line), end='')
+                          print(re.sub(r"v19.10.0", lambda semver: f"v{update_minor(semver.group(0)[1:])}.0", line), end='')
                   with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
                       for line in file:
-                          print(re.sub(r"node-version: 19.8", lambda semver: f"node-version: {update_minor(semver.group(0)[14:])}", line), end='')
+                          print(re.sub(r"node-version: 19.9", lambda semver: f"node-version: {update_minor(semver.group(0)[14:])}", line), end='')
         shell: python
-      - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.9.0')
+      - if: contains(steps.check-node-minor.outputs.ls-tags, 'v19.10.0')
         uses: peter-evans/create-pull-request@v5.0.0
         with:
           author: "GitHub <noreply@github.com>"
           base: ${{ github.ref_name }}
           branch: dependabot/nodejs-minor/${{ github.ref_name }}
           committer: "GitHub <noreply@github.com>"
-          commit-message: "chore(docs): bump node.js to v19.9.0"
+          commit-message: "chore(docs): bump node.js to v19.10.0"
           labels: javascript
-          title: "chore(docs): bump node.js to v19.9.0"
+          title: "chore(docs): bump node.js to v19.10.0"
           token: ${{ secrets.WORKFLOW_TOKEN }}
   python-v3:
     runs-on: ubuntu-latest
