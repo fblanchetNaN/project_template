@@ -2317,11 +2317,11 @@ __metadata:
   linkType: hard
 
 "@vue/repl@npm:^1.3.5":
-  version: 1.4.0
-  resolution: "@vue/repl@npm:1.4.0"
+  version: 1.4.1
+  resolution: "@vue/repl@npm:1.4.1"
   peerDependencies:
     vue: ^3.2.13
-  checksum: 2aefd7d68d9b306efdfa769397d6899a5d0bab597db4c1ba7e2a1ef7f10dbbc2a32c8ac6e5ae960dfc0ec01596d6160f0b65b9b777dd33abf45cf20c81e78c37
+  checksum: 2a7873024caf9c01fc4986aad41aa71a77deeaffdc1380c4fd35f652a18846be12238ef6188ca82ab90cb5450d74d044a0e79618803b0e710db9dbaf869eb5c5
   languageName: node
   linkType: hard
 
