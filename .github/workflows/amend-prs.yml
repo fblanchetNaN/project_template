@@ -90,7 +90,7 @@ jobs:
         with:
           name: yarn-lock--${{ github.sha }}
           path: docs
-      - uses: EndBug/add-and-commit@v9.1.1
+      - uses: EndBug/add-and-commit@v9.1.2
         with:
           author_name: ${{ github.event.workflow_run.head_commit.author.name }}
           author_email: ${{ github.event.workflow_run.head_commit.author.email }}
