@@ -165,14 +165,15 @@ __metadata:
   linkType: hard
 
 "@babel/helper-create-regexp-features-plugin@npm:^7.18.6, @babel/helper-create-regexp-features-plugin@npm:^7.20.5":
-  version: 7.21.4
-  resolution: "@babel/helper-create-regexp-features-plugin@npm:7.21.4"
+  version: 7.21.5
+  resolution: "@babel/helper-create-regexp-features-plugin@npm:7.21.5"
   dependencies:
     "@babel/helper-annotate-as-pure": ^7.18.6
     regexpu-core: ^5.3.1
+    semver: ^6.3.0
   peerDependencies:
     "@babel/core": ^7.0.0
-  checksum: 78334865db2cd1d64d103bd0d96dee2818b0387d10aa973c084e245e829df32652bca530803e397b7158af4c02b9b21d5a9601c29bdfbb8d54a3d4ad894e067b
+  checksum: c38cb01b242b0b2bb9783072e6ba4d4aa08c66ea39f9b74a45f31f95a6fe2ff3ba782d8ce09827c09939450d2d39a6db41c83051ef191482bfb67b63a5023e24
   languageName: node
   linkType: hard
 
