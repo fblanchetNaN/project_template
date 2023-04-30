@@ -29,6 +29,7 @@ dev = [
   "hammett==0.9.4",
   "hypothesis==6.74.1",
   "mutmut==2.4.3",
+  "npdoc-to-md==2.0.1",
 ]
 stable = []
 
