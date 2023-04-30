@@ -1888,12 +1888,12 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-uml@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "@mdit/plugin-uml@npm:0.4.3"
+  version: 0.4.4
+  resolution: "@mdit/plugin-uml@npm:0.4.4"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: ba3af24aec76309ae6631b6db424d955536dbead5a784ea325d514bb55a3f4beb7feae82a6524eff3824d831178c0be8466a099b124baa4b0e671e29a0642b83
+  checksum: 9b564624eeba7a2aff260512470057baab19fe596b5d5565487f32bd603e3e34c0f7f781a86f3196e03eb0a0cd384598e52b0beeab8f2f6251dd8bbca5941bc1
   languageName: node
   linkType: hard
 
