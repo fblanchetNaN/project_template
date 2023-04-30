@@ -1753,13 +1753,13 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-include@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "@mdit/plugin-include@npm:0.4.3"
+  version: 0.4.4
+  resolution: "@mdit/plugin-include@npm:0.4.4"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
     upath: ^2.0.1
-  checksum: 0f662020c55ef37b47b4689b9bfa2240f4cbc697ffbc3605228dc39c728e5828cf54420aa0e94c60017ec5c9e3fa7362259654347e34634e564f213211dab71b
+  checksum: d1cec7640b5253de5607f52d53fd23fd109bf4a33e745110848f2b47b8146bb3b02e35a9b2213a1288b3ba978996dae212366cef96bf399f13748bb3e3426baf
   languageName: node
   linkType: hard
 
