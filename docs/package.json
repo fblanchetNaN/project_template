@@ -8,7 +8,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "vuepress build .",
-    "serve": "vuepress dev ."
+    "build": "python preprocess.py & vuepress build .",
+    "serve": "python preprocess.py & vuepress dev ."
   }
 }
