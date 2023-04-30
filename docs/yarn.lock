@@ -2980,9 +2980,9 @@ __metadata:
   linkType: hard
 
 "bcrypt-ts@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "bcrypt-ts@npm:3.0.0"
-  checksum: 85950cf669672e838d991a098e856b53f7b2b869ec46c16fcc11716461cf03e59e983f39fec9e5325ec79a052c0e87b6a20019c119fc21b9fb1bdbcdd2142be9
+  version: 3.0.1
+  resolution: "bcrypt-ts@npm:3.0.1"
+  checksum: 08d7551b3ea5d6e4cedc5e95809e82190de4e9410d54fc3773d8909fe34e1c49e968d6e18888f4c3faf677f564fe36e2b7ea6ef03088a1532fa5118473c240bf
   languageName: node
   linkType: hard
 
