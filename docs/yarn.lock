@@ -1666,12 +1666,12 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-figure@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "@mdit/plugin-figure@npm:0.4.3"
+  version: 0.4.4
+  resolution: "@mdit/plugin-figure@npm:0.4.4"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: 8ffadb77ff3176be4d5bc82c0adaf30a6c0e012d4881dedfb35018edf32d339066c678504a69a85101517898dd3f6ab3aa1df1bd57e8be3d744f91a9d783941b
+  checksum: ce4c9fce20647d198b6a0a7cffd06801e020387e511baf398b6b92d5156ef9f435fc6a0a0c74d3a0eaada86bd85ca1ca7006eaecd47d1d5b99bcaa4923dd96e5
   languageName: node
   linkType: hard
 
