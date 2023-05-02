@@ -37,7 +37,7 @@ jobs:
           path: ~/.cache/pre-commit
       - if: ${{ ! steps.cache-pre-commit.outputs.cache-hit }}
         run: pre-commit install-hooks
-      - uses: peter-evans/create-pull-request@v5.0.0
+      - uses: peter-evans/create-pull-request@v5.0.1
         with:
           author: "GitHub <noreply@github.com>"
           base: ${{ github.head_ref || github.ref_name }}
