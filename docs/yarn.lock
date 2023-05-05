@@ -3269,10 +3269,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"codem-isoboxer@npm:0.3.6":
-  version: 0.3.6
-  resolution: "codem-isoboxer@npm:0.3.6"
-  checksum: aca3f0f75c57c4f3eab14727e45f21e595fb7ebf0f9f03d7ba2a320e62b4c8ae8ce9856e39336aba1b452c1f6b26a3a6e4fcd5c228f36242d0cc6f39e528df0b
+"codem-isoboxer@npm:0.3.9":
+  version: 0.3.9
+  resolution: "codem-isoboxer@npm:0.3.9"
+  checksum: a5217d4f21fe59dcf839f7e633e1099c6c51a5783b81fe516206ee89a3e5a4fcc32aa2e63b85bea5e7568fbff4b5385109c7d83bff5abd7800540bafc730ad1d
   languageName: node
   linkType: hard
 
@@ -3841,20 +3841,20 @@ __metadata:
   linkType: hard
 
 "dashjs@npm:^4.6.0":
-  version: 4.6.0
-  resolution: "dashjs@npm:4.6.0"
+  version: 4.7.0
+  resolution: "dashjs@npm:4.7.0"
   dependencies:
     bcp-47-match: ^1.0.3
     bcp-47-normalize: ^1.1.1
-    codem-isoboxer: 0.3.6
+    codem-isoboxer: 0.3.9
     es6-promise: ^4.2.8
     fast-deep-equal: 2.0.1
     html-entities: ^1.2.1
-    imsc: ^1.0.2
+    imsc: ^1.1.3
     localforage: ^1.7.1
     path-browserify: ^1.0.1
     ua-parser-js: ^1.0.2
-  checksum: 20eb63a129965a2b661be27a601b2d3b67b59a42cf68588765315efb555f3a89bd35384c9967284d38dd0c5b5348579e603626c487650ad25e1d822afa1f3abc
+  checksum: dad8af2e073436dddf4249b48700f91aa2f2a06f7b64abb6be8e1f3f13e290c92f229c9ee038fa3d9d4b80630be785cfd2753b1afd669e39891f096aca1953ef
   languageName: node
   linkType: hard
 
@@ -4893,7 +4893,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"imsc@npm:^1.0.2":
+"imsc@npm:^1.1.3":
   version: 1.1.3
   resolution: "imsc@npm:1.1.3"
   dependencies:
