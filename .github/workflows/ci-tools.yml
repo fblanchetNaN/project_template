@@ -39,6 +39,11 @@ jobs:
         run: |
           source "$( python -m hatch env find ci )/bin/activate"
           python -m pip freeze --all --exclude-editable > .github/requirements-ci.lock
+      - run: python -m hatch --verbose env create docs
+      - name: Freeze dependencies for docs tools from a fresh environment
+        run: |
+          source "$( python -m hatch env find docs )/bin/activate"
+          python -m pip freeze --all --exclude-editable > .github/requirements-docs.lock
       - uses: peter-evans/create-pull-request@v5.0.1
         with:
           author: "GitHub <noreply@github.com>"

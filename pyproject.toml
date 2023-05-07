@@ -29,6 +29,8 @@ dev = [
   "hammett==0.9.4",
   "hypothesis==6.75.2",
   "mutmut==2.4.3",
+]
+docs = [
   "npdoc-to-md==2.0.1",
 ]
 stable = []
@@ -55,6 +57,9 @@ template = "venv"
 
 [tool.hatch.envs.default]
 features = ["dev", "stable"]
+
+[tool.hatch.envs.docs]
+features = ["dev", "docs", "stable"]
 
 [tool.hatch.envs.minimal]
 features = ["dev"]
