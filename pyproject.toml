@@ -59,7 +59,7 @@ template = "venv"
 features = ["dev", "stable"]
 
 [tool.hatch.envs.docs]
-features = ["dev", "docs", "stable"]
+features = ["docs", "stable"]
 
 [tool.hatch.envs.minimal]
 features = ["dev"]
