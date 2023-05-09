@@ -1711,12 +1711,12 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-img-size@npm:^0.4.4":
-  version: 0.4.4
-  resolution: "@mdit/plugin-img-size@npm:0.4.4"
+  version: 0.4.5
+  resolution: "@mdit/plugin-img-size@npm:0.4.5"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: 4f2004bd7dbac2f40a7f202fbc45385229e39982c7bd044313fb7b4022c93a69f7f069e8777b41044a9f7937402f4fedf943f58db74e5422d30c5a12cbf55cef
+  checksum: e30482e87299dbcdbbab4276fc17b89aaa740d7f55e6b0eab622b02cd7e366b1d4505e7250316207474a861f1be8621957119808b5ba8c9cc1b2f0e97eda01b5
   languageName: node
   linkType: hard
 
