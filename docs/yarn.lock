@@ -1778,12 +1778,12 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-sub@npm:^0.4.4":
-  version: 0.4.4
-  resolution: "@mdit/plugin-sub@npm:0.4.4"
+  version: 0.4.5
+  resolution: "@mdit/plugin-sub@npm:0.4.5"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: 9ae11497534fcddf313dda3574244dcc953dd0a2b9f3d91f91827ba8440224db747d0e881fd6643eeb68c1eea04b3c92c5d0f2922e7da416e5a4327fd338073a
+  checksum: 3e1581237f5201810a92c172063926e216ef45090f78feeedce5137e94c7c88f95c72afc0b3d7c710e0d294774d01773a4691a3a5954e02bd8f37bf26a113321
   languageName: node
   linkType: hard
 
