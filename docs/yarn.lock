@@ -1732,15 +1732,15 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-katex@npm:^0.4.4":
-  version: 0.4.4
-  resolution: "@mdit/plugin-katex@npm:0.4.4"
+  version: 0.4.5
+  resolution: "@mdit/plugin-katex@npm:0.4.5"
   dependencies:
-    "@mdit/plugin-tex": 0.4.4
+    "@mdit/plugin-tex": 0.4.5
     "@types/katex": ^0.16.0
     "@types/markdown-it": ^12.2.3
-    katex: ^0.16.6
+    katex: ^0.16.7
     markdown-it: ^13.0.1
-  checksum: 125c781b852107821d33b64eb9d08398306ee592a7a2000581946720287ae742197bcd64b73a3acd2fc02dc3d68cb11159831ad9358a43d2dd12693f85a83b4c
+  checksum: e8de525ca6767c4487b15bb40f48acab0b9ea349e9a7128cf1df96968378281de0e3d4312c0a303f4ee7e6aa66965f67b80579b44d12cd151553ca1d535f9abf
   languageName: node
   linkType: hard
 
@@ -1824,6 +1824,16 @@ __metadata:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
   checksum: 37fe2ae57fa4c7006f552e769b031ec8a70917b33c9fb8ee78c4c226eb42f102bb0c6440b164fdec66718be62cb8e06d98ccdd026445c536b3bc44f9715a22f3
+  languageName: node
+  linkType: hard
+
+"@mdit/plugin-tex@npm:0.4.5":
+  version: 0.4.5
+  resolution: "@mdit/plugin-tex@npm:0.4.5"
+  dependencies:
+    "@types/markdown-it": ^12.2.3
+    markdown-it: ^13.0.1
+  checksum: beaeaeb3e2d288293e07734f9fe6c6ca355c046a51fff7faa3e409c0a8776d2c2bac8e8cd28591f3f5bc4546c24b271b7c3672df04649868e0abb08e73cc3034
   languageName: node
   linkType: hard
 
@@ -5371,7 +5381,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"katex@npm:^0.16.6, katex@npm:^0.16.7":
+"katex@npm:^0.16.7":
   version: 0.16.7
   resolution: "katex@npm:0.16.7"
   dependencies:
