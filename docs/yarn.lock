@@ -2823,14 +2823,14 @@ __metadata:
   linkType: hard
 
 "artalk@npm:^2.5.4":
-  version: 2.5.4
-  resolution: "artalk@npm:2.5.4"
+  version: 2.5.5
+  resolution: "artalk@npm:2.5.5"
   dependencies:
     abortcontroller-polyfill: ^1.7.5
     hanabi: ^0.4.0
     insane: ^2.6.2
-    marked: ^4.3.0
-  checksum: e7aca4ad56b84a9f8d13bd1d29b474744fe4da600e6dccda4e091d9f762eeaa4d7daca2e33f40c7aba3d0b87241845d1ab19d24f43638b9ae9cce6694a6df389
+    marked: ^5.0.1
+  checksum: 92c9d96fe485915826813c3a491a2adc4acae62b2c732084e99786ab6e59125fec316766d281b7d7e787acca8e7ba3bba437f42b426a197ea59930f4d6931a81
   languageName: node
   linkType: hard
 
@@ -5629,6 +5629,15 @@ __metadata:
   bin:
     marked: bin/marked.js
   checksum: 0db6817893952c3ec710eb9ceafb8468bf5ae38cb0f92b7b083baa13d70b19774674be04db5b817681fa7c5c6a088f61300815e4dd75a59696f4716ad69f6260
+  languageName: node
+  linkType: hard
+
+"marked@npm:^5.0.1":
+  version: 5.0.2
+  resolution: "marked@npm:5.0.2"
+  bin:
+    marked: bin/marked.js
+  checksum: 9d66c998a91d33c422f6242fe08c3b451e4e7863a37e990617179f96786f613e49176859dacc9557d3f6944b2afe44feaaa6a1187550a68746f070c250462213
   languageName: node
   linkType: hard
 
