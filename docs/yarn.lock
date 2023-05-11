@@ -6764,7 +6764,7 @@ __metadata:
   dependencies:
     "@vuepress/client": 2.0.0-beta.61
     "@vuepress/plugin-shiki": 2.0.0-beta.62
-    vue: 3.2.47
+    vue: 3.3.1
     vuepress: 2.0.0-beta.61
     vuepress-theme-hope: 2.0.0-beta.208
   languageName: unknown
@@ -7594,7 +7594,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue@npm:^3.3.1":
+"vue@npm:3.3.1, vue@npm:^3.3.1":
   version: 3.3.1
   resolution: "vue@npm:3.3.1"
   dependencies:
