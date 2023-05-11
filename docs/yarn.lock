@@ -1755,15 +1755,15 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-mathjax@npm:^0.4.4":
-  version: 0.4.4
-  resolution: "@mdit/plugin-mathjax@npm:0.4.4"
+  version: 0.4.5
+  resolution: "@mdit/plugin-mathjax@npm:0.4.5"
   dependencies:
-    "@mdit/plugin-tex": 0.4.4
+    "@mdit/plugin-tex": 0.4.5
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
     mathjax-full: ^3.2.2
     upath: ^2.0.1
-  checksum: 81081fa912c5952894b83455de6d1f8a0031883c32a90db0b8e82e41deff66630154d7fb84789a9cf4abaff8008d0c2b7eeb9fa661bab52f0875cc42ede69194
+  checksum: d903d4ce124bc45ee45399320d1a6ffae5d37739f0ffa13710faa0310bda9a772157a76e71cbe8320f1c90243566a25c37f028e633e3c1e4cffa7af7f1849612
   languageName: node
   linkType: hard
 
@@ -1817,16 +1817,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdit/plugin-tex@npm:0.4.4, @mdit/plugin-tex@npm:^0.4.4":
-  version: 0.4.4
-  resolution: "@mdit/plugin-tex@npm:0.4.4"
-  dependencies:
-    "@types/markdown-it": ^12.2.3
-    markdown-it: ^13.0.1
-  checksum: 37fe2ae57fa4c7006f552e769b031ec8a70917b33c9fb8ee78c4c226eb42f102bb0c6440b164fdec66718be62cb8e06d98ccdd026445c536b3bc44f9715a22f3
-  languageName: node
-  linkType: hard
-
 "@mdit/plugin-tex@npm:0.4.5":
   version: 0.4.5
   resolution: "@mdit/plugin-tex@npm:0.4.5"
@@ -1834,6 +1824,16 @@ __metadata:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
   checksum: beaeaeb3e2d288293e07734f9fe6c6ca355c046a51fff7faa3e409c0a8776d2c2bac8e8cd28591f3f5bc4546c24b271b7c3672df04649868e0abb08e73cc3034
+  languageName: node
+  linkType: hard
+
+"@mdit/plugin-tex@npm:^0.4.4":
+  version: 0.4.4
+  resolution: "@mdit/plugin-tex@npm:0.4.4"
+  dependencies:
+    "@types/markdown-it": ^12.2.3
+    markdown-it: ^13.0.1
+  checksum: 37fe2ae57fa4c7006f552e769b031ec8a70917b33c9fb8ee78c4c226eb42f102bb0c6440b164fdec66718be62cb8e06d98ccdd026445c536b3bc44f9715a22f3
   languageName: node
   linkType: hard
 
