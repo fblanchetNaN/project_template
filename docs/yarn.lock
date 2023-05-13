@@ -2885,11 +2885,11 @@ __metadata:
   linkType: hard
 
 "artplayer@npm:^5.0.6":
-  version: 5.0.6
-  resolution: "artplayer@npm:5.0.6"
+  version: 5.0.7
+  resolution: "artplayer@npm:5.0.7"
   dependencies:
     option-validator: ^2.0.6
-  checksum: 010eb61962cc3cf180dc5e91cc9fc42a5dda5d24ba39e15bae00c41ed5e87db52416da5cd60c8aa9c3b6204c01cd27ea332343f22e52ece328d00acd165c865f
+  checksum: 19cb7230f989822057d3f46c6bf6623e27933bba92017305ff2d7d6dc2857fb606592ac741408bb7cea20c2686a8471c44dfa355250820c57dd89f2b5591e890
   languageName: node
   linkType: hard
 
