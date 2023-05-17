@@ -7324,8 +7324,8 @@ __metadata:
   linkType: hard
 
 "vue-demi@npm:>=0.14.0":
-  version: 0.14.1
-  resolution: "vue-demi@npm:0.14.1"
+  version: 0.14.4
+  resolution: "vue-demi@npm:0.14.4"
   peerDependencies:
     "@vue/composition-api": ^1.0.0-rc.1
     vue: ^3.0.0-0 || ^2.6.0
@@ -7335,7 +7335,7 @@ __metadata:
   bin:
     vue-demi-fix: bin/vue-demi-fix.js
     vue-demi-switch: bin/vue-demi-switch.js
-  checksum: af46db084503910f2fa0174d207a77018edf73f3cac86ac2aea97d073b71c0700e41fa915017722efc7d78aa2b7b7f0851b731efc6e87cce16a6fd1845ffffec
+  checksum: b54b02871290c940a316f96bc43de5628c82563567c917fe5abb47c6de85d5cfe72f4502dc783a79213b293b6a49a857908e401f8bd6e2b4bcc5e90dfe0a9bbe
   languageName: node
   linkType: hard
 
