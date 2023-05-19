@@ -1650,23 +1650,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdit/plugin-container@npm:0.4.6":
+"@mdit/plugin-container@npm:0.4.6, @mdit/plugin-container@npm:^0.4.5":
   version: 0.4.6
   resolution: "@mdit/plugin-container@npm:0.4.6"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
   checksum: c4c2ad8128dcd5f8dd60a72a1238cbae0ed910a6134f6c7b66c89d22c22460997541449910100d7c679ea05cf4e937389ddd9bedb5b8abdba78794601af16fa9
-  languageName: node
-  linkType: hard
-
-"@mdit/plugin-container@npm:^0.4.5":
-  version: 0.4.5
-  resolution: "@mdit/plugin-container@npm:0.4.5"
-  dependencies:
-    "@types/markdown-it": ^12.2.3
-    markdown-it: ^13.0.1
-  checksum: 5c194bf0973a68a40d7b8b592d01b2fff1a25228e00d1aa093854cead362a3a6c1894375c1adc85d0af7688a3d2703ffea4bbf251d53b4730695b0c6dc53b430
   languageName: node
   linkType: hard
 
