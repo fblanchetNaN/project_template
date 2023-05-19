@@ -1808,12 +1808,12 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-tasklist@npm:^0.4.5":
-  version: 0.4.5
-  resolution: "@mdit/plugin-tasklist@npm:0.4.5"
+  version: 0.4.6
+  resolution: "@mdit/plugin-tasklist@npm:0.4.6"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: a5690279ae9bf1571374575ff34ab63c1caaa67a9e7e193115218183a456e52ccc441fdc0cf806f5b35dbb47967cc4b76ef57ce040b1cb99480c19d0d5207f8f
+  checksum: f5d79c42b6145d29cb59412aeea0cd6699b65df91dacd8d18f667a68361a6849941507b61e9b001dd95126ff3f1cca2ef72fe859889df806ab31e4f66e560e79
   languageName: node
   linkType: hard
 
