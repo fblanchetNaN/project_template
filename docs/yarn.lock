@@ -5664,9 +5664,9 @@ __metadata:
   linkType: hard
 
 "mhchemparser@npm:^4.1.0":
-  version: 4.1.1
-  resolution: "mhchemparser@npm:4.1.1"
-  checksum: a030ffa351b234385028498537a93a15f2b5542338678391639632498c98e2c771719f2c3b3645ee6d1338f602f087a87f96e8d85bfe5296b27eb9bdd6664fd9
+  version: 4.2.0
+  resolution: "mhchemparser@npm:4.2.0"
+  checksum: 41aa175ad7c2d2e3015f80b3a7d8c5c3f99f94a38746c01dfc70003ec451bb299c860ea2e81db89b405046b9a97f0886e6554f68713370b208009b757cb196b2
   languageName: node
   linkType: hard
 
