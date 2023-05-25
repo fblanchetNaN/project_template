@@ -1280,7 +1280,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@braintree/sanitize-url@npm:^6.0.0":
+"@braintree/sanitize-url@npm:^6.0.2":
   version: 6.0.2
   resolution: "@braintree/sanitize-url@npm:6.0.2"
   checksum: 6a9dfd4081cc96516eeb281d1a83d3b5f1ad3d2837adf968fcc2ba18889ee833554f9c641b4083c36d3360a932e4504ddf25b0b51e9933c3742622df82cf7c9a
@@ -1504,18 +1504,6 @@ __metadata:
     "@jridgewell/resolve-uri": 3.1.0
     "@jridgewell/sourcemap-codec": 1.4.14
   checksum: 0572669f855260808c16fe8f78f5f1b4356463b11d3f2c7c0b5580c8ba1cbf4ae53efe9f627595830856e57dbac2325ac17eb0c3dd0ec42102e6f227cc289c02
-  languageName: node
-  linkType: hard
-
-"@khanacademy/simple-markdown@npm:^0.8.6":
-  version: 0.8.6
-  resolution: "@khanacademy/simple-markdown@npm:0.8.6"
-  dependencies:
-    "@types/react": ">=16.0.0"
-  peerDependencies:
-    react: 16.14.0
-    react-dom: 16.14.0
-  checksum: 19f4c79f6648813f9fba922fc8d0e3175eaafe345b8647fe835477528ed13e680c150a4e1a687fa208972ebceaea9dff6066c83de753eb26a8eaec769efe5c07
   languageName: node
   linkType: hard
 
@@ -1958,7 +1946,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/debug@npm:^4.1.7":
+"@types/debug@npm:^4.0.0, @types/debug@npm:^4.1.7":
   version: 4.1.8
   resolution: "@types/debug@npm:4.1.8"
   dependencies:
@@ -2040,6 +2028,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/mdast@npm:^3.0.0":
+  version: 3.0.11
+  resolution: "@types/mdast@npm:3.0.11"
+  dependencies:
+    "@types/unist": "*"
+  checksum: 3b04cf465535553b47a1811c247668bd6cfeb54d99a2c9dbb82ccd0f5145d271d10c3169f929701d8cd55fd569f0d2e459a50845813ba3261f1fb0395a288cea
+  languageName: node
+  linkType: hard
+
 "@types/mdurl@npm:*":
   version: 1.0.2
   resolution: "@types/mdurl@npm:1.0.2"
@@ -2068,28 +2065,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prop-types@npm:*":
-  version: 15.7.5
-  resolution: "@types/prop-types@npm:15.7.5"
-  checksum: 5b43b8b15415e1f298243165f1d44390403bb2bd42e662bca3b5b5633fdd39c938e91b7fce3a9483699db0f7a715d08cef220c121f723a634972fdf596aec980
-  languageName: node
-  linkType: hard
-
 "@types/raphael@npm:2.3.3":
   version: 2.3.3
   resolution: "@types/raphael@npm:2.3.3"
   checksum: f1914983d672a9b8495ce97c7417e382465f21ce330419328265c66a69e5a31ae5de353d342a7c12842c8ec81c61e5499eefd91f1caf534eb54ce0ea3911674c
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:>=16.0.0":
-  version: 18.2.7
-  resolution: "@types/react@npm:18.2.7"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: caa5da4cf929766738ec789301dc6fb6624bd48dd317d851c4c9b84b1f47cd8ebe17fe01398cadaa0bc938cd4d502d67f4b9de9ff771dc132096bdc86228efba
   languageName: node
   linkType: hard
 
@@ -2111,17 +2090,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/scheduler@npm:*":
-  version: 0.16.3
-  resolution: "@types/scheduler@npm:0.16.3"
-  checksum: 2b0aec39c24268e3ce938c5db2f2e77f5c3dd280e05c262d9c2fe7d890929e4632a6b8e94334017b66b45e4f92a5aa42ba3356640c2a1175fa37bef2f5200767
-  languageName: node
-  linkType: hard
-
 "@types/trusted-types@npm:^2.0.2":
   version: 2.0.3
   resolution: "@types/trusted-types@npm:2.0.3"
   checksum: 4794804bc4a4a173d589841b6d26cf455ff5dc4f3e704e847de7d65d215f2e7043d8757e4741ce3a823af3f08260a8d04a1a6e9c5ec9b20b7b04586956a6b005
+  languageName: node
+  linkType: hard
+
+"@types/unist@npm:*, @types/unist@npm:^2.0.0":
+  version: 2.0.6
+  resolution: "@types/unist@npm:2.0.6"
+  checksum: 25cb860ff10dde48b54622d58b23e66214211a61c84c0f15f88d38b61aa1b53d4d46e42b557924a93178c501c166aa37e28d7f6d994aba13d24685326272d5db
   languageName: node
   linkType: hard
 
@@ -3102,6 +3081,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"character-entities@npm:^2.0.0":
+  version: 2.0.2
+  resolution: "character-entities@npm:2.0.2"
+  checksum: cf1643814023697f725e47328fcec17923b8f1799102a8a79c1514e894815651794a2bffd84bb1b3a4b124b050154e4529ed6e81f7c8068a734aecf07a6d3def
+  languageName: node
+  linkType: hard
+
 "chart.js@npm:^4.3.0":
   version: 4.3.0
   resolution: "chart.js@npm:4.3.0"
@@ -3397,7 +3383,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^3.0.2, csstype@npm:^3.1.1":
+"csstype@npm:^3.1.1":
   version: 3.1.2
   resolution: "csstype@npm:3.1.2"
   checksum: e1a52e6c25c1314d6beef5168da704ab29c5186b877c07d822bd0806717d9a265e8493a2e35ca7e68d0f5d472d43fac1cdce70fd79fd0853dff81f3028d857b5
@@ -3796,7 +3782,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.3, debug@npm:^4.3.4":
+"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.3, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
   dependencies:
@@ -3812,6 +3798,15 @@ __metadata:
   version: 1.2.0
   resolution: "decamelize@npm:1.2.0"
   checksum: ad8c51a7e7e0720c70ec2eeb1163b66da03e7616d7b98c9ef43cce2416395e84c1e9548dd94f5f6ffecfee9f8b94251fc57121a8b021f2ff2469b2bae247b8aa
+  languageName: node
+  linkType: hard
+
+"decode-named-character-reference@npm:^1.0.0":
+  version: 1.0.2
+  resolution: "decode-named-character-reference@npm:1.0.2"
+  dependencies:
+    character-entities: ^2.0.0
+  checksum: f4c71d3b93105f20076052f9cb1523a22a9c796b8296cd35eef1ca54239c78d182c136a848b83ff8da2071e3ae2b1d300bf29d00650a6d6e675438cc31b11d78
   languageName: node
   linkType: hard
 
@@ -3864,6 +3859,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dequal@npm:^2.0.0":
+  version: 2.0.3
+  resolution: "dequal@npm:2.0.3"
+  checksum: 8679b850e1a3d0ebbc46ee780d5df7b478c23f335887464023a631d1b9af051ad4a6595a44220f9ff8ff95a8ddccf019b5ad778a976fd7bbf77383d36f412f90
+  languageName: node
+  linkType: hard
+
+"diff@npm:^5.0.0":
+  version: 5.1.0
+  resolution: "diff@npm:5.1.0"
+  checksum: c7bf0df7c9bfbe1cf8a678fd1b2137c4fb11be117a67bc18a0e03ae75105e8533dbfb1cda6b46beb3586ef5aed22143ef9d70713977d5fb1f9114e21455fba90
+  languageName: node
+  linkType: hard
+
 "dijkstrajs@npm:^1.0.1":
   version: 1.0.3
   resolution: "dijkstrajs@npm:1.0.3"
@@ -3907,10 +3916,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dompurify@npm:2.4.5":
-  version: 2.4.5
-  resolution: "dompurify@npm:2.4.5"
-  checksum: d6d3c3b320f15cdb5b26aa1902c3275a3ab2c3705a9df4420bb94691d7c4df67959ec7b91e486c308320791b0ee000456f042734c45d76721e61c2768eac706e
+"dompurify@npm:3.0.3":
+  version: 3.0.3
+  resolution: "dompurify@npm:3.0.3"
+  checksum: 02242f2fe6a5c078fd0cb04efc93079d73a2fe886bebb5e33100b7e52f4b9bfe5f2afb0b69cae39d9a13d7bbf54435df41494890c4abe7740429828b2dbb94d9
   languageName: node
   linkType: hard
 
@@ -5318,6 +5327,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"kleur@npm:^4.0.3":
+  version: 4.1.5
+  resolution: "kleur@npm:4.1.5"
+  checksum: 1dc476e32741acf0b1b5b0627ffd0d722e342c1b0da14de3e8ae97821327ca08f9fb944542fb3c126d90ac5f27f9d804edbe7c585bf7d12ef495d115e0f22c12
+  languageName: node
+  linkType: hard
+
 "klona@npm:^2.0.6":
   version: 2.0.6
   resolution: "klona@npm:2.0.6"
@@ -5601,6 +5617,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mdast-util-from-markdown@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "mdast-util-from-markdown@npm:1.3.0"
+  dependencies:
+    "@types/mdast": ^3.0.0
+    "@types/unist": ^2.0.0
+    decode-named-character-reference: ^1.0.0
+    mdast-util-to-string: ^3.1.0
+    micromark: ^3.0.0
+    micromark-util-decode-numeric-character-reference: ^1.0.0
+    micromark-util-decode-string: ^1.0.0
+    micromark-util-normalize-identifier: ^1.0.0
+    micromark-util-symbol: ^1.0.0
+    micromark-util-types: ^1.0.0
+    unist-util-stringify-position: ^3.0.0
+    uvu: ^0.5.0
+  checksum: cc971d1ad381150f6504fd753fbcffcc64c0abb527540ce343625c2bba76104505262122ef63d14ab66eb47203f323267017c6d09abfa8535ee6a8e14069595f
+  languageName: node
+  linkType: hard
+
+"mdast-util-to-string@npm:^3.1.0":
+  version: 3.2.0
+  resolution: "mdast-util-to-string@npm:3.2.0"
+  dependencies:
+    "@types/mdast": ^3.0.0
+  checksum: dc40b544d54339878ae2c9f2b3198c029e1e07291d2126bd00ca28272ee6616d0d2194eb1c9828a7c34d412a79a7e73b26512a734698d891c710a1e73db1e848
+  languageName: node
+  linkType: hard
+
 "mdurl@npm:^1.0.1":
   version: 1.0.1
   resolution: "mdurl@npm:1.0.1"
@@ -5629,28 +5674,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mermaid@npm:10.1.0":
-  version: 10.1.0
-  resolution: "mermaid@npm:10.1.0"
+"mermaid@npm:10.2.0":
+  version: 10.2.0
+  resolution: "mermaid@npm:10.2.0"
   dependencies:
-    "@braintree/sanitize-url": ^6.0.0
-    "@khanacademy/simple-markdown": ^0.8.6
+    "@braintree/sanitize-url": ^6.0.2
     cytoscape: ^3.23.0
     cytoscape-cose-bilkent: ^4.1.0
     cytoscape-fcose: ^2.1.0
     d3: ^7.4.0
     dagre-d3-es: 7.0.10
     dayjs: ^1.11.7
-    dompurify: 2.4.5
+    dompurify: 3.0.3
     elkjs: ^0.8.2
     khroma: ^2.0.0
     lodash-es: ^4.17.21
+    mdast-util-from-markdown: ^1.3.0
     non-layered-tidy-tree-layout: ^2.0.2
-    stylis: ^4.1.2
+    stylis: ^4.1.3
     ts-dedent: ^2.2.0
     uuid: ^9.0.0
     web-worker: ^1.2.0
-  checksum: d38c72aee917948491e782aac885ac0c71eb5f51f904a6d4bf1ceeb97d502b77da41524ee04de6cd1b0f9b645ad8853319f5ac60a7cce248de2484c2fd616b8e
+  checksum: 95efd9074b6fa1e3a9df90f99357a127ebfb04f11cd2759b7fe104a9ef1b331d1d0fa3c1b03302afcbbad45b9de7d73ce3ae6ae3bd206b53676c3563fcf07629
   languageName: node
   linkType: hard
 
@@ -5658,6 +5703,243 @@ __metadata:
   version: 4.2.1
   resolution: "mhchemparser@npm:4.2.1"
   checksum: 6dd7e3926befc74d26cf7b44b9e5ff7295e142bffc48a60bd225d5a30d525354afb70d23fc4fdb8f46178099ab98a66a57a6131dcb0f410264cfd2b9ad4af4b7
+  languageName: node
+  linkType: hard
+
+"micromark-core-commonmark@npm:^1.0.1":
+  version: 1.0.6
+  resolution: "micromark-core-commonmark@npm:1.0.6"
+  dependencies:
+    decode-named-character-reference: ^1.0.0
+    micromark-factory-destination: ^1.0.0
+    micromark-factory-label: ^1.0.0
+    micromark-factory-space: ^1.0.0
+    micromark-factory-title: ^1.0.0
+    micromark-factory-whitespace: ^1.0.0
+    micromark-util-character: ^1.0.0
+    micromark-util-chunked: ^1.0.0
+    micromark-util-classify-character: ^1.0.0
+    micromark-util-html-tag-name: ^1.0.0
+    micromark-util-normalize-identifier: ^1.0.0
+    micromark-util-resolve-all: ^1.0.0
+    micromark-util-subtokenize: ^1.0.0
+    micromark-util-symbol: ^1.0.0
+    micromark-util-types: ^1.0.1
+    uvu: ^0.5.0
+  checksum: 4b483c46077f696ed310f6d709bb9547434c218ceb5c1220fde1707175f6f68b44da15ab8668f9c801e1a123210071e3af883a7d1215122c913fd626f122bfc2
+  languageName: node
+  linkType: hard
+
+"micromark-factory-destination@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "micromark-factory-destination@npm:1.0.0"
+  dependencies:
+    micromark-util-character: ^1.0.0
+    micromark-util-symbol: ^1.0.0
+    micromark-util-types: ^1.0.0
+  checksum: 8e733ae9c1c2342f14ff290bf09946e20f6f540117d80342377a765cac48df2ea5e748f33c8b07501ad7a43414b1a6597c8510ede2052b6bf1251fab89748e20
+  languageName: node
+  linkType: hard
+
+"micromark-factory-label@npm:^1.0.0":
+  version: 1.0.2
+  resolution: "micromark-factory-label@npm:1.0.2"
+  dependencies:
+    micromark-util-character: ^1.0.0
+    micromark-util-symbol: ^1.0.0
+    micromark-util-types: ^1.0.0
+    uvu: ^0.5.0
+  checksum: 957e9366bdc8dbc1437c0706ff96972fa985ab4b1274abcae12f6094f527cbf5c69e7f2304c23c7f4b96e311ff7911d226563b8b43dcfcd4091e8c985fb97ce6
+  languageName: node
+  linkType: hard
+
+"micromark-factory-space@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "micromark-factory-space@npm:1.0.0"
+  dependencies:
+    micromark-util-character: ^1.0.0
+    micromark-util-types: ^1.0.0
+  checksum: 70d3aafde4e68ef4e509a3b644e9a29e4aada00801279e346577b008cbca06d78051bcd62aa7ea7425856ed73f09abd2b36607803055f726f52607ee7cb706b0
+  languageName: node
+  linkType: hard
+
+"micromark-factory-title@npm:^1.0.0":
+  version: 1.0.2
+  resolution: "micromark-factory-title@npm:1.0.2"
+  dependencies:
+    micromark-factory-space: ^1.0.0
+    micromark-util-character: ^1.0.0
+    micromark-util-symbol: ^1.0.0
+    micromark-util-types: ^1.0.0
+    uvu: ^0.5.0
+  checksum: 9a9cf66babde0bad1e25d6c1087082bfde6dfc319a36cab67c89651cc1a53d0e21cdec83262b5a4c33bff49f0e3c8dc2a7bd464e991d40dbea166a8f9b37e5b2
+  languageName: node
+  linkType: hard
+
+"micromark-factory-whitespace@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "micromark-factory-whitespace@npm:1.0.0"
+  dependencies:
+    micromark-factory-space: ^1.0.0
+    micromark-util-character: ^1.0.0
+    micromark-util-symbol: ^1.0.0
+    micromark-util-types: ^1.0.0
+  checksum: 0888386e6ea2dd665a5182c570d9b3d0a172d3f11694ca5a2a84e552149c9f1429f5b975ec26e1f0fa4388c55a656c9f359ce5e0603aff6175ba3e255076f20b
+  languageName: node
+  linkType: hard
+
+"micromark-util-character@npm:^1.0.0":
+  version: 1.1.0
+  resolution: "micromark-util-character@npm:1.1.0"
+  dependencies:
+    micromark-util-symbol: ^1.0.0
+    micromark-util-types: ^1.0.0
+  checksum: 504a4e3321f69bddf3fec9f0c1058239fc23336bda5be31d532b150491eda47965a251b37f8a7a9db0c65933b3aaa49cf88044fb1028be3af7c5ee6212bf8d5f
+  languageName: node
+  linkType: hard
+
+"micromark-util-chunked@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "micromark-util-chunked@npm:1.0.0"
+  dependencies:
+    micromark-util-symbol: ^1.0.0
+  checksum: c1efd56e8c4217bcf1c6f1a9fb9912b4a2a5503b00d031da902be922fb3fee60409ac53f11739991291357b2784fb0647ddfc74c94753a068646c0cb0fd71421
+  languageName: node
+  linkType: hard
+
+"micromark-util-classify-character@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "micromark-util-classify-character@npm:1.0.0"
+  dependencies:
+    micromark-util-character: ^1.0.0
+    micromark-util-symbol: ^1.0.0
+    micromark-util-types: ^1.0.0
+  checksum: 180446e6a1dec653f625ded028f244784e1db8d10ad05c5d70f08af9de393b4a03dc6cf6fa5ed8ccc9c24bbece7837abf3bf66681c0b4adf159364b7d5236dfd
+  languageName: node
+  linkType: hard
+
+"micromark-util-combine-extensions@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "micromark-util-combine-extensions@npm:1.0.0"
+  dependencies:
+    micromark-util-chunked: ^1.0.0
+    micromark-util-types: ^1.0.0
+  checksum: 5304a820ef75340e1be69d6ad167055b6ba9a3bafe8171e5945a935752f462415a9dd61eb3490220c055a8a11167209a45bfa73f278338b7d3d61fa1464d3f35
+  languageName: node
+  linkType: hard
+
+"micromark-util-decode-numeric-character-reference@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "micromark-util-decode-numeric-character-reference@npm:1.0.0"
+  dependencies:
+    micromark-util-symbol: ^1.0.0
+  checksum: f3ae2bb582a80f1e9d3face026f585c0c472335c064bd850bde152376f0394cb2831746749b6be6e0160f7d73626f67d10716026c04c87f402c0dd45a1a28633
+  languageName: node
+  linkType: hard
+
+"micromark-util-decode-string@npm:^1.0.0":
+  version: 1.0.2
+  resolution: "micromark-util-decode-string@npm:1.0.2"
+  dependencies:
+    decode-named-character-reference: ^1.0.0
+    micromark-util-character: ^1.0.0
+    micromark-util-decode-numeric-character-reference: ^1.0.0
+    micromark-util-symbol: ^1.0.0
+  checksum: 2dbb41c9691cc71505d39706405139fb7d6699429d577a524c7c248ac0cfd09d3dd212ad8e91c143a00b2896f26f81136edc67c5bda32d20446f0834d261b17a
+  languageName: node
+  linkType: hard
+
+"micromark-util-encode@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "micromark-util-encode@npm:1.0.1"
+  checksum: 9290583abfdc79ea3e7eb92c012c47a0e14327888f8aaa6f57ff79b3058d8e7743716b9d91abca3646f15ab3d78fdad9779fdb4ccf13349cd53309dfc845253a
+  languageName: node
+  linkType: hard
+
+"micromark-util-html-tag-name@npm:^1.0.0":
+  version: 1.1.0
+  resolution: "micromark-util-html-tag-name@npm:1.1.0"
+  checksum: a9b783cec89ec813648d59799464c1950fe281ae797b2a965f98ad0167d7fa1a247718eff023b4c015f47211a172f9446b8e6b98aad50e3cd44a3337317dad2c
+  languageName: node
+  linkType: hard
+
+"micromark-util-normalize-identifier@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "micromark-util-normalize-identifier@npm:1.0.0"
+  dependencies:
+    micromark-util-symbol: ^1.0.0
+  checksum: d7c09d5e8318fb72f194af72664bd84a48a2928e3550b2b21c8fbc0ec22524f2a72e0f6663d2b95dc189a6957d3d7759b60716e888909710767cd557be821f8b
+  languageName: node
+  linkType: hard
+
+"micromark-util-resolve-all@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "micromark-util-resolve-all@npm:1.0.0"
+  dependencies:
+    micromark-util-types: ^1.0.0
+  checksum: 409667f2bd126ef8acce009270d2aecaaa5584c5807672bc657b09e50aa91bd2e552cf41e5be1e6469244a83349cbb71daf6059b746b1c44e3f35446fef63e50
+  languageName: node
+  linkType: hard
+
+"micromark-util-sanitize-uri@npm:^1.0.0":
+  version: 1.1.0
+  resolution: "micromark-util-sanitize-uri@npm:1.1.0"
+  dependencies:
+    micromark-util-character: ^1.0.0
+    micromark-util-encode: ^1.0.0
+    micromark-util-symbol: ^1.0.0
+  checksum: fe6093faa0adeb8fad606184d927ce37f207dcc2ec7256438e7f273c8829686245dd6161b597913ef25a3c4fb61863d3612a40cb04cf15f83ba1b4087099996b
+  languageName: node
+  linkType: hard
+
+"micromark-util-subtokenize@npm:^1.0.0":
+  version: 1.0.2
+  resolution: "micromark-util-subtokenize@npm:1.0.2"
+  dependencies:
+    micromark-util-chunked: ^1.0.0
+    micromark-util-symbol: ^1.0.0
+    micromark-util-types: ^1.0.0
+    uvu: ^0.5.0
+  checksum: c32ee58a7e1384ab1161a9ee02fbb04ad7b6e96d0b8c93dba9803c329a53d07f22ab394c7a96b2e30d6b8fbe3585b85817dba07277b1317111fc234e166bd2d1
+  languageName: node
+  linkType: hard
+
+"micromark-util-symbol@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "micromark-util-symbol@npm:1.0.1"
+  checksum: c6a3023b3a7432c15864b5e33a1bcb5042ac7aa097f2f452e587bef45433d42d39e0a5cce12fbea91e0671098ba0c3f62a2b30ce1cde66ecbb5e8336acf4391d
+  languageName: node
+  linkType: hard
+
+"micromark-util-types@npm:^1.0.0, micromark-util-types@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "micromark-util-types@npm:1.0.2"
+  checksum: 08dc901b7c06ee3dfeb54befca05cbdab9525c1cf1c1080967c3878c9e72cb9856c7e8ff6112816e18ead36ce6f99d55aaa91560768f2f6417b415dcba1244df
+  languageName: node
+  linkType: hard
+
+"micromark@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "micromark@npm:3.1.0"
+  dependencies:
+    "@types/debug": ^4.0.0
+    debug: ^4.0.0
+    decode-named-character-reference: ^1.0.0
+    micromark-core-commonmark: ^1.0.1
+    micromark-factory-space: ^1.0.0
+    micromark-util-character: ^1.0.0
+    micromark-util-chunked: ^1.0.0
+    micromark-util-combine-extensions: ^1.0.0
+    micromark-util-decode-numeric-character-reference: ^1.0.0
+    micromark-util-encode: ^1.0.0
+    micromark-util-normalize-identifier: ^1.0.0
+    micromark-util-resolve-all: ^1.0.0
+    micromark-util-sanitize-uri: ^1.0.0
+    micromark-util-subtokenize: ^1.0.0
+    micromark-util-symbol: ^1.0.0
+    micromark-util-types: ^1.0.1
+    uvu: ^0.5.0
+  checksum: 5fe5bc3bf92e2ddd37b5f0034080fc3a4d4b3c1130dd5e435bb96ec75e9453091272852e71a4d74906a8fcf992d6f79d794607657c534bda49941e9950a92e28
   languageName: node
   linkType: hard
 
@@ -5810,6 +6092,13 @@ __metadata:
     es6-promise: ^4.2.5
     webworkify-webpack: ^2.1.5
   checksum: 102a11b701b75657ef89bff329255c168101e322a6232397a10e91c013c14dfad96581f2a614847ce22934cd8822eecd0c3d96a1bdd42a60114f36456b26f13f
+  languageName: node
+  linkType: hard
+
+"mri@npm:^1.1.0":
+  version: 1.2.0
+  resolution: "mri@npm:1.2.0"
+  checksum: 83f515abbcff60150873e424894a2f65d68037e5a7fcde8a9e2b285ee9c13ac581b63cfc1e6826c4732de3aeb84902f7c1e16b7aff46cd3f897a0f757a894e85
   languageName: node
   linkType: hard
 
@@ -6522,7 +6811,7 @@ __metadata:
     "@vuepress/plugin-shiki": 2.0.0-beta.62
     vue: 3.3.4
     vuepress: 2.0.0-beta.62
-    vuepress-theme-hope: 2.0.0-beta.212
+    vuepress-theme-hope: 2.0.0-beta.215
   languageName: unknown
   linkType: soft
 
@@ -6539,6 +6828,15 @@ __metadata:
   version: 1.3.3
   resolution: "rw@npm:1.3.3"
   checksum: c20d82421f5a71c86a13f76121b751553a99cd4a70ea27db86f9b23f33db941f3f06019c30f60d50c356d0bd674c8e74764ac146ea55e217c091bde6fba82aa3
+  languageName: node
+  linkType: hard
+
+"sade@npm:^1.7.3":
+  version: 1.8.1
+  resolution: "sade@npm:1.8.1"
+  dependencies:
+    mri: ^1.1.0
+  checksum: 0756e5b04c51ccdc8221ebffd1548d0ce5a783a44a0fa9017a026659b97d632913e78f7dca59f2496aa996a0be0b0c322afd87ca72ccd909406f49dbffa0f45d
   languageName: node
   linkType: hard
 
@@ -6964,7 +7262,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylis@npm:^4.1.2":
+"stylis@npm:^4.1.3":
   version: 4.2.0
   resolution: "stylis@npm:4.2.0"
   checksum: 0eb6cc1b866dc17a6037d0a82ac7fa877eba6a757443e79e7c4f35bacedbf6421fadcab4363b39667b43355cbaaa570a3cde850f776498e5450f32ed2f9b7584
@@ -7205,6 +7503,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"unist-util-stringify-position@npm:^3.0.0":
+  version: 3.0.3
+  resolution: "unist-util-stringify-position@npm:3.0.3"
+  dependencies:
+    "@types/unist": ^2.0.0
+  checksum: dbd66c15183607ca942a2b1b7a9f6a5996f91c0d30cf8966fb88955a02349d9eefd3974e9010ee67e71175d784c5a9fea915b0aa0b0df99dcb921b95c4c9e124
+  languageName: node
+  linkType: hard
+
 "universalify@npm:^2.0.0":
   version: 2.0.0
   resolution: "universalify@npm:2.0.0"
@@ -7269,6 +7576,20 @@ __metadata:
   bin:
     uuid: dist/bin/uuid
   checksum: 8dd2c83c43ddc7e1c71e36b60aea40030a6505139af6bee0f382ebcd1a56f6cd3028f7f06ffb07f8cf6ced320b76aea275284b224b002b289f89fe89c389b028
+  languageName: node
+  linkType: hard
+
+"uvu@npm:^0.5.0":
+  version: 0.5.6
+  resolution: "uvu@npm:0.5.6"
+  dependencies:
+    dequal: ^2.0.0
+    diff: ^5.0.0
+    kleur: ^4.0.3
+    sade: ^1.7.3
+  bin:
+    uvu: bin.js
+  checksum: 09460a37975627de9fcad396e5078fb844d01aaf64a6399ebfcfd9e55f1c2037539b47611e8631f89be07656962af0cf48c334993db82b9ae9c3d25ce3862168
   languageName: node
   linkType: hard
 
@@ -7363,9 +7684,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuepress-plugin-auto-catalog@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-auto-catalog@npm:2.0.0-beta.212"
+"vuepress-plugin-auto-catalog@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-auto-catalog@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/core": 2.0.0-beta.62
@@ -7373,11 +7694,11 @@ __metadata:
     "@vuepress/utils": 2.0.0-beta.62
     vue: ^3.3.4
     vue-router: ^4.2.1
-    vuepress-plugin-components: 2.0.0-beta.212
-    vuepress-plugin-sass-palette: 2.0.0-beta.212
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-plugin-components: 2.0.0-beta.215
+    vuepress-plugin-sass-palette: 2.0.0-beta.215
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
-    sass-loader: ^13.2.2
+    sass-loader: ^13.3.0
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
     vuepress-webpack: 2.0.0-beta.62
@@ -7390,13 +7711,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: bde0a6016f7a54072cb96f52a52d1bfd58b72fae029ab35e1b51a39d6a07e25c4b82b09235f0bc665996cfd5287fce452042b0f5ccd6c0afab890347f1f29891
+  checksum: 00583ddabca44b46a7c23140e816854aadb0df601585136f203f7bb829343c0b35f42efda3787c458cc39bc8b56188ddad64545e6a29ecceaab46513311f97f9
   languageName: node
   linkType: hard
 
-"vuepress-plugin-blog2@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-blog2@npm:2.0.0-beta.212"
+"vuepress-plugin-blog2@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-blog2@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/core": 2.0.0-beta.62
@@ -7405,7 +7726,7 @@ __metadata:
     chokidar: ^3.5.3
     vue: ^3.3.4
     vue-router: ^4.2.1
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
@@ -7417,13 +7738,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: c9f947feb69ab119da73d955a8d0e7f18d01b9cd94be046466f9d71f58022bde23ce946d80e86a36b840f61afd9efdb470a4cdf804becdc82222a370dfeece9a
+  checksum: 06057d43b578e0985e647b70e74927e17c8619a858de86e6c90d597431873772a7d5f8659f9bb5e377e0b06af463f8d2b5a4810223516e189a80dd906f7d9013
   languageName: node
   linkType: hard
 
-"vuepress-plugin-comment2@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-comment2@npm:2.0.0-beta.212"
+"vuepress-plugin-comment2@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-comment2@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
@@ -7434,10 +7755,10 @@ __metadata:
     twikoo: ^1.6.16
     vue: ^3.3.4
     vue-router: ^4.2.1
-    vuepress-plugin-sass-palette: 2.0.0-beta.212
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-plugin-sass-palette: 2.0.0-beta.215
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
-    sass-loader: ^13.2.2
+    sass-loader: ^13.3.0
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
     vuepress-webpack: 2.0.0-beta.62
@@ -7450,13 +7771,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 8166742342a9dbad454f06e1b31b6833e48883e0b3dd9f0a25ab7d275811bf33317171aabde4d25fdaa54273d0cdf4feb032c8900b0858b3978134feed5599dc
+  checksum: fbbd84715dd56b567ee2f54414ba079a9dbb78174cbae79360a60b1848c5d72e6f9013ccef251df555c52aef66c97f92fcdbea561eff24b80d7283690f634806
   languageName: node
   linkType: hard
 
-"vuepress-plugin-components@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-components@npm:2.0.0-beta.212"
+"vuepress-plugin-components@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-components@npm:2.0.0-beta.215"
   dependencies:
     "@stackblitz/sdk": ^1.9.0
     "@vuepress/client": 2.0.0-beta.62
@@ -7472,11 +7793,11 @@ __metadata:
     qrcode: ^1.5.3
     vue: ^3.3.4
     vue-router: ^4.2.1
-    vuepress-plugin-reading-time2: 2.0.0-beta.212
-    vuepress-plugin-sass-palette: 2.0.0-beta.212
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-plugin-reading-time2: 2.0.0-beta.215
+    vuepress-plugin-sass-palette: 2.0.0-beta.215
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
-    sass-loader: ^13.2.2
+    sass-loader: ^13.3.0
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
     vuepress-webpack: 2.0.0-beta.62
@@ -7489,13 +7810,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 81a67e0c876ae33c8e929048eb2ba0a11d1989dcdb15b19c2069d9f88660b68830ed4786aa362cae0f2ccf30576ee6402501e6f6931fc48ae6c4d3ee9032d1e2
+  checksum: deeee998504f739c23e1ad6ecc92f7ac83ca6378f233d83e7133731b779b62a2c3e4cab7ce1052b546e786d3dbaa836f5da8bbd123a285e4b333d9d79013e6ca
   languageName: node
   linkType: hard
 
-"vuepress-plugin-copy-code2@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-copy-code2@npm:2.0.0-beta.212"
+"vuepress-plugin-copy-code2@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-copy-code2@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
@@ -7504,10 +7825,10 @@ __metadata:
     balloon-css: ^1.2.0
     vue: ^3.3.4
     vue-router: ^4.2.1
-    vuepress-plugin-sass-palette: 2.0.0-beta.212
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-plugin-sass-palette: 2.0.0-beta.215
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
-    sass-loader: ^13.2.2
+    sass-loader: ^13.3.0
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
     vuepress-webpack: 2.0.0-beta.62
@@ -7520,13 +7841,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: aad405724b103366aaf3edac24db70426e896ead743e9c1ea9fd49e64646dce8278cec0d513b3824d051a6829dc0f0dfc3053a4955b73878bd7e288eedfe8cad
+  checksum: df47d0c0072befe9d1991b59f772ad7f4cd835224fad03c232bf1660df0d0a9a80e0506c49cae5510bdd50c922541daa147f918d5d5f5b0b728168308a504e80
   languageName: node
   linkType: hard
 
-"vuepress-plugin-copyright2@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-copyright2@npm:2.0.0-beta.212"
+"vuepress-plugin-copyright2@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-copyright2@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
@@ -7534,7 +7855,7 @@ __metadata:
     "@vueuse/core": ^10.1.2
     vue: ^3.3.4
     vue-router: ^4.2.1
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
@@ -7546,18 +7867,18 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: f9891ac13df3cf19ab3b463b749543f563332032d039a4d0f48ee217905fdfc7e61a5181dcf650a9925a8c83c7fa34e49f918a77dc9a4d429b9ce743f2bce203
+  checksum: a338d2f019c0614ee02767f6c2ea5435251331d8e3ba9294a1e99de6237a50d549904cab3477140c841babd25e87c47f51d1dd780dd68916b4920c03d1a7de34
   languageName: node
   linkType: hard
 
-"vuepress-plugin-feed2@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-feed2@npm:2.0.0-beta.212"
+"vuepress-plugin-feed2@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-feed2@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/shared": 2.0.0-beta.62
     "@vuepress/utils": 2.0.0-beta.62
     cheerio: 1.0.0-rc.12
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-shared: 2.0.0-beta.215
     xml-js: ^1.6.11
   peerDependencies:
     vuepress: 2.0.0-beta.62
@@ -7570,13 +7891,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 92575147b54d3f3ce5cdc466ecc9ad445343062ea629d5f3f67dd0d1b302198768637b792f00105f1d5a0a6cb0082a1affe1b971e90817531593681859d614c4
+  checksum: 5ccef483d80faf9ec5dc94ef2a9fc254afc5e959635cc5b48ce88d570e342f50f40e64abd5f26494c87d1fdeb3d71daa016b196abbdb6468859dbdf985b4b17d
   languageName: node
   linkType: hard
 
-"vuepress-plugin-md-enhance@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-md-enhance@npm:2.0.0-beta.212"
+"vuepress-plugin-md-enhance@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-md-enhance@npm:2.0.0-beta.215"
   dependencies:
     "@babel/core": ^7.21.8
     "@mdit/plugin-align": ^0.4.6
@@ -7612,14 +7933,14 @@ __metadata:
     js-yaml: ^4.1.0
     katex: ^0.16.7
     markdown-it: ^13.0.1
-    mermaid: 10.1.0
+    mermaid: 10.2.0
     reveal.js: ^4.5.0
     vue: ^3.3.4
     vue-router: ^4.2.1
-    vuepress-plugin-sass-palette: 2.0.0-beta.212
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-plugin-sass-palette: 2.0.0-beta.215
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
-    sass-loader: ^13.2.2
+    sass-loader: ^13.3.0
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
     vuepress-webpack: 2.0.0-beta.62
@@ -7632,13 +7953,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: eafe2339e022bd9470f50a2cb3383b36351c8e8d6aa901b0ebaad383d81008cf571a59e8aa0f77d11e63e41fb57ade3b440e7f741577caf10fbbf6deb2e0ffa2
+  checksum: 2bedf06a9a799ac69faf98f6a9bc057da9a3f7e137750536ad1d68bdb25b26b6608b21f5ae5be608955016ed69ba6501b4d74c9c6c116ed7b2dbe0cbbbd3a3a8
   languageName: node
   linkType: hard
 
-"vuepress-plugin-photo-swipe@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-photo-swipe@npm:2.0.0-beta.212"
+"vuepress-plugin-photo-swipe@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-photo-swipe@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
@@ -7647,10 +7968,10 @@ __metadata:
     photoswipe: ^5.3.7
     vue: ^3.3.4
     vue-router: ^4.2.1
-    vuepress-plugin-sass-palette: 2.0.0-beta.212
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-plugin-sass-palette: 2.0.0-beta.215
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
-    sass-loader: ^13.2.2
+    sass-loader: ^13.3.0
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
     vuepress-webpack: 2.0.0-beta.62
@@ -7663,13 +7984,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 8f671ac07d01219d8ba46da43f4c0e75265e7d8ad49d1395b9096f59a088093e3620a269e6bdf8a7311d10b9435d4ca2db4b70c20b6465c82d51af5c301d0348
+  checksum: 9eb628d19d00e0f3c01e6d619b247fa02714c6b9d80bde984a3d3c97f41937993b5c809dfda3d20d04dece5ca3bd22fd4ebf7c1fbbf501a9ad23977ca7030e7b
   languageName: node
   linkType: hard
 
-"vuepress-plugin-pwa2@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-pwa2@npm:2.0.0-beta.212"
+"vuepress-plugin-pwa2@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-pwa2@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
@@ -7679,11 +8000,11 @@ __metadata:
     register-service-worker: ^1.7.2
     vue: ^3.3.4
     vue-router: ^4.2.1
-    vuepress-plugin-sass-palette: 2.0.0-beta.212
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-plugin-sass-palette: 2.0.0-beta.215
+    vuepress-shared: 2.0.0-beta.215
     workbox-build: ^6.5.4
   peerDependencies:
-    sass-loader: ^13.2.2
+    sass-loader: ^13.3.0
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
     vuepress-webpack: 2.0.0-beta.62
@@ -7696,17 +8017,17 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: f771b947684687d5ae09f3bccea8ed9030da353a1db2a1b5bc251039d2ebf719b09ab99fec997254b9a064dce0e699d12f2e05958e88339781247ba34feb0ac3
+  checksum: 9561fe3ae4aa6eb8384379264bdaabfea9e02014b344567d9596fccd5effc0584e7ea3334a544958db2f1d31abc6b20d13d1b74bba580c8ee064d6ae5853ead6
   languageName: node
   linkType: hard
 
-"vuepress-plugin-reading-time2@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-reading-time2@npm:2.0.0-beta.212"
+"vuepress-plugin-reading-time2@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-reading-time2@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     vue: ^3.3.4
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
@@ -7718,19 +8039,19 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 802e146fc858407f6a041404e03061b90c7a2bc5a292a266c715ada2187fd888227dc1a26fa9cc072578cf79db20e115f18b760fe863006ed0064e4d61ee1026
+  checksum: a2bfe05a398b86b112bddf558cf3ec1408014a2587919885df70e1765d34259c84d3aed897e65c82bb1c93cf12552e5f48665cb81b9e49d0be860fd1a7d31ff6
   languageName: node
   linkType: hard
 
-"vuepress-plugin-rtl@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-rtl@npm:2.0.0-beta.212"
+"vuepress-plugin-rtl@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-rtl@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
     "@vuepress/utils": 2.0.0-beta.62
     vue: ^3.3.4
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
@@ -7742,21 +8063,21 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 60360f9360526739cebea4a9dd3a76d3c58b8071976e0a4749de030454fdc266cdf9e3cca16e45ed69d1c43b8de5ec4d934e3d4342950bdadd84388e03b4487f
+  checksum: d61106236a5d5ea84181c2df43cad8e5b03fa1833ef65bdcbd604b042ebe40ea1fd51010988dee89fbc1be834b93f55757f050aa5dc8945b68be4f4a2955bad8
   languageName: node
   linkType: hard
 
-"vuepress-plugin-sass-palette@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-sass-palette@npm:2.0.0-beta.212"
+"vuepress-plugin-sass-palette@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-sass-palette@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/shared": 2.0.0-beta.62
     "@vuepress/utils": 2.0.0-beta.62
     chokidar: ^3.5.3
     sass: ^1.62.1
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
-    sass-loader: ^13.2.2
+    sass-loader: ^13.3.0
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
     vuepress-webpack: 2.0.0-beta.62
@@ -7769,17 +8090,17 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: bc5159777a99e5a0cfccdd1b00f446c2536390df7b2a9a6aad61b6da4bedcb24b29a54a934ce29adc4d6a1e3c4df058a3685413da83372f7467f76e3e5888719
+  checksum: 286f0688acb3f46252d530929ea24ba1d1c126f949fa119aa7b728b994b7202de790e61c2265d1f1056f484f0fed425f3bfbf94be1299d271f4cf7b677bfc09a
   languageName: node
   linkType: hard
 
-"vuepress-plugin-seo2@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-seo2@npm:2.0.0-beta.212"
+"vuepress-plugin-seo2@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-seo2@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/shared": 2.0.0-beta.62
     "@vuepress/utils": 2.0.0-beta.62
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
@@ -7791,18 +8112,18 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 56c610f171299951a258793d75822669811d379f21af6a477a1496900af200f8cc1697ea559c2b51464a2803cedafdcc9ce877a86d4d5fff72833ecfb75b4937
+  checksum: be9880968e821f96b8845653fe3d2bc649d9a237c771fb631ca624ecbb03ace7bafe68d43c40015a2e7e4d1e0159d48f1294e66134a724acf93b703c25289965
   languageName: node
   linkType: hard
 
-"vuepress-plugin-sitemap2@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-plugin-sitemap2@npm:2.0.0-beta.212"
+"vuepress-plugin-sitemap2@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-plugin-sitemap2@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/shared": 2.0.0-beta.62
     "@vuepress/utils": 2.0.0-beta.62
     sitemap: ^7.1.1
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
@@ -7814,13 +8135,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: fcfa2f4430476b8d56e2a88d6913577561f15443346c02070270a47295d2cc95e3788bae522a41af34035bee19f07f215b354c0a623689d399e4fb1a9c6b949c
+  checksum: 968fc93ae677f42690be05511d63124dd6da049259cf9605297a207c7b4965f2f8d76f7a4f7b97401fc5e9f4ab03bff4e8fe46db4f361fc602ee75a5e53bdbf4
   languageName: node
   linkType: hard
 
-"vuepress-shared@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-shared@npm:2.0.0-beta.212"
+"vuepress-shared@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-shared@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
@@ -7846,13 +8167,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 8cc1b3e751a74a0b9a49d4c3d607afab3911f85260b1f187a48e2b848e85b9a0031daace1ef9c110ad6b2ba7c1fe2a453a134f3f727ad85309ccd854ddb8e861
+  checksum: b9c643363b314fab545db4b048a0e56fef603b2117a7810880cbc115181a6a8bbb5b09864cce90fe7f06383170b1a70dc7b12a0a59922d5089a914ebafac780d
   languageName: node
   linkType: hard
 
-"vuepress-theme-hope@npm:2.0.0-beta.212":
-  version: 2.0.0-beta.212
-  resolution: "vuepress-theme-hope@npm:2.0.0-beta.212"
+"vuepress-theme-hope@npm:2.0.0-beta.215":
+  version: 2.0.0-beta.215
+  resolution: "vuepress-theme-hope@npm:2.0.0-beta.215"
   dependencies:
     "@vuepress/cli": 2.0.0-beta.62
     "@vuepress/client": 2.0.0-beta.62
@@ -7874,24 +8195,24 @@ __metadata:
     gray-matter: ^4.0.3
     vue: ^3.3.4
     vue-router: ^4.2.1
-    vuepress-plugin-auto-catalog: 2.0.0-beta.212
-    vuepress-plugin-blog2: 2.0.0-beta.212
-    vuepress-plugin-comment2: 2.0.0-beta.212
-    vuepress-plugin-components: 2.0.0-beta.212
-    vuepress-plugin-copy-code2: 2.0.0-beta.212
-    vuepress-plugin-copyright2: 2.0.0-beta.212
-    vuepress-plugin-feed2: 2.0.0-beta.212
-    vuepress-plugin-md-enhance: 2.0.0-beta.212
-    vuepress-plugin-photo-swipe: 2.0.0-beta.212
-    vuepress-plugin-pwa2: 2.0.0-beta.212
-    vuepress-plugin-reading-time2: 2.0.0-beta.212
-    vuepress-plugin-rtl: 2.0.0-beta.212
-    vuepress-plugin-sass-palette: 2.0.0-beta.212
-    vuepress-plugin-seo2: 2.0.0-beta.212
-    vuepress-plugin-sitemap2: 2.0.0-beta.212
-    vuepress-shared: 2.0.0-beta.212
+    vuepress-plugin-auto-catalog: 2.0.0-beta.215
+    vuepress-plugin-blog2: 2.0.0-beta.215
+    vuepress-plugin-comment2: 2.0.0-beta.215
+    vuepress-plugin-components: 2.0.0-beta.215
+    vuepress-plugin-copy-code2: 2.0.0-beta.215
+    vuepress-plugin-copyright2: 2.0.0-beta.215
+    vuepress-plugin-feed2: 2.0.0-beta.215
+    vuepress-plugin-md-enhance: 2.0.0-beta.215
+    vuepress-plugin-photo-swipe: 2.0.0-beta.215
+    vuepress-plugin-pwa2: 2.0.0-beta.215
+    vuepress-plugin-reading-time2: 2.0.0-beta.215
+    vuepress-plugin-rtl: 2.0.0-beta.215
+    vuepress-plugin-sass-palette: 2.0.0-beta.215
+    vuepress-plugin-seo2: 2.0.0-beta.215
+    vuepress-plugin-sitemap2: 2.0.0-beta.215
+    vuepress-shared: 2.0.0-beta.215
   peerDependencies:
-    sass-loader: ^13.2.2
+    sass-loader: ^13.3.0
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
     vuepress-webpack: 2.0.0-beta.62
@@ -7904,7 +8225,7 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 95208bcee00588e2c284b0006b6388f8690d8c74fb677bf37a39c6e5a5663026ece883f4c6273658c51955d6bec8996aef5091a9e36e80379dc8162f8594f4fd
+  checksum: c21af80d224f65b3df040cfeac809d04ff05f776626250b53103e37e8a425d9c575e0023987cf8a178376ba36fa111a5c58154f2978daff59fe32782a22b1764
   languageName: node
   linkType: hard
 
