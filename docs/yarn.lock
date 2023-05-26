@@ -1038,13 +1038,13 @@ __metadata:
   linkType: hard
 
 "@babel/plugin-transform-new-target@npm:^7.18.6":
-  version: 7.18.6
-  resolution: "@babel/plugin-transform-new-target@npm:7.18.6"
+  version: 7.22.0
+  resolution: "@babel/plugin-transform-new-target@npm:7.22.0"
   dependencies:
-    "@babel/helper-plugin-utils": ^7.18.6
+    "@babel/helper-plugin-utils": ^7.21.5
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: bd780e14f46af55d0ae8503b3cb81ca86dcc73ed782f177e74f498fff934754f9e9911df1f8f3bd123777eed7c1c1af4d66abab87c8daae5403e7719a6b845d1
+  checksum: 826e1a105dfe7e7097054242fe7bae1af5475681760fa8042b353c44a13d824a164bf7c53e32c421d9bf37f27f128878bc908f455a5800763d3a4d9d3abb43c8
   languageName: node
   linkType: hard
 
