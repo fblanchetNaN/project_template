@@ -5,7 +5,7 @@ colorama==0.4.6
 coverage==7.2.6
 glob2==0.7
 hammett==0.9.4
-hypothesis==6.75.3
+hypothesis==6.75.5
 junit-xml==1.8
 mutmut==2.4.3
 parso==0.8.3
