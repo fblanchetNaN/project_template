@@ -428,15 +428,15 @@ __metadata:
   linkType: hard
 
 "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@npm:^7.20.7":
-  version: 7.20.7
-  resolution: "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@npm:7.20.7"
+  version: 7.22.0
+  resolution: "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@npm:7.22.0"
   dependencies:
-    "@babel/helper-plugin-utils": ^7.20.2
+    "@babel/helper-plugin-utils": ^7.21.5
     "@babel/helper-skip-transparent-expression-wrappers": ^7.20.0
-    "@babel/plugin-proposal-optional-chaining": ^7.20.7
+    "@babel/plugin-transform-optional-chaining": ^7.22.0
   peerDependencies:
     "@babel/core": ^7.13.0
-  checksum: d610f532210bee5342f5b44a12395ccc6d904e675a297189bc1e401cc185beec09873da523466d7fec34ae1574f7a384235cba1ccc9fe7b89ba094167897c845
+  checksum: 71e93d6d0159da3338716cdd1e06a43c60f4c197d70b526e9898bd07b548b9c7979ca635c965f1894a258f5fdfa175d8f8e2d1daa084f340c6b8b970b26f3678
   languageName: node
   linkType: hard
 
@@ -578,7 +578,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-optional-chaining@npm:^7.20.7, @babel/plugin-proposal-optional-chaining@npm:^7.21.0":
+"@babel/plugin-proposal-optional-chaining@npm:^7.21.0":
   version: 7.21.0
   resolution: "@babel/plugin-proposal-optional-chaining@npm:7.21.0"
   dependencies:
@@ -1057,6 +1057,19 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 0fcb04e15deea96ae047c21cb403607d49f06b23b4589055993365ebd7a7d7541334f06bf9642e90075e66efce6ebaf1eb0ef066fbbab802d21d714f1aac3aef
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-transform-optional-chaining@npm:^7.22.0":
+  version: 7.22.0
+  resolution: "@babel/plugin-transform-optional-chaining@npm:7.22.0"
+  dependencies:
+    "@babel/helper-plugin-utils": ^7.21.5
+    "@babel/helper-skip-transparent-expression-wrappers": ^7.20.0
+    "@babel/plugin-syntax-optional-chaining": ^7.8.3
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: b75ae97f26cca3928bbe841849fd900b2a768ed7a7a7c4fc9965d3863eea0c62fae126699ef416104e6aaf758ba5f9fce9077da4c5db2add3aabf9e864f44686
   languageName: node
   linkType: hard
 
