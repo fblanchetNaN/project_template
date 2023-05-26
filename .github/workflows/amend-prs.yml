@@ -42,10 +42,6 @@ jobs:
           ref: ${{ github.event.workflow_run.head_branch }}
       - uses: actions/download-artifact@v3.0.2
         with:
-          name: requirements-prs--${{ github.sha }}
-          path: .github/requirements-prs
-      - uses: actions/download-artifact@v3.0.2
-        with:
           name: yarn-lock--${{ github.sha }}
           path: docs
       - uses: EndBug/add-and-commit@v9.1.3
