@@ -96,11 +96,11 @@ __metadata:
   linkType: hard
 
 "@babel/helper-builder-binary-assignment-operator-visitor@npm:^7.18.6":
-  version: 7.21.5
-  resolution: "@babel/helper-builder-binary-assignment-operator-visitor@npm:7.21.5"
+  version: 7.22.0
+  resolution: "@babel/helper-builder-binary-assignment-operator-visitor@npm:7.22.0"
   dependencies:
-    "@babel/types": ^7.21.5
-  checksum: 9a033d3d7a6409256272ea6fc03731511af9f936ee0b161ace05d171d7bd5adf455dc85f80437d92277462f6bd2af9af1f2d1967edc21ca4d5966ac0a09cf61d
+    "@babel/types": ^7.22.0
+  checksum: 3579d09b0d9e6c2fa0147f33a8e3a80c90cca58d0ca529eeb512f8163a67113efda918fe736c21a7b6ae21f28ceeb92d0c3afbd2381695db307eb32d333e11aa
   languageName: node
   linkType: hard
 
