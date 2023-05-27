@@ -367,15 +367,15 @@ __metadata:
   linkType: hard
 
 "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@npm:^7.20.7":
-  version: 7.22.0
-  resolution: "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@npm:7.22.0"
+  version: 7.22.3
+  resolution: "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@npm:7.22.3"
   dependencies:
     "@babel/helper-plugin-utils": ^7.21.5
     "@babel/helper-skip-transparent-expression-wrappers": ^7.20.0
-    "@babel/plugin-transform-optional-chaining": ^7.22.0
+    "@babel/plugin-transform-optional-chaining": ^7.22.3
   peerDependencies:
     "@babel/core": ^7.13.0
-  checksum: 71e93d6d0159da3338716cdd1e06a43c60f4c197d70b526e9898bd07b548b9c7979ca635c965f1894a258f5fdfa175d8f8e2d1daa084f340c6b8b970b26f3678
+  checksum: d786e4d89c0674cab4fb65e804920782b2ff8319a3e6c561c81b0265451f4ac9f8ce1f9699303398636352b5177730e31c219a086b72980bf39f98faadeab3c1
   languageName: node
   linkType: hard
 
@@ -999,7 +999,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-optional-chaining@npm:^7.22.0":
+"@babel/plugin-transform-optional-chaining@npm:^7.22.3":
   version: 7.22.3
   resolution: "@babel/plugin-transform-optional-chaining@npm:7.22.3"
   dependencies:
