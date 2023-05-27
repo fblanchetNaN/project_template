@@ -1000,15 +1000,15 @@ __metadata:
   linkType: hard
 
 "@babel/plugin-transform-optional-chaining@npm:^7.22.0":
-  version: 7.22.0
-  resolution: "@babel/plugin-transform-optional-chaining@npm:7.22.0"
+  version: 7.22.3
+  resolution: "@babel/plugin-transform-optional-chaining@npm:7.22.3"
   dependencies:
     "@babel/helper-plugin-utils": ^7.21.5
     "@babel/helper-skip-transparent-expression-wrappers": ^7.20.0
     "@babel/plugin-syntax-optional-chaining": ^7.8.3
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: b75ae97f26cca3928bbe841849fd900b2a768ed7a7a7c4fc9965d3863eea0c62fae126699ef416104e6aaf758ba5f9fce9077da4c5db2add3aabf9e864f44686
+  checksum: 9b50a28b59250ecabeae928b8237c596e6f81f5fcdacd03a99a3777bbfea2447773936f4b5091e63b2d46e707429d9bdf22fcd0fb4b05a702bf08f554bea3ae2
   languageName: node
   linkType: hard
 
