@@ -187,11 +187,11 @@ __metadata:
   linkType: hard
 
 "@babel/helper-member-expression-to-functions@npm:^7.22.0":
-  version: 7.22.0
-  resolution: "@babel/helper-member-expression-to-functions@npm:7.22.0"
+  version: 7.22.3
+  resolution: "@babel/helper-member-expression-to-functions@npm:7.22.3"
   dependencies:
-    "@babel/types": ^7.22.0
-  checksum: c6b9c175fd37156fdac14752171135385925fdca6621c046183b3da99a30b35901b4f5a5fcd63aa9d20536898660e40ad1181c29bc7f2f06a6bdf0b44b5c60ec
+    "@babel/types": ^7.22.3
+  checksum: c31b7c8096e722ab7717a1e2343b26afa469172aeb1a8643e9387a14bb50d77dd032fafedf282fcde37b90dcadd2e770c0dfea745a3b1de893d607f2ccba7c0f
   languageName: node
   linkType: hard
 
