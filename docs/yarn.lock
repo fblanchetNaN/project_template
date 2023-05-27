@@ -977,13 +977,13 @@ __metadata:
   linkType: hard
 
 "@babel/plugin-transform-new-target@npm:^7.18.6":
-  version: 7.22.0
-  resolution: "@babel/plugin-transform-new-target@npm:7.22.0"
+  version: 7.22.3
+  resolution: "@babel/plugin-transform-new-target@npm:7.22.3"
   dependencies:
     "@babel/helper-plugin-utils": ^7.21.5
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 826e1a105dfe7e7097054242fe7bae1af5475681760fa8042b353c44a13d824a164bf7c53e32c421d9bf37f27f128878bc908f455a5800763d3a4d9d3abb43c8
+  checksum: a28043575aae52127b7287711cf0b244a28279464d979858408ca6197169b6f7e6341e5b4554a894d409245fcd696c9bf38d5f1f1c64f84a82f479bf35659920
   languageName: node
   linkType: hard
 
