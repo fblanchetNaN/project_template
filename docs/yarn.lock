@@ -38,9 +38,9 @@ __metadata:
   linkType: hard
 
 "@babel/compat-data@npm:^7.17.7, @babel/compat-data@npm:^7.20.5, @babel/compat-data@npm:^7.21.5, @babel/compat-data@npm:^7.22.0":
-  version: 7.22.0
-  resolution: "@babel/compat-data@npm:7.22.0"
-  checksum: 6e5d8c2c6f1598c6d6301ca853180030810ef2e81f73f531147c5ebfef711867b80e9ebe344e9529cc3843a4b5b398f3973f6a88addd827acf2226dfabb11c11
+  version: 7.22.3
+  resolution: "@babel/compat-data@npm:7.22.3"
+  checksum: eb001646f41459f42ccb0d39ee8bb3c3c495bc297234817044c0002689c625e3159a6678c53fd31bd98cf21f31472b73506f350fc6906e3bdfa49cb706e2af8d
   languageName: node
   linkType: hard
 
