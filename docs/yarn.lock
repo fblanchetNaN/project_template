@@ -5807,14 +5807,14 @@ __metadata:
   linkType: hard
 
 "micromark-factory-label@npm:^1.0.0":
-  version: 1.0.2
-  resolution: "micromark-factory-label@npm:1.0.2"
+  version: 1.1.0
+  resolution: "micromark-factory-label@npm:1.1.0"
   dependencies:
     micromark-util-character: ^1.0.0
     micromark-util-symbol: ^1.0.0
     micromark-util-types: ^1.0.0
     uvu: ^0.5.0
-  checksum: 957e9366bdc8dbc1437c0706ff96972fa985ab4b1274abcae12f6094f527cbf5c69e7f2304c23c7f4b96e311ff7911d226563b8b43dcfcd4091e8c985fb97ce6
+  checksum: fcda48f1287d9b148c562c627418a2ab759cdeae9c8e017910a0cba94bb759a96611e1fc6df33182e97d28fbf191475237298983bb89ef07d5b02464b1ad28d5
   languageName: node
   linkType: hard
 
