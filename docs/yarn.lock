@@ -5883,12 +5883,12 @@ __metadata:
   linkType: hard
 
 "micromark-util-combine-extensions@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "micromark-util-combine-extensions@npm:1.0.0"
+  version: 1.1.0
+  resolution: "micromark-util-combine-extensions@npm:1.1.0"
   dependencies:
     micromark-util-chunked: ^1.0.0
     micromark-util-types: ^1.0.0
-  checksum: 5304a820ef75340e1be69d6ad167055b6ba9a3bafe8171e5945a935752f462415a9dd61eb3490220c055a8a11167209a45bfa73f278338b7d3d61fa1464d3f35
+  checksum: ee78464f5d4b61ccb437850cd2d7da4d690b260bca4ca7a79c4bb70291b84f83988159e373b167181b6716cb197e309bc6e6c96a68cc3ba9d50c13652774aba9
   languageName: node
   linkType: hard
 
