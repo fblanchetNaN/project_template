@@ -5977,9 +5977,9 @@ __metadata:
   linkType: hard
 
 "micromark-util-types@npm:^1.0.0, micromark-util-types@npm:^1.0.1":
-  version: 1.0.2
-  resolution: "micromark-util-types@npm:1.0.2"
-  checksum: 08dc901b7c06ee3dfeb54befca05cbdab9525c1cf1c1080967c3878c9e72cb9856c7e8ff6112816e18ead36ce6f99d55aaa91560768f2f6417b415dcba1244df
+  version: 1.1.0
+  resolution: "micromark-util-types@npm:1.1.0"
+  checksum: b0ef2b4b9589f15aec2666690477a6a185536927ceb7aa55a0f46475852e012d75a1ab945187e5c7841969a842892164b15d58ff8316b8e0d6cc920cabd5ede7
   languageName: node
   linkType: hard
 
