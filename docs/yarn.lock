@@ -1831,12 +1831,12 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-sup@npm:^0.4.6":
-  version: 0.4.6
-  resolution: "@mdit/plugin-sup@npm:0.4.6"
+  version: 0.4.7
+  resolution: "@mdit/plugin-sup@npm:0.4.7"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: 261f5f6c89165dbe0e6b27b2102e0d0f74bf1869a1d2e5ffb041730eeb7d198dbfd6c37b7bec346029c329f2fe0c8b709ccbc6482c251f5ac2db0ec0ce6a7b8c
+  checksum: 51273491b6d7ab668cc206b59ff3c6a4d1e520385abd0bdb283a38de6c72e11a1aea0d1fe13a9d460fb2609a1ab066714e225fc1bc54711abb044036635babab
   languageName: node
   linkType: hard
 
