@@ -1683,13 +1683,13 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-align@npm:^0.4.6":
-  version: 0.4.6
-  resolution: "@mdit/plugin-align@npm:0.4.6"
+  version: 0.4.7
+  resolution: "@mdit/plugin-align@npm:0.4.7"
   dependencies:
-    "@mdit/plugin-container": 0.4.6
+    "@mdit/plugin-container": 0.4.7
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: 02e8a2e782797cc2b77795b36a318822d3de84bca43a191d1a485a6f28fc86030328f68bc04cbce7106df97aa28e3747cb10cd0cf32fe8e2315ca98ed3819743
+  checksum: 8a445b8fffe5a67d4696f2c5909e6143b48ab9ca34e05fdd19096048bf5dfd194c0941f2eca05830ecf311e8698f61a6dee7ec00cd3260b48f61fb0374863626
   languageName: node
   linkType: hard
 
@@ -1703,7 +1703,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdit/plugin-container@npm:0.4.6, @mdit/plugin-container@npm:^0.4.6":
+"@mdit/plugin-container@npm:0.4.7":
+  version: 0.4.7
+  resolution: "@mdit/plugin-container@npm:0.4.7"
+  dependencies:
+    "@types/markdown-it": ^12.2.3
+    markdown-it: ^13.0.1
+  checksum: 1546b49a40f1902ca5373f6244e39856f502cee7be0884bcbc747e4616ad76ad68e4d17bbc4259b8441fa6645cb346dbcbcdb35a2c66be07df6cf19e60ee49a5
+  languageName: node
+  linkType: hard
+
+"@mdit/plugin-container@npm:^0.4.6":
   version: 0.4.6
   resolution: "@mdit/plugin-container@npm:0.4.6"
   dependencies:
