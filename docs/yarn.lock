@@ -3420,6 +3420,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"create-codepen@npm:0.0.3":
+  version: 0.0.3
+  resolution: "create-codepen@npm:0.0.3"
+  checksum: b387754f4a724c88a3dbb5a0d92507c655a3e4978bb0959e75e518dce35d98adcc2ef19f2b5f6ff6cd2f27c76609231e679675923d80c7f259eebde0a265fcde
+  languageName: node
+  linkType: hard
+
 "cross-spawn@npm:^7.0.3":
   version: 7.0.3
   resolution: "cross-spawn@npm:7.0.3"
@@ -6885,7 +6892,7 @@ __metadata:
     "@vuepress/plugin-shiki": 2.0.0-beta.62
     vue: 3.3.4
     vuepress: 2.0.0-beta.62
-    vuepress-theme-hope: 2.0.0-beta.220
+    vuepress-theme-hope: 2.0.0-beta.221
   languageName: unknown
   linkType: soft
 
@@ -7758,9 +7765,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuepress-plugin-auto-catalog@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-auto-catalog@npm:2.0.0-beta.220"
+"vuepress-plugin-auto-catalog@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-auto-catalog@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/core": 2.0.0-beta.62
@@ -7768,9 +7775,9 @@ __metadata:
     "@vuepress/utils": 2.0.0-beta.62
     vue: ^3.3.4
     vue-router: ^4.2.2
-    vuepress-plugin-components: 2.0.0-beta.220
-    vuepress-plugin-sass-palette: 2.0.0-beta.220
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-plugin-components: 2.0.0-beta.221
+    vuepress-plugin-sass-palette: 2.0.0-beta.221
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     sass-loader: ^13.3.1
     vuepress: 2.0.0-beta.62
@@ -7785,13 +7792,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 9870c1514d689c6314f4551c2eae34d451a07dc0cb40c6306f0c006c2f50c195d3467a122c2e6254d668da0fc0bd58236382235f6557f2eab69516bbe997abba
+  checksum: b339e8c8564a4e8e4096f40183580f6389f5e4ba7a682ccaf66c59e25da8eb36846ecb2ea29a48b912ceb6ad513fca54fcf19e74c601ec5a9ce0a0854002f6c4
   languageName: node
   linkType: hard
 
-"vuepress-plugin-blog2@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-blog2@npm:2.0.0-beta.220"
+"vuepress-plugin-blog2@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-blog2@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/core": 2.0.0-beta.62
@@ -7800,7 +7807,7 @@ __metadata:
     chokidar: ^3.5.3
     vue: ^3.3.4
     vue-router: ^4.2.2
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
@@ -7812,13 +7819,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 2e4d22da81a8c123bbda1fce180ca558beca42107ada772a4ca107008bee42bd42375baacf9e9b6a2dcf535c07584a9feb10632a2ff87957f36a10a692f3fdda
+  checksum: a6c47871a36c5186d2cfd1b3d16a5da6076623b8c91a7904bdc77c12adf4bf5e3cec50d5412da9e2dec5e2a58485ef99705fa52e786f35ed2d2b174e2fb6f5e0
   languageName: node
   linkType: hard
 
-"vuepress-plugin-comment2@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-comment2@npm:2.0.0-beta.220"
+"vuepress-plugin-comment2@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-comment2@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
@@ -7829,8 +7836,8 @@ __metadata:
     twikoo: ^1.6.16
     vue: ^3.3.4
     vue-router: ^4.2.2
-    vuepress-plugin-sass-palette: 2.0.0-beta.220
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-plugin-sass-palette: 2.0.0-beta.221
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     sass-loader: ^13.3.1
     vuepress: 2.0.0-beta.62
@@ -7845,13 +7852,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: f6fe5162803948dc73bf09466570ede0a14e2e63532d5e57175a3190e8e8c713d1084622e0ba2af45661d8f3d4aba1ed3173597ad59495627960edf8d630b20d
+  checksum: 304e5b2f351d1c376586ae821496a77fd4693efe4214f18002c40ead9bd30086410554260ed9525c6ff9bd69c790f218e3e73fede43819f56dfd5dff087aabab
   languageName: node
   linkType: hard
 
-"vuepress-plugin-components@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-components@npm:2.0.0-beta.220"
+"vuepress-plugin-components@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-components@npm:2.0.0-beta.221"
   dependencies:
     "@stackblitz/sdk": ^1.9.0
     "@vuepress/client": 2.0.0-beta.62
@@ -7860,6 +7867,7 @@ __metadata:
     "@vueuse/core": ^10.1.2
     artplayer: ^5.0.9
     balloon-css: ^1.2.0
+    create-codepen: 0.0.3
     dashjs: ^4.7.0
     hls.js: ^1.4.4
     mpegts.js: ^1.7.3
@@ -7867,9 +7875,9 @@ __metadata:
     qrcode: ^1.5.3
     vue: ^3.3.4
     vue-router: ^4.2.2
-    vuepress-plugin-reading-time2: 2.0.0-beta.220
-    vuepress-plugin-sass-palette: 2.0.0-beta.220
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-plugin-reading-time2: 2.0.0-beta.221
+    vuepress-plugin-sass-palette: 2.0.0-beta.221
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     sass-loader: ^13.3.1
     vuepress: 2.0.0-beta.62
@@ -7884,13 +7892,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: cf6bf993eed5a520d31b7e34866ea6cce761d63cd808a3cdf65c1fd27c4ae347ff3f45761059cc9117c87ae75cf7b1c019794a9d9f00d0648cdbbea7aeed38b2
+  checksum: a94971d39fde6356c79752ae8ffbff3d633d70e5256373c7123a25f0eff135c97beba445194a78ce74af42d1b07036286aba7e8de946caf0713a805e4dea24d7
   languageName: node
   linkType: hard
 
-"vuepress-plugin-copy-code2@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-copy-code2@npm:2.0.0-beta.220"
+"vuepress-plugin-copy-code2@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-copy-code2@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
@@ -7899,8 +7907,8 @@ __metadata:
     balloon-css: ^1.2.0
     vue: ^3.3.4
     vue-router: ^4.2.2
-    vuepress-plugin-sass-palette: 2.0.0-beta.220
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-plugin-sass-palette: 2.0.0-beta.221
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     sass-loader: ^13.3.1
     vuepress: 2.0.0-beta.62
@@ -7915,13 +7923,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 29381c5386f34612d6632f10f640a1ed7019cb68d0841ad76f73d7cf5747950d6171bca0a264cbcf4eecb7906d3516d678980a78304ee85d6b895e81f8fce179
+  checksum: 671b4ef93fa3cfe5147e67279fda8bd141b6327c940204300e62d0c7963ead619498e139bf1a6ffcfbe00d08d7d7d4c63a8161cb4d667ed21d4169a70d2968fc
   languageName: node
   linkType: hard
 
-"vuepress-plugin-copyright2@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-copyright2@npm:2.0.0-beta.220"
+"vuepress-plugin-copyright2@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-copyright2@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
@@ -7929,7 +7937,7 @@ __metadata:
     "@vueuse/core": ^10.1.2
     vue: ^3.3.4
     vue-router: ^4.2.2
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
@@ -7941,18 +7949,18 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: bc3653dc00ab64d0c727ecfa3843843a9f8ef5b7b2230b5eff6ed31e0ffa3cc496d81551c220c12a789844049dbe12b75e0960199c81f765d7938d2849b1a905
+  checksum: 0988725d7aa447e93d8b1517f9fa1e7e74ceccdf65594b0bbcab86b9a43abf9c07e0f485b051ab5e6b8f001050914e25e627d2de92951470e31e30f0a10b8354
   languageName: node
   linkType: hard
 
-"vuepress-plugin-feed2@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-feed2@npm:2.0.0-beta.220"
+"vuepress-plugin-feed2@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-feed2@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/shared": 2.0.0-beta.62
     "@vuepress/utils": 2.0.0-beta.62
     cheerio: 1.0.0-rc.12
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-shared: 2.0.0-beta.221
     xml-js: ^1.6.11
   peerDependencies:
     vuepress: 2.0.0-beta.62
@@ -7965,13 +7973,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 733deba09e5af0d0e5370d47d3e2548cf93628d3c6ef1b33e490e70c986494bf274ce363fc842ecc936062bbbc66c4fdedbac9946e73a24a49ebc7950b568199
+  checksum: 16bfad1d7c4ee5481ba6679198f3d5c4a82acdfc9ba59bf1754ab5793445b1ea04c1d4213718bc67e5b04a1e2dc11ee81d8e503046cfaa1c974fb42a7e218325
   languageName: node
   linkType: hard
 
-"vuepress-plugin-md-enhance@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-md-enhance@npm:2.0.0-beta.220"
+"vuepress-plugin-md-enhance@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-md-enhance@npm:2.0.0-beta.221"
   dependencies:
     "@babel/core": ^7.22.1
     "@mdit/plugin-align": ^0.4.6
@@ -8011,8 +8019,8 @@ __metadata:
     reveal.js: ^4.5.0
     vue: ^3.3.4
     vue-router: ^4.2.2
-    vuepress-plugin-sass-palette: 2.0.0-beta.220
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-plugin-sass-palette: 2.0.0-beta.221
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     sass-loader: ^13.3.1
     vuepress: 2.0.0-beta.62
@@ -8027,13 +8035,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 112f0ece87e2868b35a8121c4c44055f302cdd7dbd6841b77c6c07c70d276ab81a20c71251282ca31c14ad8a4a01a02e55902b86817ba6026a3afa39381da104
+  checksum: 1497480e3d43136991b66661c9395fa6619b9e48432d974f9950fe4463144b6538f8749894c6b88eeaa6949dfd9c9efc8506eaedd134316b478ea88736d44a6a
   languageName: node
   linkType: hard
 
-"vuepress-plugin-photo-swipe@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-photo-swipe@npm:2.0.0-beta.220"
+"vuepress-plugin-photo-swipe@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-photo-swipe@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
@@ -8042,8 +8050,8 @@ __metadata:
     photoswipe: ^5.3.7
     vue: ^3.3.4
     vue-router: ^4.2.2
-    vuepress-plugin-sass-palette: 2.0.0-beta.220
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-plugin-sass-palette: 2.0.0-beta.221
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     sass-loader: ^13.3.1
     vuepress: 2.0.0-beta.62
@@ -8058,13 +8066,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 25c429f12f6a1b641a210d648f30fc4fb784df501f140674b107a357f599e2a268867a64140530533a32ef625f7243eedc5f7019c700618e8875b2a98754364d
+  checksum: 206450791f9a61eaa529882d25fdc061a146c1b53e41b9105560e0bde39563f82c158f4b214d7c56904060be29e1a6dac99e61f433ea4981726ab7b4a1516700
   languageName: node
   linkType: hard
 
-"vuepress-plugin-pwa2@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-pwa2@npm:2.0.0-beta.220"
+"vuepress-plugin-pwa2@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-pwa2@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
@@ -8074,8 +8082,8 @@ __metadata:
     register-service-worker: ^1.7.2
     vue: ^3.3.4
     vue-router: ^4.2.2
-    vuepress-plugin-sass-palette: 2.0.0-beta.220
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-plugin-sass-palette: 2.0.0-beta.221
+    vuepress-shared: 2.0.0-beta.221
     workbox-build: ^7.0.0
   peerDependencies:
     sass-loader: ^13.3.1
@@ -8091,17 +8099,17 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 9fb6991ae45358b30864fd2189f14d8f52f978feaa00072be1de96061c5e75ad1f502da19ad78e921c1f5901cd1c516ace13d70326bf48dc60e602db38f1f5f6
+  checksum: 9bf56810cbb3899311f14b1a3dafc4bdbf8d40212e0248b0586b3b4673d2186dcbf028983f5cf392b1a90c39583a10d09762fc309d9ca56dfb5fca9c3a6a474f
   languageName: node
   linkType: hard
 
-"vuepress-plugin-reading-time2@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-reading-time2@npm:2.0.0-beta.220"
+"vuepress-plugin-reading-time2@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-reading-time2@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     vue: ^3.3.4
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
@@ -8113,19 +8121,19 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: faacd7d6742a15e978e5d1818d610b2249df8f98aa56dd73ff94708be33a981cfb5839f9e0ff342daddac4ec741c1df96f2e510f1b78ab779aed65b498fb3e9b
+  checksum: ac49110d3118a7fb936567cf1ffa5d981a80e25e280bc8d54675e793499834c69da99368d6020b252f22c4bd4e9887ebb62990544d06f4d7e518520f402ccde7
   languageName: node
   linkType: hard
 
-"vuepress-plugin-rtl@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-rtl@npm:2.0.0-beta.220"
+"vuepress-plugin-rtl@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-rtl@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
     "@vuepress/utils": 2.0.0-beta.62
     vue: ^3.3.4
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
@@ -8137,19 +8145,19 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: f8468c234b1f3dbfe25e60c227f53ff7a52bae592928ad64676d81729af95a6cdca671e27f23944f2f9ee29e80aae8b3566dbe2d50e65d4140fdc2ff8197a6c0
+  checksum: febc7b0113b3c1771ecae8dd5d98d2e0d98e6eb3dc41a663b789ca88a7252bf33ba0ba7bd07729b42bba1027e423243f39741890f03a82f4d2d30d51f4a4ca2b
   languageName: node
   linkType: hard
 
-"vuepress-plugin-sass-palette@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-sass-palette@npm:2.0.0-beta.220"
+"vuepress-plugin-sass-palette@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-sass-palette@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/shared": 2.0.0-beta.62
     "@vuepress/utils": 2.0.0-beta.62
     chokidar: ^3.5.3
     sass: ^1.62.1
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     sass-loader: ^13.3.1
     vuepress: 2.0.0-beta.62
@@ -8164,17 +8172,17 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 24c9ba2bdeae1acfc6aa0846d396dbf5c30165163191ab552de8ebd0079d80bfd422fcc8fe5513ddeed55ffe4af9314bdd9345743505fad9f44ea6ff916c538e
+  checksum: f93cf845d18058034e28a9d751c65a20d7b97eadaf7fda83812452fa7c3ff42b6c73a7f8b92ab982f1170b7b48f65189bc71d4f39e3a9cc6a3ab07f9911234ca
   languageName: node
   linkType: hard
 
-"vuepress-plugin-seo2@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-seo2@npm:2.0.0-beta.220"
+"vuepress-plugin-seo2@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-seo2@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/shared": 2.0.0-beta.62
     "@vuepress/utils": 2.0.0-beta.62
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
@@ -8186,18 +8194,18 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 052e347d697b18330554d0e8b11f7a4c7eab465e02790b7a8713722644cdf9370988826557a69093d660b5c81c98a4338d041dbadf2510c8adf5e869cf30ba1e
+  checksum: 9df683fa7c3743361839abfc57e35003c2f3aa9e9a3d1fcdd51ca632ec07d99355ad768222347aac9039a827225fc8cf6c74eb3a4a4464fd4bf8158b87d62de0
   languageName: node
   linkType: hard
 
-"vuepress-plugin-sitemap2@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-plugin-sitemap2@npm:2.0.0-beta.220"
+"vuepress-plugin-sitemap2@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-plugin-sitemap2@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/shared": 2.0.0-beta.62
     "@vuepress/utils": 2.0.0-beta.62
     sitemap: ^7.1.1
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     vuepress: 2.0.0-beta.62
     vuepress-vite: 2.0.0-beta.62
@@ -8209,13 +8217,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 9376736142322e3caca1267639103761d816fa6af96d776f31fe1c6237b409ed6122761b350619b783d4e6cc9a39c4fc120408eda70aa43f56395450d652eafc
+  checksum: d9b9e49b594b313393fc2f405aee147d0af39810e8ff7a599dd7dec45e35d58ffc2fc025dbce9c820127b60ac1421b4979e7c74d164088bce9dff359fa5bb90a
   languageName: node
   linkType: hard
 
-"vuepress-shared@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-shared@npm:2.0.0-beta.220"
+"vuepress-shared@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-shared@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/client": 2.0.0-beta.62
     "@vuepress/shared": 2.0.0-beta.62
@@ -8241,13 +8249,13 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: c615bf8139e518c93387351ad80eec82d876f47c31b842c9dd02eed583c54ca34880923828afce9532f1990c65cfb30e6e0e04873b7ff486fc15e90c96ecf0f3
+  checksum: d4eee6f7581091abd9f41f9b2cd3385543f56f1a39a6d87835b008fe623fa53f2f1ef5e8df36e00a27997323ecc7d2ff160f6f806b3858b85cf2db5aa822f956
   languageName: node
   linkType: hard
 
-"vuepress-theme-hope@npm:2.0.0-beta.220":
-  version: 2.0.0-beta.220
-  resolution: "vuepress-theme-hope@npm:2.0.0-beta.220"
+"vuepress-theme-hope@npm:2.0.0-beta.221":
+  version: 2.0.0-beta.221
+  resolution: "vuepress-theme-hope@npm:2.0.0-beta.221"
   dependencies:
     "@vuepress/cli": 2.0.0-beta.62
     "@vuepress/client": 2.0.0-beta.62
@@ -8269,22 +8277,22 @@ __metadata:
     gray-matter: ^4.0.3
     vue: ^3.3.4
     vue-router: ^4.2.2
-    vuepress-plugin-auto-catalog: 2.0.0-beta.220
-    vuepress-plugin-blog2: 2.0.0-beta.220
-    vuepress-plugin-comment2: 2.0.0-beta.220
-    vuepress-plugin-components: 2.0.0-beta.220
-    vuepress-plugin-copy-code2: 2.0.0-beta.220
-    vuepress-plugin-copyright2: 2.0.0-beta.220
-    vuepress-plugin-feed2: 2.0.0-beta.220
-    vuepress-plugin-md-enhance: 2.0.0-beta.220
-    vuepress-plugin-photo-swipe: 2.0.0-beta.220
-    vuepress-plugin-pwa2: 2.0.0-beta.220
-    vuepress-plugin-reading-time2: 2.0.0-beta.220
-    vuepress-plugin-rtl: 2.0.0-beta.220
-    vuepress-plugin-sass-palette: 2.0.0-beta.220
-    vuepress-plugin-seo2: 2.0.0-beta.220
-    vuepress-plugin-sitemap2: 2.0.0-beta.220
-    vuepress-shared: 2.0.0-beta.220
+    vuepress-plugin-auto-catalog: 2.0.0-beta.221
+    vuepress-plugin-blog2: 2.0.0-beta.221
+    vuepress-plugin-comment2: 2.0.0-beta.221
+    vuepress-plugin-components: 2.0.0-beta.221
+    vuepress-plugin-copy-code2: 2.0.0-beta.221
+    vuepress-plugin-copyright2: 2.0.0-beta.221
+    vuepress-plugin-feed2: 2.0.0-beta.221
+    vuepress-plugin-md-enhance: 2.0.0-beta.221
+    vuepress-plugin-photo-swipe: 2.0.0-beta.221
+    vuepress-plugin-pwa2: 2.0.0-beta.221
+    vuepress-plugin-reading-time2: 2.0.0-beta.221
+    vuepress-plugin-rtl: 2.0.0-beta.221
+    vuepress-plugin-sass-palette: 2.0.0-beta.221
+    vuepress-plugin-seo2: 2.0.0-beta.221
+    vuepress-plugin-sitemap2: 2.0.0-beta.221
+    vuepress-shared: 2.0.0-beta.221
   peerDependencies:
     sass-loader: ^13.3.1
     vuepress: 2.0.0-beta.62
@@ -8299,7 +8307,7 @@ __metadata:
       optional: true
     vuepress-webpack:
       optional: true
-  checksum: 7ce6620bb2f7787150d6cd64eaf9d9a5763327a603695f9d6d448e12807d910eeb5afdbb574c024101c85fe63827d7ef0bc3e31dbea97acc895d99de7a11c958
+  checksum: a170891afe7087d385ad32af1c16a76876c32233fb4fdf2e21b58a0046fd928b386f3c2db23579fb13bc55088ac8275aba956acfac65c7fe8d85d6446b3f3493
   languageName: node
   linkType: hard
 
