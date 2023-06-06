@@ -1694,12 +1694,12 @@ __metadata:
   linkType: hard
 
 "@mdit/plugin-attrs@npm:^0.4.6":
-  version: 0.4.6
-  resolution: "@mdit/plugin-attrs@npm:0.4.6"
+  version: 0.4.7
+  resolution: "@mdit/plugin-attrs@npm:0.4.7"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
-  checksum: a980a0ddd1cd1a6b7f0243dbe7e8b6366a2e0443ac5413f49b7393db682f6ec72cc63624e133b9ccd42b2e5ef6965c07d78829d5d955db8119cabad86a1b231f
+  checksum: 6dd40f3d29d8353a2c8aeda777b07a3d428ffc32b6950ed246051a4c5eb066c5943b3b1a8df28120cddd4c0568558d9d892f4f5d60ec8902bda32d278dca7ac0
   languageName: node
   linkType: hard
 
