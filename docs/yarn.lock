@@ -1860,23 +1860,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdit/plugin-tex@npm:0.4.7":
+"@mdit/plugin-tex@npm:0.4.7, @mdit/plugin-tex@npm:^0.4.6":
   version: 0.4.7
   resolution: "@mdit/plugin-tex@npm:0.4.7"
   dependencies:
     "@types/markdown-it": ^12.2.3
     markdown-it: ^13.0.1
   checksum: 5ebcb4c05e062ca5a4d132381103d518bf77720f69a67fa5b1048539746f89aeb7a04077454605bf19b85429a10503bea6fc29522426984d159bb56b77236696
-  languageName: node
-  linkType: hard
-
-"@mdit/plugin-tex@npm:^0.4.6":
-  version: 0.4.6
-  resolution: "@mdit/plugin-tex@npm:0.4.6"
-  dependencies:
-    "@types/markdown-it": ^12.2.3
-    markdown-it: ^13.0.1
-  checksum: 435dfdd0079bcc6cad61de3f119b86d4afea1c999cd6e59ad71ccd738c3733f9c9e29e3742b98ac60d0ef66cc69eb7a9c14d120f46a2ec83164677a0dc1deaad
   languageName: node
   linkType: hard
 
