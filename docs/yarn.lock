@@ -7696,13 +7696,13 @@ __metadata:
   linkType: hard
 
 "vidstack@npm:^0.6.4":
-  version: 0.6.4
-  resolution: "vidstack@npm:0.6.4"
+  version: 0.6.5
+  resolution: "vidstack@npm:0.6.5"
   dependencies:
     maverick.js: 0.37.0
     media-captions: 0.0.13
     type-fest: ^3.8.0
-  checksum: 2d3692887c35ecd7e50643bda61821fc625e91ac7edfcbf252e126f750c7fba7816d8ac1bd83049d6711e9ec25eb7dfaa9edb1128a8db760f5ca5d264d99fafb
+  checksum: ef826408b0436286daf95ce72e3857cd2e38eac6c1550adc5dd0b412fb53adb88ef82a65082226c7c106618b1561c1ec347298b16a59fa26a0997334675065ac
   languageName: node
   linkType: hard
 
