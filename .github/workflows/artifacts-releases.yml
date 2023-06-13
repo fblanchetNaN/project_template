@@ -99,7 +99,7 @@ jobs:
         with:
           path: docs/.vuepress/dist
       - id: deployment
-        uses: actions/deploy-pages@v2.0.1
+        uses: actions/deploy-pages@v2.0.2
   deploy-release:
     if: needs.prepare-release.outputs.release_created
     name: Publish on PyPi
