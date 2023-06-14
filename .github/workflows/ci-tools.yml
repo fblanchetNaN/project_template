@@ -44,7 +44,7 @@ jobs:
         run: |
           source "$( python -m hatch env find docs )/bin/activate"
           python -m pip freeze --all --exclude-editable > .github/requirements-docs.lock
-      - uses: peter-evans/create-pull-request@v5.0.1
+      - uses: peter-evans/create-pull-request@v5.0.2
         with:
           author: "GitHub <noreply@github.com>"
           base: ${{ github.head_ref || github.ref_name }}

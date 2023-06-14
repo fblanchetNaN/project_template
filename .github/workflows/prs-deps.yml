@@ -68,7 +68,7 @@ jobs:
         with:
           name: requirements-prs--${{ github.sha }}
           path: .github/requirements-prs
-      - uses: peter-evans/create-pull-request@v5.0.1
+      - uses: peter-evans/create-pull-request@v5.0.2
         with:
           author: "GitHub <noreply@github.com>"
           base: ${{ github.head_ref || github.ref_name }}
