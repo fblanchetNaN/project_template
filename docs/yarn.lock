@@ -2424,6 +2424,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuepress/client@npm:2.0.0-beta.64":
+  version: 2.0.0-beta.64
+  resolution: "@vuepress/client@npm:2.0.0-beta.64"
+  dependencies:
+    "@vue/devtools-api": ^6.5.0
+    "@vuepress/shared": 2.0.0-beta.64
+    "@vueuse/core": ^10.2.1
+    vue: ^3.3.4
+    vue-router: ^4.2.2
+  checksum: 4ed82b469f0ef3b7782f3d39272cdb7aaf2d70e460124195bcfe5fd520d2d9c9af596970c1e3ccd16452b5e28b62e349cb67098974d62a3b8ae9382a7f07a121
+  languageName: node
+  linkType: hard
+
 "@vuepress/core@npm:2.0.0-beta.62":
   version: 2.0.0-beta.62
   resolution: "@vuepress/core@npm:2.0.0-beta.62"
@@ -2656,6 +2669,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vuepress/shared@npm:2.0.0-beta.64":
+  version: 2.0.0-beta.64
+  resolution: "@vuepress/shared@npm:2.0.0-beta.64"
+  dependencies:
+    "@mdit-vue/types": ^0.12.0
+    "@vue/shared": ^3.3.4
+  checksum: ee2b1b0d150a92a2fb7536322fb08101b6d6a2cc55c28c64ac6fd77ffb4f661df3e1a2f932a2c8d9f582efda19c15127ccc0c6592cd3449568699fcdf1fa9442
+  languageName: node
+  linkType: hard
+
 "@vuepress/theme-default@npm:2.0.0-beta.62":
   version: 2.0.0-beta.62
   resolution: "@vuepress/theme-default@npm:2.0.0-beta.62"
@@ -2738,10 +2761,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vueuse/core@npm:^10.2.1":
+  version: 10.2.1
+  resolution: "@vueuse/core@npm:10.2.1"
+  dependencies:
+    "@types/web-bluetooth": ^0.0.17
+    "@vueuse/metadata": 10.2.1
+    "@vueuse/shared": 10.2.1
+    vue-demi: ">=0.14.5"
+  checksum: 1a7a7ad8372a2ff87ceddee2663a29a911dcd8a1a40b0e63436bc3b0f0786598f70e40e02e69d3cacfb634e35fdcd98136e049431a73516109ff062d8004cd54
+  languageName: node
+  linkType: hard
+
 "@vueuse/metadata@npm:10.1.2":
   version: 10.1.2
   resolution: "@vueuse/metadata@npm:10.1.2"
   checksum: b72470776ec6aeb88a21b4a60b6b365ad22559c965b7038ae8c68a6a2942631748f3beb4b715bdde3d8adb1dac06a5ebeb41255f24d60c8f28f19ac6fa3bc152
+  languageName: node
+  linkType: hard
+
+"@vueuse/metadata@npm:10.2.1":
+  version: 10.2.1
+  resolution: "@vueuse/metadata@npm:10.2.1"
+  checksum: 1672c0e6e6a54fe397c04b83bf4b78a8db410df272010f5db829e9f72ed285d526ca8bb4d7a3373b17aac2fb37c83d866f6077e667f54afc1ae20bf1ab1a5478
   languageName: node
   linkType: hard
 
@@ -2751,6 +2793,15 @@ __metadata:
   dependencies:
     vue-demi: ">=0.14.0"
   checksum: a134cc254bfef28ceca2c48c7532a4f1e2231dbb75304e43f896b41771f3d51b93897cc9a16bbd98c7aa6163fc44e001319bbf2478408382ef4d9788875301f2
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:10.2.1":
+  version: 10.2.1
+  resolution: "@vueuse/shared@npm:10.2.1"
+  dependencies:
+    vue-demi: ">=0.14.5"
+  checksum: eeb19c0448d3f238615e24c738d2a6ebdc8b7d840405dd8704b5d0a3cd84ac3a8d5ec87856b501fac89f0f3bb868e7339d46e5fc3ece02c07160aedd41e507b2
   languageName: node
   linkType: hard
 
@@ -7021,7 +7072,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@vuepress/client": 2.0.0-beta.62
+    "@vuepress/client": 2.0.0-beta.64
     "@vuepress/plugin-shiki": 2.0.0-beta.63
     vue: 3.3.4
     vuepress: 2.0.0-beta.62
@@ -7876,7 +7927,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-demi@npm:>=0.14.0":
+"vue-demi@npm:>=0.14.0, vue-demi@npm:>=0.14.5":
   version: 0.14.5
   resolution: "vue-demi@npm:0.14.5"
   peerDependencies:
