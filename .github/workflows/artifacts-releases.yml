@@ -95,7 +95,7 @@ jobs:
         with:
           name: static-site--${{ github.sha }}
           path: docs/.vuepress/dist
-      - uses: actions/upload-pages-artifact@v1.0.10
+      - uses: actions/upload-pages-artifact@v2.0.0
         with:
           path: docs/.vuepress/dist
       - id: deployment
