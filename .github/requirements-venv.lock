@@ -41,4 +41,4 @@ trove-classifiers==2023.7.6
 userpath==1.8.0
 virtualenv==20.23.1
 wheel==0.40.0
-zipp==3.16.0
+zipp==3.16.1
