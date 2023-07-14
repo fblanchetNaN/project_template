@@ -1,6 +1,6 @@
 astunparse==1.6.3
 attrs==23.1.0
-click==8.1.4
+click==8.1.5
 colorama==0.4.6
 coverage==7.2.7
 exceptiongroup==1.1.2
