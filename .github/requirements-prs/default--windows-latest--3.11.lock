@@ -9,7 +9,7 @@ hypothesis==6.81.2
 junit-xml==1.8
 mutmut==2.4.3
 parso==0.8.3
-pip==23.1.2
+pip==23.2
 pony==0.7.16
 setuptools==68.0.0
 six==1.16.0
