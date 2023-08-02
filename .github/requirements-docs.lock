@@ -15,7 +15,7 @@ Pygments==2.15.1
 requests==2.31.0
 setuptools==68.0.0
 snowballstemmer==2.2.0
-Sphinx==7.1.1
+Sphinx==7.1.2
 sphinxcontrib-applehelp==1.0.4
 sphinxcontrib-devhelp==1.0.2
 sphinxcontrib-htmlhelp==2.0.1
