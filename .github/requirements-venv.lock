@@ -19,7 +19,7 @@ jeepney==0.8.0
 keyring==24.2.0
 markdown-it-py==3.0.0
 mdurl==0.1.2
-more-itertools==10.0.0
+more-itertools==10.1.0
 packaging==23.1
 pathspec==0.11.2
 pexpect==4.8.0
