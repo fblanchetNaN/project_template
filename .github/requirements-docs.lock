@@ -16,11 +16,11 @@ requests==2.31.0
 setuptools==68.0.0
 snowballstemmer==2.2.0
 Sphinx==7.1.2
-sphinxcontrib-applehelp==1.0.5
-sphinxcontrib-devhelp==1.0.3
-sphinxcontrib-htmlhelp==2.0.2
+sphinxcontrib-applehelp==1.0.6
+sphinxcontrib-devhelp==1.0.4
+sphinxcontrib-htmlhelp==2.0.3
 sphinxcontrib-jsmath==1.0.1
-sphinxcontrib-qthelp==1.0.4
-sphinxcontrib-serializinghtml==1.1.6
+sphinxcontrib-qthelp==1.0.5
+sphinxcontrib-serializinghtml==1.1.7
 urllib3==2.0.4
 wheel==0.41.0
