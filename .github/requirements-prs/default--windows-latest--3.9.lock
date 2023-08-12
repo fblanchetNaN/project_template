@@ -16,4 +16,4 @@ setuptools==68.0.0
 six==1.16.0
 sortedcontainers==2.4.0
 toml==0.10.2
-wheel==0.41.0
+wheel==0.41.1
