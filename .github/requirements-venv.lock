@@ -5,7 +5,7 @@ click==8.1.7
 cryptography==41.0.3
 distlib==0.3.7
 editables==0.5
-filelock==3.12.2
+filelock==3.12.3
 h11==0.14.0
 hatch==1.7.0
 hatchling==1.18.0
