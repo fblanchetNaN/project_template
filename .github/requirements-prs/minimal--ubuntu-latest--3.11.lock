@@ -4,7 +4,7 @@ click==8.1.7
 coverage==7.3.0
 glob2==0.7
 hammett==0.9.4
-hypothesis==6.82.6
+hypothesis==6.82.7
 junit-xml==1.8
 mutmut==2.4.3
 parso==0.8.3
