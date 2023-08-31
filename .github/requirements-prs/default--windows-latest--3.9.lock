@@ -12,8 +12,8 @@ mutmut==2.4.3
 parso==0.8.3
 pip==23.2.1
 pony==0.7.16
-setuptools==68.0.0
+setuptools==68.1.2
 six==1.16.0
 sortedcontainers==2.4.0
 toml==0.10.2
-wheel==0.41.1
+wheel==0.41.2
