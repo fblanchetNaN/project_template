@@ -11,5 +11,5 @@ pre-commit==3.3.3
 pyproject_hooks==1.0.0
 PyYAML==6.0.1
 setuptools==68.0.0
-virtualenv==20.24.3
+virtualenv==20.24.4
 wheel==0.41.1
