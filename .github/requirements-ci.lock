@@ -1,4 +1,4 @@
-build==0.10.0
+build==1.0.0
 cfgv==3.4.0
 distlib==0.3.7
 filelock==3.12.3
