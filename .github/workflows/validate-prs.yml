@@ -15,7 +15,7 @@ jobs:
     name: Pre-commit (include linter)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.6.0
+      - uses: actions/checkout@v4.0.0
       - uses: actions/setup-python@v4.7.0
         with:
           cache: pip
@@ -36,7 +36,7 @@ jobs:
       files_exists: ${{ steps.existence-action.outputs.files_exists }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.6.0
+      - uses: actions/checkout@v4.0.0
       - id: existence-action
         uses: andstor/file-existence-action@v2.0.0
         with:
@@ -54,7 +54,7 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
         python-version: ["3.9", "3.10", "3.11"]
     steps:
-      - uses: actions/checkout@v3.6.0
+      - uses: actions/checkout@v4.0.0
       - uses: actions/setup-python@v4.7.0
         with:
           cache: pip
@@ -98,7 +98,7 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
         python-version: ["3.9", "3.10", "3.11"]
     steps:
-      - uses: actions/checkout@v3.6.0
+      - uses: actions/checkout@v4.0.0
       - uses: actions/setup-python@v4.7.0
         with:
           cache: pip
