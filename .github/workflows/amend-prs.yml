@@ -27,7 +27,7 @@ jobs:
       - run: yarn install --no-immutable
         working-directory: docs
       - if: success() || failure()
-        uses: actions/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@v3.1.3
         with:
           name: yarn-lock--${{ github.sha }}
           path: docs/yarn.lock
