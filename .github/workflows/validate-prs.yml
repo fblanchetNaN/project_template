@@ -24,7 +24,7 @@ jobs:
           python-version: 3.11
       - run: python -m pip config --user set install.use-pep517 true
       - run: python -m pip install -r .github/requirements-ci.lock
-      - uses: actions/cache@v3.3.1
+      - uses: actions/cache@v3.3.2
         with:
           key: ${{ hashFiles('.pre-commit-config.yaml') }}
           path: ~/.cache/pre-commit
