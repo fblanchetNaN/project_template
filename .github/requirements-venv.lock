@@ -30,7 +30,7 @@ ptyprocess==0.7.0
 pycparser==2.21
 Pygments==2.16.1
 pyperclip==1.8.2
-rich==13.5.2
+rich==13.5.3
 SecretStorage==3.3.3
 setuptools==68.2.0
 shellingham==1.5.3
