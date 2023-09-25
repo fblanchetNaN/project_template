@@ -11,7 +11,7 @@ junit-xml==1.9
 mutmut==2.4.4
 parso==0.8.3
 pip==23.2.1
-pony==0.7.16
+pony==0.7.17
 setuptools==68.2.0
 six==1.16.0
 sortedcontainers==2.4.0
