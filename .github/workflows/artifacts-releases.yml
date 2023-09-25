@@ -19,7 +19,7 @@ jobs:
       release_created: ${{ steps.release-please.outputs.release_created }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.0.0
+      - uses: actions/checkout@v4.1.0
       - uses: GoogleCloudPlatform/release-please-action@v3.7.11
         id: release-please
         with:
@@ -32,7 +32,7 @@ jobs:
     name: Build the static site
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.0.0
+      - uses: actions/checkout@v4.1.0
       - id: setup-python
         uses: actions/setup-python@v4.7.0
         with:
@@ -66,7 +66,7 @@ jobs:
     name: Build the rolling release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.0.0
+      - uses: actions/checkout@v4.1.0
       - uses: actions/setup-python@v4.7.0
         with:
           cache: pip
@@ -89,7 +89,7 @@ jobs:
     needs: [prepare-release, build-docs, build-rolling]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.0.0
+      - uses: actions/checkout@v4.1.0
       - uses: actions/configure-pages@v3.0.6
       - uses: actions/download-artifact@v3.0.2
         with:
@@ -106,7 +106,7 @@ jobs:
     needs: [prepare-release, build-docs, build-rolling]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.0.0
+      - uses: actions/checkout@v4.1.0
       - uses: actions/setup-python@v4.7.0
         with:
           cache: pip
