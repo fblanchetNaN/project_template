@@ -24,7 +24,7 @@ jobs:
     needs: check-nodejs-major
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.0
+      - uses: actions/checkout@v4.1.1
       - uses: actions/setup-python@v4.7.1
         with:
           cache: pip
@@ -86,7 +86,7 @@ jobs:
     needs: check-nodejs-minor
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.0
+      - uses: actions/checkout@v4.1.1
       - uses: actions/setup-python@v4.7.1
         with:
           cache: pip
@@ -139,7 +139,7 @@ jobs:
     needs: check-python-v3
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.0
+      - uses: actions/checkout@v4.1.1
       - uses: actions/setup-python@v4.7.1
         with:
           cache: pip
@@ -189,7 +189,7 @@ jobs:
     needs: check-python-v4
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.0
+      - uses: actions/checkout@v4.1.1
       - uses: actions/setup-python@v4.7.1
         with:
           cache: pip
