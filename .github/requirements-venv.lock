@@ -37,7 +37,7 @@ shellingham==1.5.3
 sniffio==1.3.0
 tomli_w==1.0.0
 tomlkit==0.12.1
-trove-classifiers==2023.10.17
+trove-classifiers==2023.10.18
 userpath==1.9.1
 virtualenv==20.24.5
 wheel==0.41.2
