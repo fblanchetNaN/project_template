@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: check
-        run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v21.0.0)'" >> $GITHUB_OUTPUT
+        run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v22.0.0)'" >> $GITHUB_OUTPUT
   nodejs-major:
-    if: contains(needs.check-nodejs-major.outputs.ls-tags, 'v21.0.0')
-    name: Create a new PR bumping node.js to v21.0.0
+    if: contains(needs.check-nodejs-major.outputs.ls-tags, 'v22.0.0')
+    name: Create a new PR bumping node.js to v22.0.0
     needs: check-nodejs-major
     runs-on: ubuntu-latest
     steps:
@@ -31,7 +31,7 @@ jobs:
           cache-dependency-path: .github/requirements-ci.lock
           check-latest: true
           python-version: 3.11
-      - name: Update node.js to v21.0.0
+      - name: Update node.js to v22.0.0
         run: |
           import fileinput
           import os
@@ -49,13 +49,13 @@ jobs:
               for name in files:
                   with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
                       for line in file:
-                          print(re.sub(r"v21.0.0", lambda semver: f"v{update_major(semver.group(0)[1:])}.0", line), end='')
+                          print(re.sub(r"v22.0.0", lambda semver: f"v{update_major(semver.group(0)[1:])}.0", line), end='')
                   with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
                       for line in file:
-                          print(re.sub(r"v20.9.0", lambda semver: f"v{update_minor(update_major(semver.group(0)[1:]))}.0", line), end='')
+                          print(re.sub(r"v21.1.0", lambda semver: f"v{update_minor(update_major(semver.group(0)[1:]))}.0", line), end='')
                   with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
                       for line in file:
-                          print(re.sub(r"node-version: 20.8", lambda semver: f"node-version: {update_major(semver.group(0)[14:])}", line), end='')
+                          print(re.sub(r"node-version: 21.0", lambda semver: f"node-version: {update_major(semver.group(0)[14:])}", line), end='')
         shell: python
       - uses: peter-evans/create-pull-request@v5.0.2
         with:
@@ -63,15 +63,15 @@ jobs:
           base: ${{ github.ref_name }}
           branch: dependabot/nodejs-major/${{ github.ref_name }}
           committer: "GitHub <noreply@github.com>"
-          commit-message: "chore(docs): bump node.js to v21.0.0"
+          commit-message: "chore(docs): bump node.js to v22.0.0"
           labels: |
             documentation
             javascript
             merge:queue
-          title: "chore(docs): bump node.js to v21.0.0"
+          title: "chore(docs): bump node.js to v22.0.0"
           token: ${{ secrets.WORKFLOW_TOKEN }}
   check-nodejs-minor:
-    if: ${{ ! contains(needs.check-nodejs-major.outputs.ls-tags, 'v21.0.0') }}
+    if: ${{ ! contains(needs.check-nodejs-major.outputs.ls-tags, 'v22.0.0') }}
     name: Check if a new node.js minor version has been released
     needs: check-nodejs-major
     outputs:
@@ -79,10 +79,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: check
-        run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v20.9.0)'" >> $GITHUB_OUTPUT
+        run: echo "ls-tags='$(git ls-remote https://github.com/nodejs/node refs/tags/v21.1.0)'" >> $GITHUB_OUTPUT
   nodejs-minor:
-    if: contains(needs.check-nodejs-minor.outputs.ls-tags, 'v20.9.0')
-    name: Create a new PR bumping node.js to v20.9.0
+    if: contains(needs.check-nodejs-minor.outputs.ls-tags, 'v21.1.0')
+    name: Create a new PR bumping node.js to v21.1.0
     needs: check-nodejs-minor
     runs-on: ubuntu-latest
     steps:
@@ -93,7 +93,7 @@ jobs:
           cache-dependency-path: .github/requirements-ci.lock
           check-latest: true
           python-version: 3.11
-      - name: Update node.js to v20.9.0
+      - name: Update node.js to v21.1.0
         run: |
           import fileinput
           import os
@@ -107,10 +107,10 @@ jobs:
               for name in files:
                   with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
                       for line in file:
-                          print(re.sub(r"v20.9.0", lambda semver: f"v{update_minor(semver.group(0)[1:])}.0", line), end='')
+                          print(re.sub(r"v21.1.0", lambda semver: f"v{update_minor(semver.group(0)[1:])}.0", line), end='')
                   with fileinput.input(files=os.path.join(root, name), inplace=True) as file:
                       for line in file:
-                          print(re.sub(r"node-version: 20.8", lambda semver: f"node-version: {update_minor(semver.group(0)[14:])}", line), end='')
+                          print(re.sub(r"node-version: 21.0", lambda semver: f"node-version: {update_minor(semver.group(0)[14:])}", line), end='')
         shell: python
       - uses: peter-evans/create-pull-request@v5.0.2
         with:
@@ -118,12 +118,12 @@ jobs:
           base: ${{ github.ref_name }}
           branch: dependabot/nodejs-minor/${{ github.ref_name }}
           committer: "GitHub <noreply@github.com>"
-          commit-message: "chore(docs): bump node.js to v20.9.0"
+          commit-message: "chore(docs): bump node.js to v21.1.0"
           labels: |
             documentation
             javascript
             merge:queue
-          title: "chore(docs): bump node.js to v20.9.0"
+          title: "chore(docs): bump node.js to v21.1.0"
           token: ${{ secrets.WORKFLOW_TOKEN }}
   check-python-v3:
     name: Check if a new python 3 version has been released
