@@ -39,7 +39,7 @@ jobs:
           cache: pip
           cache-dependency-path: .github/requirements-docs.lock
           check-latest: true
-          python-version: 3.11
+          python-version: 3.12
       - run: python -m pip config --user set install.use-pep517 true
       - run: python -m pip install -r .github/requirements-docs.lock
       - run: python -m pip install -e ".[dev, stable]"
@@ -72,7 +72,7 @@ jobs:
           cache: pip
           cache-dependency-path: .github/requirements-ci.lock
           check-latest: true
-          python-version: 3.11
+          python-version: 3.12
       - run: python -m pip config --user set install.use-pep517 true
       - run: python -m pip install -r .github/requirements-ci.lock
       - run: python -m build
@@ -112,7 +112,7 @@ jobs:
           cache: pip
           cache-dependency-path: .github/requirements-ci.lock
           check-latest: true
-          python-version: 3.11
+          python-version: 3.12
       - run: python -m pip config --user set install.use-pep517 true
       - run: python -m pip install -r .github/requirements-ci.lock
       - run: python -m hatch publish
