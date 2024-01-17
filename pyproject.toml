@@ -27,7 +27,7 @@ dependencies = []
 dev = [
   "coverage==7.3.2",
   "hammett==0.9.4",
-  "hypothesis==6.88.1",
+  "hypothesis==6.96.0",
   "mutmut==2.4.4",
 ]
 docs = [
