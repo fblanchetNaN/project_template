@@ -1,14 +1,14 @@
 astunparse==1.6.3
-attrs==23.1.0
+attrs==23.2.0
 click==8.1.7
 coverage==7.3.2
-exceptiongroup==1.1.3
+exceptiongroup==1.2.2
 glob2==0.7
 hammett==0.9.4
 hypothesis==6.88.1
 junit-xml==1.9
 mutmut==2.4.4
-parso==0.8.3
+parso==0.8.4
 pip==23.2.1
 pony==0.7.17
 setuptools==68.2.0
